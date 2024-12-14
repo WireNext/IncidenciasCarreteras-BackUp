@@ -1,36 +1,39 @@
-name: Actualizar tráfico
+name: Generar GeoJSON de tráfico
 
 on:
+  push:
+    branches:
+      - main
   schedule:
-    - cron: '*/15 * * * *'  # Ejecutar automáticamente cada 15 minutos
-  workflow_dispatch:       # Permitir ejecución manual desde la interfaz de GitHub
+    - cron: "*/15 * * * *" # Se ejecuta cada 15 minutos
+  workflow_dispatch: # Permite ejecución manual
 
 jobs:
-  run_script:
-    runs-on: ubuntu-latest  # Usar una máquina virtual con Ubuntu
+  generate-geojson:
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Hacer checkout del repositorio
-        uses: actions/checkout@v3
+    - name: Configurar repositorio
+      uses: actions/checkout@v3
 
-      - name: Configurar Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'  # O la versión que prefieras
+    - name: Configurar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9 # Ajusta según tu versión de Python
 
-      - name: Instalar dependencias
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests  # Instala las librerías que necesites
+    - name: Instalar dependencias
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
 
-      - name: Ejecutar script
-        run: |
-          python traffic_data.geojson  # Reemplaza con el nombre de tu script
+    - name: Ejecutar script para generar GeoJSON
+      run: python generate_traffic_data.py
 
-      - name: Subir los resultados a GitHub (opcional)
-        run: |
-          git config --global user.email "your-email@example.com"
-          git config --global user.name "Your Name"
-          git add .
-          git commit -m "Actualizar resultados de tráfico"
-          git push
+    - name: Confirmar contenido generado
+      run: cat traffic_data.geojson
+
+    - name: Subir archivo generado al repositorio
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "Actualizar GeoJSON de tráfico"
+        file_pattern: traffic_data.geojson
