@@ -23,12 +23,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Verify Maven installation
-        run: |
-          mvn --version  # Verifica que Maven está correctamente instalado
-
-      - name: Create target directory (optional)
-        run: |
-          mkdir -p target  # Crea el directorio 'target' manualmente en caso de que no exista
+        run: mvn --version  # Verifica que Maven está correctamente instalado
 
       - name: Build with Maven
         run: mvn clean install  # Compila el proyecto y genera el archivo GeoJSON en 'target/'
