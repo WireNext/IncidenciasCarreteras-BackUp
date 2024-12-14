@@ -81,7 +81,8 @@ def process_xml_from_url(url, region_name):
         }
 
         # Guardar el archivo GeoJSON
-        with open("traffic_data.geojson", "w") as f:
+        file_name = f"{region_name.replace(' ', '_')}_traffic_data.geojson"
+        with open(file_name, "w") as f:
             json.dump(geojson_data, f, indent=2)
 
         print(f"Archivo GeoJSON generado con éxito para {region_name}")
