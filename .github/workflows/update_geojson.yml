@@ -25,6 +25,9 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
 
+      - name: List files in target directory  # Paso extra para comprobar los archivos generados
+        run: ls -l target/
+
       - name: Upload GeoJSON as artifact
         uses: actions/upload-artifact@v3
         with:
