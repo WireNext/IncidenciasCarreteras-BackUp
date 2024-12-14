@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:  # Permite ejecutar manualmente el flujo de trabajo
+  workflow_dispatch:
   schedule:
     - cron: '*/15 * * * *'  # Ejecutar cada 15 minutos
 
@@ -31,7 +31,7 @@ jobs:
       - name: Check if the GeoJSON file exists in the root directory
         run: |
           echo "Checking if incidencias.geojson exists in the root directory"
-          ls -l  # Listará todo el contenido en la raíz del proyecto
+          ls -R  # Listará todos los archivos en el directorio raíz
           if [ ! -f incidencias.geojson ]; then
             echo "GeoJSON file does not exist!"
             exit 1  # Esto provocará un error si el archivo no existe
@@ -43,4 +43,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: incidencias-geojson
-          path: incidencias.geojson  # Ruta del archivo GeoJSON en la raíz
+          path: incidencias.geojson  # Asegúrate de que el archivo GeoJSON esté en la raíz
