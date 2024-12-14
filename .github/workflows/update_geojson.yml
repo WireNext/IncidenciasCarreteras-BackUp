@@ -28,10 +28,12 @@ jobs:
       - name: Build with Maven
         run: mvn clean install  # Compila el proyecto y genera el archivo GeoJSON en la raíz
 
+      - name: Check files in the root directory
+        run: ls -l  # Verifica si el archivo GeoJSON está en la raíz
+
       - name: Check if the GeoJSON file exists in the root directory
         run: |
           echo "Checking if incidencias.geojson exists in the root directory"
-          ls -R  # Listará todos los archivos en el directorio raíz
           if [ ! -f incidencias.geojson ]; then
             echo "GeoJSON file does not exist!"
             exit 1  # Esto provocará un error si el archivo no existe
