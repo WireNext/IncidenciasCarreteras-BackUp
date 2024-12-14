@@ -1,9 +1,14 @@
 import xml.etree.ElementTree as ET
 import json
-import os
+import requests
 
-# Directorio donde se encuentran los archivos XML
-XML_DIRECTORY = "xml_files"
+# Lista de regiones con sus respectivas URLs de archivos XML
+REGIONS = {
+    "Cataluña": "http://infocar.dgt.es/datex2/sct/SituationPublication/all/content.xml",
+    "País Vasco": "http://infocar.dgt.es/datex2/dt-gv/SituationPublication/all/content.xml",
+    "Resto España": "http://infocar.dgt.es/datex2/dgt/SituationPublication/all/content.xml"
+}
+
 OUTPUT_FILE = "traffic_data.geojson"
 
 # Estructura inicial del GeoJSON
@@ -12,14 +17,19 @@ data = {
     "features": []
 }
 
-# Función para procesar un archivo XML y extraer los datos necesarios
-def process_xml_file(file_path, region_name):
+# Función para procesar un archivo XML desde una URL y extraer los datos necesarios
+def process_xml_from_url(url, region_name):
     try:
-        tree = ET.parse(file_path)
-        root = tree.getroot()
+        # Descargar el archivo XML desde la URL
+        response = requests.get(url)
+        response.raise_for_status()  # Verifica errores HTTP
 
+        # Parsear el contenido XML
+        root = ET.fromstring(response.content)
+
+        # Procesar los incidentes en el archivo XML
         for incident in root.findall(".//incident"):
-            # Extrae datos necesarios, ajusta las etiquetas según el XML
+            # Extraer datos necesarios; ajusta las etiquetas según el XML
             latitude = incident.find("latitude").text
             longitude = incident.find("longitude").text
             description = incident.find("description").text
@@ -43,13 +53,12 @@ def process_xml_file(file_path, region_name):
             data["features"].append(feature)
 
     except Exception as e:
-        print(f"Error procesando {file_path}: {e}")
+        print(f"Error procesando {region_name} desde {url}: {e}")
 
-# Procesar todos los archivos XML de diferentes regiones
-for file_name in os.listdir(XML_DIRECTORY):
-    if file_name.endswith(".xml"):
-        region_name = os.path.splitext(file_name)[0]  # Asumimos que el nombre del archivo es el de la región
-        process_xml_file(os.path.join(XML_DIRECTORY, file_name), region_name)
+# Procesar todos los archivos XML de las regiones especificadas
+for region_name, url in REGIONS.items():
+    print(f"Procesando región: {region_name} desde {url}")
+    process_xml_from_url(url, region_name)
 
 # Guardar el resultado en un archivo GeoJSON
 with open(OUTPUT_FILE, "w", encoding="utf-8") as geojson_file:
