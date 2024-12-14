@@ -4,14 +4,14 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:  # Permite la ejecución manual desde la UI de GitHub
+  workflow_dispatch:
   schedule:
     - cron: '*/15 * * * *'  # Ejecutar cada 15 minutos
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -22,16 +22,24 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Build with Maven
-        run: mvn clean install
+      - name: Verify Maven installation
+        run: |
+          mvn --version  # Verifica que Maven está correctamente instalado
 
-      - name: List files in target directory  # Paso extra para comprobar los archivos generados
+      - name: Create target directory (optional)
+        run: |
+          mkdir -p target  # Crea el directorio 'target' manualmente en caso de que no exista
+
+      - name: Build with Maven
+        run: mvn clean install  # Compila el proyecto y genera el archivo GeoJSON en 'target/'
+
+      - name: List files in target directory
         run: |
           echo "Listing files in target directory"
-          ls -R target/  # Listar recursivamente los archivos dentro del directorio target
+          ls -R target/  # Lista todos los archivos generados en 'target/'
 
       - name: Upload GeoJSON as artifact
         uses: actions/upload-artifact@v3
         with:
           name: incidencias-geojson
-          path: target/incidencias.geojson
+          path: target/incidencias.geojson  # Asegúrate de que el archivo GeoJSON esté disponible después de la ejecución de Maven
