@@ -92,15 +92,22 @@ def process_xml_from_url(url, region_name):
                     "coordinates": [float(longitude), float(latitude)]  # Longitud, Latitud
                 }
 
-                # Si no hay propiedades válidas, no agregamos este incidente
-                if properties:
-                    incident = {
-                        "type": "Feature",
-                        "properties": properties,
-                        "geometry": geometry
-                    }
+                # Crear el campo de descripción personalizado
+                description = f"<b>Motivo:</b> {properties.get('incident_type', 'Desconocido')}<br>"
+                description += f"<b>Fecha de Creación:</b> {properties.get('creation_time', 'Desconocido')}<br>"
+                description += f"<b>Estado de la Carretera:</b> {properties.get('network_status', 'Desconocido')}<br>"
+                description += f"<b>Dirección:</b> {properties.get('direction', 'Desconocida')}<br>"
 
-                    incidents.append(incident)
+                # Crear el objeto del incidente con la descripción incluida
+                incident = {
+                    "type": "Feature",
+                    "properties": {
+                        "description": description
+                    },
+                    "geometry": geometry
+                }
+
+                incidents.append(incident)
 
         # Crear el archivo GeoJSON
         geojson_data = {
