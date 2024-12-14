@@ -21,25 +21,26 @@ def process_xml_from_url(url, region_name):
         # Parsear el contenido XML
         root = ET.fromstring(response.content)
 
-        # Imprimir todo el XML para verificar la estructura
-        print(f"\n--- Estructura XML para {region_name} ---")
-        print(ET.tostring(root, encoding='utf-8').decode())
-
         # Procesar los incidentes en el archivo XML
-        incident_count = 0
-        for location_group in root.findall(".//_0:groupOfLocations/_0:locationContainedInGroup", NS):
-            # Extraer todos los elementos de este grupo de localización para inspección
-            print(f"\n--- Detalles del Incidente ---")
-            for elem in location_group.iter():
-                print(f"Tag: {elem.tag}, Texto: {elem.text}")
+        for situation in root.findall(".//_0:situation", NS):
+            # Extraer los datos relevantes
+            situation_creation_time = situation.find(".//_0:situationRecordCreationTime", NS)
+            environmental_obstruction_type = situation.find(".//_0:environmentalObstructionType", NS)
+            network_management_type = situation.find(".//_0:networkManagementType", NS)
+            direction_relative = situation.find(".//_0:directionRelative", NS)
 
-            incident_count += 1
+            # Si no se encuentra algún valor, asignar "Desconocido"
+            creation_time = situation_creation_time.text if situation_creation_time is not None else "Desconocida"
+            obstruction_type = environmental_obstruction_type.text if environmental_obstruction_type is not None else "Desconocido"
+            network_status = network_management_type.text if network_management_type is not None else "Desconocido"
+            direction = direction_relative.text if direction_relative is not None else "Desconocida"
 
-        # Comprobar si se han procesado incidentes
-        if incident_count == 0:
-            print(f"No se encontraron incidentes en el XML de {region_name}.")
-        else:
-            print(f"Se procesaron {incident_count} incidentes en {region_name}.")
+            # Mostrar la información para cada incidente
+            print(f"Incidente: {obstruction_type}")
+            print(f"Fecha de Creación: {creation_time}")
+            print(f"Estado de la carretera: {network_status}")
+            print(f"Dirección: {direction}")
+            print("------")
 
     except Exception as e:
         print(f"Error procesando {region_name} desde {url}: {e}")
