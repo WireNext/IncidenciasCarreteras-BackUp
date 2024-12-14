@@ -1,34 +1,33 @@
-name: Update DGT GeoJSON
+name: Update GeoJSON
 
 on:
+  # Ejecutar manualmente desde la interfaz de GitHub
+  workflow_dispatch:
+  # Ejecutar automáticamente cada 15 minutos
   schedule:
-    - cron: '*/15 * * * *'  # Ejecutar cada 15 minutos
-  workflow_dispatch:        # Permite ejecutar el workflow manualmente
+    - cron: '*/15 * * * *' # Esto es el cron que ejecuta cada 15 minutos
 
 jobs:
   generate-geojson:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
-          java-version: '17'   # Ajusta a la versión de Java que necesitas
-          distribution: 'temurin'
+          java-version: '11' # O la versión de Java que necesites
 
-      - name: Compile Java
-        run: javac src/DGTDataFetcher.java -d out
+      - name: Build Java project
+        run: mvn clean install # O el comando que usas para compilar tu código
 
-      - name: Run Java Program
-        run: java -cp out DGTDataFetcher
+      - name: Run DGT Data Fetcher
+        run: java -jar target/dgt-data-fetcher.jar # O el comando adecuado para ejecutar tu código
 
-      - name: Commit and Push GeoJSON
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
-          git add incidencias.geojson
-          git commit -m "Update incidencias.geojson with latest DGT data" || echo "No changes to commit"
-          git push
+      - name: Upload GeoJSON
+        uses: actions/upload-artifact@v3
+        with:
+          name: geojson-output
+          path: incidencias.geojson
