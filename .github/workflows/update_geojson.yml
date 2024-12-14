@@ -36,6 +36,10 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Check if GeoJSON file is detected by Git
+        run: |
+          git status  # Verifica si el archivo GeoJSON está siendo detectado como cambiado
+
       - name: Pull latest changes
         run: git pull origin main  # Asegúrate de que tu rama esté actualizada
 
