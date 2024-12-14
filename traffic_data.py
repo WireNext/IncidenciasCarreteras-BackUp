@@ -28,13 +28,20 @@ def process_xml_from_url(url, region_name):
         # Parsear el contenido XML
         root = ET.fromstring(response.content)
 
+        # Depuración: imprimir el XML para verificar su estructura
+        # print(ET.tostring(root, encoding='utf8').decode('utf8'))
+
         # Procesar los incidentes en el archivo XML
+        incident_count = 0
         for incident in root.findall(".//incident"):
             # Extraer datos necesarios; ajusta las etiquetas según el XML
             latitude = incident.find("latitude").text
             longitude = incident.find("longitude").text
             description = incident.find("description").text
             road = incident.find("road").text
+
+            # Depuración: verificar qué datos se están extrayendo
+            print(f"Extrayendo incidente: {description}, {road}, {latitude}, {longitude}")
 
             # Verificar que las coordenadas sean válidas antes de agregarlas
             try:
@@ -60,6 +67,13 @@ def process_xml_from_url(url, region_name):
 
             # Añadir al GeoJSON
             data["features"].append(feature)
+            incident_count += 1
+
+        # Comprobar si se han procesado incidentes
+        if incident_count == 0:
+            print(f"No se encontraron incidentes en el XML de {region_name}.")
+        else:
+            print(f"Se procesaron {incident_count} incidentes en {region_name}.")
 
     except Exception as e:
         print(f"Error procesando {region_name} desde {url}: {e}")
@@ -69,8 +83,12 @@ for region_name, url in REGIONS.items():
     print(f"Procesando región: {region_name} desde {url}")
     process_xml_from_url(url, region_name)
 
-# Guardar el resultado en un archivo GeoJSON
-with open(OUTPUT_FILE, "w", encoding="utf-8") as geojson_file:
-    json.dump(data, geojson_file, ensure_ascii=False, indent=4)
+# Verificar si hay incidentes antes de guardar el archivo
+if len(data["features"]) == 0:
+    print("No se encontraron incidentes para agregar al GeoJSON.")
+else:
+    # Guardar el resultado en un archivo GeoJSON
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as geojson_file:
+        json.dump(data, geojson_file, ensure_ascii=False, indent=4)
 
-print(f"Archivo GeoJSON generado: {OUTPUT_FILE}")
+    print(f"Archivo GeoJSON generado: {OUTPUT_FILE}")
