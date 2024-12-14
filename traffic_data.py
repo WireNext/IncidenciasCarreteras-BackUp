@@ -35,15 +35,26 @@ def process_xml_from_url(url, region_name):
         incident_count = 0
         for location_group in root.findall(".//_0:groupOfLocations/_0:locationContainedInGroup", NS):
             # Extraer coordenadas
-            latitude = location_group.find(".//_0:pointCoordinates/_0:latitude", NS).text
-            longitude = location_group.find(".//_0:pointCoordinates/_0:longitude", NS).text
-            location_name = location_group.find(".//_0:name/_0:descriptor/_0:value", NS).text
+            latitude = location_group.find(".//_0:pointCoordinates/_0:latitude", NS)
+            longitude = location_group.find(".//_0:pointCoordinates/_0:longitude", NS)
+            
+            # Verificación de que las coordenadas existen
+            if latitude is not None and longitude is not None:
+                latitude = latitude.text
+                longitude = longitude.text
+            else:
+                print("Coordenadas no encontradas para un incidente.")
+                continue
 
-            # Extraer detalles del incidente
+            # Extraer detalles del incidente (en este caso, tráfico y tipo de restricción)
             description = location_group.find(".//_0:situationRecord/_0:impact/_0:impactDetails/_0:trafficRestrictionType", NS)
             description = description.text if description is not None else "Desconocido"
 
-            # Obtener el nombre de la carretera
+            # Obtener el nombre de la ubicación
+            location_name = location_group.find(".//_0:name/_0:descriptor/_0:value", NS)
+            location_name = location_name.text if location_name is not None else "Desconocida"
+
+            # Obtener el identificador de la carretera
             road = location_group.find(".//_0:situationRecord/_0:situationRecordCreationReference", NS)
             road = road.text if road is not None else "Desconocida"
 
@@ -51,10 +62,10 @@ def process_xml_from_url(url, region_name):
             time = location_group.find(".//_0:situationRecord/_0:situationRecordCreationTime", NS)
             time = time.text if time is not None else "Desconocido"
 
-            # Depuración: verificar qué datos se están extrayendo
-            print(f"Extrayendo incidente: {location_name}, {latitude}, {longitude}, {description}, {road}, {time}")
+            # Depuración: mostrar los valores extraídos
+            print(f"Incidente encontrado: {location_name}, {latitude}, {longitude}, {description}, {road}, {time}")
 
-            # Verificar que las coordenadas sean válidas antes de agregarlas
+            # Verificar que las coordenadas sean válidas
             try:
                 latitude = float(latitude)
                 longitude = float(longitude)
