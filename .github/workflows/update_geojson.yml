@@ -15,17 +15,14 @@ jobs:
       - name: Verify Maven installation
         run: mvn --version  # Verifica que Maven está correctamente instalado
 
-      - name: Create target directory (in case it's not created)
-        run: mkdir -p target  # Crea el directorio target si no existe
-
       - name: Build with Maven
-        run: mvn clean install  # Compila el proyecto y genera el archivo GeoJSON en 'target/'
+        run: mvn clean install  # Compila el proyecto y genera el archivo GeoJSON en la raíz
 
-      - name: Check if the GeoJSON file exists in target/
+      - name: Check if the GeoJSON file exists in root directory
         run: |
-          echo "Checking if incidencias.geojson exists in target/"
-          ls -R target/  # Listará todo el contenido dentro de target/
-          if [ ! -f target/incidencias.geojson ]; then
+          echo "Checking if incidencias.geojson exists in the root directory"
+          ls -l  # Listará todo el contenido en la raíz del proyecto
+          if [ ! -f incidencias.geojson ]; then
             echo "GeoJSON file does not exist!"
             exit 1  # Esto provocará un error si el archivo no existe
           else
@@ -36,4 +33,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: incidencias-geojson
-          path: target/incidencias.geojson  # Asegúrate de que el archivo GeoJSON esté disponible después de la ejecución de Maven
+          path: incidencias.geojson  # Ruta del archivo GeoJSON en la raíz
