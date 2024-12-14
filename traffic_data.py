@@ -12,6 +12,10 @@ REGIONS = {
 # Definir el espacio de nombres para el XML
 NS = {'_0': 'http://datex2.eu/schema/1_0/1_0'}
 
+# Función para comprobar si un valor es válido (no es nulo ni "Desconocido")
+def is_valid(value):
+    return value is not None and value.strip() and value.lower() != "desconocido"
+
 # Función para procesar un archivo XML desde una URL y extraer los datos necesarios
 def process_xml_from_url(url, region_name):
     try:
@@ -33,22 +37,22 @@ def process_xml_from_url(url, region_name):
             network_management_type = situation.find(".//_0:networkManagementType", NS)
             direction_relative = situation.find(".//_0:directionRelative", NS)
 
-            # Asignar valores si están presentes, sino los dejamos fuera del GeoJSON
+            # Asignar valores si están presentes y son válidos
             properties = {}
 
-            if situation_creation_time is not None:
+            if situation_creation_time is not None and is_valid(situation_creation_time.text):
                 properties["creation_time"] = situation_creation_time.text
 
-            if environmental_obstruction_type is not None:
+            if environmental_obstruction_type is not None and is_valid(environmental_obstruction_type.text):
                 properties["incident_type"] = environmental_obstruction_type.text
 
-            if network_management_type is not None:
+            if network_management_type is not None and is_valid(network_management_type.text):
                 properties["network_status"] = network_management_type.text
 
-            if direction_relative is not None:
+            if direction_relative is not None and is_valid(direction_relative.text):
                 properties["direction"] = direction_relative.text
 
-            # Si no hay propiedades, no agregamos este incidente
+            # Si no hay propiedades válidas, no agregamos este incidente
             if properties:
                 # Crear la geometría (aquí puedes personalizar la ubicación)
                 geometry = {
