@@ -31,11 +31,19 @@ jobs:
       - name: List files in target directory
         run: ls -la target/  # Verifica si el archivo GeoJSON está dentro de target/
 
+      - name: Configure git for commit
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Pull latest changes
+        run: git pull origin main  # Asegúrate de que tu rama esté actualizada
+
       - name: Commit GeoJSON file if updated
         run: |
           git add target/incidencias.geojson  # Asegúrate de añadir el archivo correcto
           git diff --cached --quiet || git commit -m "Update GeoJSON file"
-          git push
+          git push origin main  # Ahora puedes hacer el push
 
       - name: Upload GeoJSON as artifact
         uses: actions/upload-artifact@v3
