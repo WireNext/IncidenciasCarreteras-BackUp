@@ -26,6 +26,17 @@ def format_datetime(datetime_str):
     except ValueError:
         return datetime_str  # Si no se puede convertir, devolver el valor original
 
+# Función para realizar las sustituciones de palabras
+def translate_incident_type(incident_type):
+    # Realizar las sustituciones
+    translations = {
+        "flooding": "Inundación",
+        "roadClosed": "Corte Total",
+        "restrictions": "Restricciones",
+        "narrowLanes": "Carriles Estrechos"
+    }
+    return translations.get(incident_type.lower(), incident_type)  # Retorna la traducción o el valor original
+
 # Función para procesar un archivo XML desde una URL y extraer los datos necesarios
 def process_xml_from_url(url, region_name):
     try:
@@ -72,9 +83,10 @@ def process_xml_from_url(url, region_name):
                 formatted_time = format_datetime(situation_creation_time.text)
                 properties["creation_time"] = formatted_time
 
-            # Asignar el tipo de incidente si está presente
+            # Asignar el tipo de incidente y traducirlo si es necesario
             if environmental_obstruction_type is not None and is_valid(environmental_obstruction_type.text):
-                properties["incident_type"] = environmental_obstruction_type.text
+                translated_type = translate_incident_type(environmental_obstruction_type.text)
+                properties["incident_type"] = translated_type
 
             # Asignar el estado de la carretera si está presente
             if network_management_type is not None and is_valid(network_management_type.text):
