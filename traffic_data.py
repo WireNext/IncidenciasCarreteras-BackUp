@@ -18,6 +18,9 @@ data = {
     "features": []
 }
 
+# Definir el espacio de nombres para el XML
+NS = {'_0': 'http://datex2.eu/schema/1_0/1_0'}
+
 # Función para procesar un archivo XML desde una URL y extraer los datos necesarios
 def process_xml_from_url(url, region_name):
     try:
@@ -28,27 +31,23 @@ def process_xml_from_url(url, region_name):
         # Parsear el contenido XML
         root = ET.fromstring(response.content)
 
-        # Depuración: imprimir el XML para verificar su estructura
-        # print(ET.tostring(root, encoding='utf8').decode('utf8'))
-
         # Procesar los incidentes en el archivo XML
         incident_count = 0
-        for incident in root.findall(".//incident"):
-            # Extraer datos necesarios; ajusta las etiquetas según el XML
-            latitude = incident.find("latitude").text
-            longitude = incident.find("longitude").text
-            description = incident.find("description").text
-            road = incident.find("road").text
+        for location_group in root.findall(".//_0:groupOfLocations/_0:locationContainedInGroup", NS):
+            # Extraer coordenadas
+            latitude = location_group.find(".//_0:pointCoordinates/_0:latitude", NS).text
+            longitude = location_group.find(".//_0:pointCoordinates/_0:longitude", NS).text
+            location_name = location_group.find(".//_0:name/_0:descriptor/_0:value", NS).text
 
             # Depuración: verificar qué datos se están extrayendo
-            print(f"Extrayendo incidente: {description}, {road}, {latitude}, {longitude}")
+            print(f"Extrayendo incidente: {location_name}, {latitude}, {longitude}")
 
             # Verificar que las coordenadas sean válidas antes de agregarlas
             try:
                 latitude = float(latitude)
                 longitude = float(longitude)
             except (ValueError, TypeError):
-                print(f"Coordenadas inválidas para incidente en {road}. Saltando este incidente.")
+                print(f"Coordenadas inválidas para incidente en {location_name}. Saltando este incidente.")
                 continue
 
             # Crear una Feature para el GeoJSON
@@ -60,8 +59,8 @@ def process_xml_from_url(url, region_name):
                 },
                 "properties": {
                     "region": region_name,
-                    "description": description,
-                    "road": road
+                    "description": location_name,
+                    "road": "Desconocido"  # Aquí puedes poner más información si está disponible
                 }
             }
 
