@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '11'  # O la versión que prefieras
-          distribution: 'adoptopenjdk'  # O la distribución que prefieras (adoptopenjdk, zulu, temurin)
+          distribution: 'temurin'  # Usamos 'temurin' para Eclipse Temurin
 
       - name: Build Java project
         run: mvn clean install  # O el comando que usas para compilar tu código
