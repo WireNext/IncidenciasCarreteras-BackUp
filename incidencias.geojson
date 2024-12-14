@@ -1,0 +1,16 @@
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class DGTDataFetcher {
+    public static void main(String[] args) {
+        // Simulación de generación de GeoJSON
+        String geojson = "{ \"type\": \"FeatureCollection\", \"features\": [] }";
+
+        try (FileWriter file = new FileWriter("incidencias.geojson")) {
+            file.write(geojson);
+            System.out.println("GeoJSON actualizado correctamente.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
