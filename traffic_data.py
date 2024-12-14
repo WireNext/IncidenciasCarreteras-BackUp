@@ -37,6 +37,10 @@ def process_xml_from_url(url, region_name):
             network_management_type = situation.find(".//_0:networkManagementType", NS)
             direction_relative = situation.find(".//_0:directionRelative", NS)
 
+            # Extraer las coordenadas si están presentes
+            latitude = situation.find(".//_0:pointCoordinates/_0:latitude", NS)
+            longitude = situation.find(".//_0:pointCoordinates/_0:longitude", NS)
+
             # Asignar valores si están presentes y son válidos
             properties = {}
 
@@ -52,22 +56,22 @@ def process_xml_from_url(url, region_name):
             if direction_relative is not None and is_valid(direction_relative.text):
                 properties["direction"] = direction_relative.text
 
-            # Si no hay propiedades válidas, no agregamos este incidente
-            if properties:
-                # Crear la geometría (aquí puedes personalizar la ubicación)
+            # Si hay coordenadas válidas, agregar la geometría
+            if latitude is not None and longitude is not None and is_valid(latitude.text) and is_valid(longitude.text):
                 geometry = {
-                    "type": "Point",  # O puedes cambiar a "LineString" o "Polygon" si los datos lo requieren
-                    "coordinates": [-4.2257915, 41.61863]  # Cambia esto a las coordenadas correctas
+                    "type": "Point",
+                    "coordinates": [float(longitude.text), float(latitude.text)]  # Longitud, Latitud
                 }
 
-                # Agregar el incidente con las propiedades válidas
-                incident = {
-                    "type": "Feature",
-                    "properties": properties,
-                    "geometry": geometry
-                }
+                # Si no hay propiedades válidas, no agregamos este incidente
+                if properties:
+                    incident = {
+                        "type": "Feature",
+                        "properties": properties,
+                        "geometry": geometry
+                    }
 
-                incidents.append(incident)
+                    incidents.append(incident)
 
         # Crear el archivo GeoJSON
         geojson_data = {
