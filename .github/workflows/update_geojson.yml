@@ -1,61 +1,36 @@
-name: Build and Fetch DGT Data
+name: Actualizar tráfico
 
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
   schedule:
-    - cron: '*/15 * * * *'  # Ejecutar cada 15 minutos
+    - cron: '*/15 * * * *'  # Ejecutar automáticamente cada 15 minutos
+  workflow_dispatch:       # Permitir ejecución manual desde la interfaz de GitHub
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  run_script:
+    runs-on: ubuntu-latest  # Usar una máquina virtual con Ubuntu
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Hacer checkout del repositorio
+        uses: actions/checkout@v3
 
-      - name: Set up Java 17 (using Temurin distribution)
-        uses: actions/setup-java@v2
+      - name: Configurar Python
+        uses: actions/setup-python@v4
         with:
-          java-version: '17'
-          distribution: 'temurin'
+          python-version: '3.10'  # O la versión que prefieras
 
-      - name: Verify Maven installation
-        run: mvn --version  # Verifica que Maven está correctamente instalado
-
-      - name: Build with Maven
-        run: mvn clean install  # Compila el proyecto y genera el archivo GeoJSON en la raíz
-
-      - name: List files in the root directory
-        run: ls -la  # Verifica si el archivo GeoJSON está en la raíz
-
-      - name: Check if GeoJSON file exists
+      - name: Instalar dependencias
         run: |
-          if [ -f "incidencias.geojson" ]; then
-            echo "GeoJSON file exists"
-          else
-            echo "GeoJSON file does not exist"
-            exit 1
-          fi
+          python -m pip install --upgrade pip
+          pip install requests  # Instala las librerías que necesites
 
-      - name: Configure git for commit
+      - name: Ejecutar script
         run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          python trafico.py  # Reemplaza con el nombre de tu script
 
-      - name: Check Git status
-        run: git status  # Verifica si Git detecta el archivo como cambiado
-
-      - name: Add and commit GeoJSON file if exists
+      - name: Subir los resultados a GitHub (opcional)
         run: |
-          git add incidencias.geojson  # Añade el archivo GeoJSON desde la raíz
-          git diff --cached --quiet || git commit -m "Update GeoJSON file"  # Solo hace commit si hay cambios
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main  # Usa el GITHUB_TOKEN para autenticar el push
-
-      - name: Upload GeoJSON as artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: incidencias-geojson
-          path: incidencias.geojson  # El archivo GeoJSON está en la raíz
+          git config --global user.email "your-email@example.com"
+          git config --global user.name "Your Name"
+          git add .
+          git commit -m "Actualizar resultados de tráfico"
+          git push
