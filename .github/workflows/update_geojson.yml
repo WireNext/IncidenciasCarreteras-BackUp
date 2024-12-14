@@ -31,7 +31,7 @@ jobs:
       - name: List files in the root directory
         run: ls -la  # Verifica si el archivo GeoJSON está en la raíz
 
-      - name: Verify GeoJSON file exists
+      - name: Check if GeoJSON file exists
         run: |
           if [ -f "incidencias.geojson" ]; then
             echo "GeoJSON file exists"
@@ -45,13 +45,10 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Check if Git detects changes
+      - name: Check Git status
         run: git status  # Verifica si Git detecta el archivo como cambiado
 
-      - name: Pull latest changes
-        run: git pull origin main  # Asegúrate de que tu rama esté actualizada
-
-      - name: Commit GeoJSON file if updated
+      - name: Add and commit GeoJSON file if exists
         run: |
           git add incidencias.geojson  # Añade el archivo GeoJSON desde la raíz
           git diff --cached --quiet || git commit -m "Update GeoJSON file"  # Solo hace commit si hay cambios
