@@ -1,3 +1,13 @@
+name: Build and Fetch DGT Data
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Permite ejecutar manualmente el flujo de trabajo
+  schedule:
+    - cron: '*/15 * * * *'  # Ejecutar cada 15 minutos
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,7 +28,7 @@ jobs:
       - name: Build with Maven
         run: mvn clean install  # Compila el proyecto y genera el archivo GeoJSON en la raíz
 
-      - name: Check if the GeoJSON file exists in root directory
+      - name: Check if the GeoJSON file exists in the root directory
         run: |
           echo "Checking if incidencias.geojson exists in the root directory"
           ls -l  # Listará todo el contenido en la raíz del proyecto
