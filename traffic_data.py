@@ -33,29 +33,37 @@ def process_xml_from_url(url, region_name):
             network_management_type = situation.find(".//_0:networkManagementType", NS)
             direction_relative = situation.find(".//_0:directionRelative", NS)
 
-            # Si no se encuentra algún valor, asignar "Desconocido"
-            creation_time = situation_creation_time.text if situation_creation_time is not None else "Desconocida"
-            obstruction_type = environmental_obstruction_type.text if environmental_obstruction_type is not None else "Desconocido"
-            network_status = network_management_type.text if network_management_type is not None else "Desconocido"
-            direction = direction_relative.text if direction_relative is not None else "Desconocida"
+            # Asignar valores si están presentes, sino los dejamos fuera del GeoJSON
+            properties = {}
 
-            # Para cada incidencia, guardar la información en el formato necesario
-            incident = {
-                "type": "Feature",
-                "properties": {
-                    "incident_type": obstruction_type,
-                    "creation_time": creation_time,
-                    "network_status": network_status,
-                    "direction": direction,
-                    "region": region_name
-                },
-                "geometry": {
+            if situation_creation_time is not None:
+                properties["creation_time"] = situation_creation_time.text
+
+            if environmental_obstruction_type is not None:
+                properties["incident_type"] = environmental_obstruction_type.text
+
+            if network_management_type is not None:
+                properties["network_status"] = network_management_type.text
+
+            if direction_relative is not None:
+                properties["direction"] = direction_relative.text
+
+            # Si no hay propiedades, no agregamos este incidente
+            if properties:
+                # Crear la geometría (aquí puedes personalizar la ubicación)
+                geometry = {
                     "type": "Point",  # O puedes cambiar a "LineString" o "Polygon" si los datos lo requieren
-                    "coordinates": [-4.2257915, 41.61863]  # Cambia esto a las coordenadas correctas de cada incidencia
+                    "coordinates": [-4.2257915, 41.61863]  # Cambia esto a las coordenadas correctas
                 }
-            }
 
-            incidents.append(incident)
+                # Agregar el incidente con las propiedades válidas
+                incident = {
+                    "type": "Feature",
+                    "properties": properties,
+                    "geometry": geometry
+                }
+
+                incidents.append(incident)
 
         # Crear el archivo GeoJSON
         geojson_data = {
