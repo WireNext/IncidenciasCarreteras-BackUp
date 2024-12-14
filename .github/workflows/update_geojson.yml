@@ -13,10 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Java 17
+      - name: Set up Java 17 (using Temurin distribution)
         uses: actions/setup-java@v2
         with:
           java-version: '17'
+          distribution: 'temurin'
 
       - name: Build with Maven
         run: mvn clean install
