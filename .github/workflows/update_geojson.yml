@@ -25,7 +25,7 @@ jobs:
 
       - name: Ejecutar script
         run: |
-          python dgt_traffic_fetcher.py  # Reemplaza con el nombre de tu script
+          python traffic_data.geojson  # Reemplaza con el nombre de tu script
 
       - name: Subir los resultados a GitHub (opcional)
         run: |
