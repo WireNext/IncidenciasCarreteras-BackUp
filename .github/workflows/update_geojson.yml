@@ -27,7 +27,11 @@ jobs:
         pip install -r requirements.txt
 
     - name: Ejecutar script para generar GeoJSON
-      run: python generate_traffic_data.py
+      run: python traffic_data.py
+
+    - name: Verificar si el archivo GeoJSON ha cambiado
+      run: |
+        git diff --exit-code traffic_data.geojson || echo "El archivo ha cambiado"
 
     - name: Confirmar contenido generado
       run: cat traffic_data.geojson
