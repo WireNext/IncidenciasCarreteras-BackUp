@@ -7,7 +7,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- Datos del proyecto -->
-    <groupId>com.miempresa</groupId> <!-- Cambia por tu nombre de empresa o dominio -->
+    <groupId>com.wirenext</groupId> <!-- Cambia por tu nombre de empresa o dominio -->
     <artifactId>dgt-data-fetcher</artifactId> <!-- Nombre del artefacto -->
     <version>1.0-SNAPSHOT</version> <!-- Versión del artefacto -->
     <packaging>jar</packaging> <!-- Tipo de empaquetado -->
@@ -18,11 +18,6 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.12.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.8.1</version>
         </dependency>
     </dependencies>
 
