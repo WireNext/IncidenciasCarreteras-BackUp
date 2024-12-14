@@ -54,9 +54,22 @@ def process_xml_from_url(url, region_name):
                 print(f"Coordenadas no válidas para un incidente en {region_name}. Saltando este incidente.")
                 continue
 
-            # Extraer detalles del incidente
-            description = location_group.find(".//_0:situationRecord/_0:impact/_0:impactDetails/_0:trafficRestrictionType", NS)
-            description = description.text if description is not None else "No especificado"
+            # Extraer los detalles adicionales del incidente
+            # Fecha de creación
+            creation_time = location_group.find(".//_0:situationRecord/_0:situationRecordCreationTime", NS)
+            creation_time = creation_time.text if creation_time is not None else "Fecha desconocida"
+
+            # Motivo de la incidencia (obstrucción ambiental)
+            obstruction_type = location_group.find(".//_0:situationRecord/_0:environmentalObstructionType", NS)
+            obstruction_type = obstruction_type.text if obstruction_type is not None else "Motivo desconocido"
+
+            # Estado de la carretera (tipo de gestión de red)
+            network_status = location_group.find(".//_0:situationRecord/_0:networkManagementType", NS)
+            network_status = network_status.text if network_status is not None else "Estado desconocido"
+
+            # Dirección de la incidencia
+            direction = location_group.find(".//_0:situationRecord/_0:directionRelative", NS)
+            direction = direction.text if direction is not None else "Dirección desconocida"
 
             # Obtener el nombre de la ubicación
             location_name = location_group.find(".//_0:name/_0:descriptor/_0:value", NS)
@@ -66,12 +79,8 @@ def process_xml_from_url(url, region_name):
             road = location_group.find(".//_0:situationRecord/_0:situationRecordCreationReference", NS)
             road = road.text if road is not None else "Carretera desconocida"
 
-            # Obtener el tiempo de creación del incidente
-            time = location_group.find(".//_0:situationRecord/_0:situationRecordCreationTime", NS)
-            time = time.text if time is not None else "Hora desconocida"
-
             # Depuración: mostrar los valores extraídos
-            print(f"Incidente encontrado: {location_name}, {latitude}, {longitude}, {description}, {road}, {time}")
+            print(f"Incidente encontrado: {location_name}, {latitude}, {longitude}, {obstruction_type}, {network_status}, {direction}, {road}, {creation_time}")
 
             # Crear una Feature para el GeoJSON
             feature = {
@@ -82,10 +91,12 @@ def process_xml_from_url(url, region_name):
                 },
                 "properties": {
                     "region": region_name,
-                    "description": f"Incidente: {description} en la carretera {road} en {location_name}",
+                    "description": f"Incidente: {obstruction_type} en la carretera {road} en {location_name}",
                     "road": road,
-                    "time": time,
-                    "incident_type": description,
+                    "time": creation_time,
+                    "incident_type": obstruction_type,
+                    "status": network_status,
+                    "direction": direction,
                     "location_name": location_name
                 }
             }
