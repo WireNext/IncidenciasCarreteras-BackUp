@@ -1,4 +1,4 @@
-name: Build and Fetch DGT Data
+name: Upload GeoJSON Artifact
 
 on:
   push:
@@ -9,37 +9,15 @@ on:
     - cron: '*/15 * * * *'  # Ejecutar cada 15 minutos
 
 jobs:
-  build:
+  upload:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Java 17 (using Temurin distribution)
-        uses: actions/setup-java@v2
-        with:
-          java-version: '17'
-          distribution: 'temurin'
-
-      - name: Verify Maven installation
-        run: mvn --version  # Verifica que Maven está correctamente instalado
-
-      - name: Build with Maven
-        run: mvn clean install  # Compila el proyecto y genera el archivo GeoJSON en la raíz
-
       - name: Check files in the root directory
         run: ls -l  # Verifica si el archivo GeoJSON está en la raíz
-
-      - name: Check if the GeoJSON file exists in the root directory
-        run: |
-          echo "Checking if incidencias.geojson exists in the root directory"
-          if [ ! -f incidencias.geojson ]; then
-            echo "GeoJSON file does not exist!"
-            exit 1  # Esto provocará un error si el archivo no existe
-          else
-            echo "GeoJSON file exists."
-          fi
 
       - name: Upload GeoJSON as artifact
         uses: actions/upload-artifact@v3
