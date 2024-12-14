@@ -28,8 +28,11 @@ jobs:
       - name: Build with Maven
         run: mvn clean install  # Compila el proyecto y genera el archivo GeoJSON en 'target/'
 
-      - name: List files in target directory
-        run: ls -la target/  # Verifica si el archivo GeoJSON está dentro de target/
+      - name: Move GeoJSON to root directory
+        run: mv target/incidencias.geojson ./incidencias.geojson  # Mueve el archivo GeoJSON a la raíz
+
+      - name: List files in root directory
+        run: ls -la ./  # Verifica si el archivo GeoJSON está en la raíz
 
       - name: Configure git for commit
         run: |
@@ -41,7 +44,7 @@ jobs:
 
       - name: Commit GeoJSON file if updated
         run: |
-          git add target/incidencias.geojson  # Añade el archivo GeoJSON
+          git add ./incidencias.geojson  # Añade el archivo GeoJSON
           git diff --cached --quiet || git commit -m "Update GeoJSON file"  # Solo hace commit si hay cambios
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main  # Usa el GITHUB_TOKEN para autenticar el push
 
@@ -49,4 +52,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: incidencias-geojson
-          path: target/incidencias.geojson  # El archivo debería estar en 'target/'
+          path: ./incidencias.geojson  # El archivo debería estar en la raíz
