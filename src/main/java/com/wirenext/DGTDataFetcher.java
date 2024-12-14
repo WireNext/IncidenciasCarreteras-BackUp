@@ -18,7 +18,8 @@ public class DGTDataFetcher {
     );
 
     // Ruta de salida del archivo GeoJSON
-    private static final String OUTPUT_FILE = "incidencias.geojson";
+    private static final String OUTPUT_FILE = "incidencias.geojson";  // Archivo en la raíz
+
 
     public static void main(String[] args) {
         try {
