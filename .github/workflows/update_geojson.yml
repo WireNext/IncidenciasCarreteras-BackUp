@@ -1,11 +1,9 @@
 name: Update GeoJSON
 
 on:
-  # Ejecutar manualmente desde la interfaz de GitHub
   workflow_dispatch:
-  # Ejecutar automáticamente cada 15 minutos
   schedule:
-    - cron: '*/15 * * * *' # Esto es el cron que ejecuta cada 15 minutos
+    - cron: '*/15 * * * *'
 
 jobs:
   generate-geojson:
@@ -18,13 +16,14 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
-          java-version: '11' # O la versión de Java que necesites
+          java-version: '11'  # O la versión que prefieras
+          distribution: 'adoptopenjdk'  # O la distribución que prefieras (adoptopenjdk, zulu, temurin)
 
       - name: Build Java project
-        run: mvn clean install # O el comando que usas para compilar tu código
+        run: mvn clean install  # O el comando que usas para compilar tu código
 
       - name: Run DGT Data Fetcher
-        run: java -jar target/dgt-data-fetcher.jar # O el comando adecuado para ejecutar tu código
+        run: java -jar target/dgt-data-fetcher.jar  # O el comando adecuado para ejecutar tu código
 
       - name: Upload GeoJSON
         uses: actions/upload-artifact@v3
