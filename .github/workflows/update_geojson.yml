@@ -1,13 +1,3 @@
-name: Build and Fetch DGT Data
-
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-  schedule:
-    - cron: '*/15 * * * *'  # Ejecutar cada 15 minutos
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,6 +14,9 @@ jobs:
 
       - name: Verify Maven installation
         run: mvn --version  # Verifica que Maven está correctamente instalado
+
+      - name: Create target directory (in case it's not created)
+        run: mkdir -p target  # Crea el directorio target si no existe
 
       - name: Build with Maven
         run: mvn clean install  # Compila el proyecto y genera el archivo GeoJSON en 'target/'
