@@ -46,6 +46,8 @@ def process_xml_from_url(url, region_name):
             environmental_obstruction_type = situation.find(".//_0:environmentalObstructionType", NS)
             network_management_type = situation.find(".//_0:networkManagementType", NS)
             direction_relative = situation.find(".//_0:directionRelative", NS)
+            road_number = situation.find(".//_0:roadNumber", NS)
+            reference_point_distance = situation.find(".//_0:referencePointDistance", NS)
 
             # Extraer las coordenadas de cada incidente
             coordinates = situation.findall(".//_0:pointCoordinates", NS)
@@ -85,6 +87,13 @@ def process_xml_from_url(url, region_name):
                 elif direction_relative.text.lower() == 'negative':
                     properties["direction"] = "Decreciente"
 
+            # Asignar la carretera y el punto kilométrico si están presentes
+            if road_number is not None and is_valid(road_number.text):
+                properties["road"] = road_number.text
+
+            if reference_point_distance is not None and is_valid(reference_point_distance.text):
+                properties["kilometer_point"] = reference_point_distance.text
+
             # Si hay coordenadas válidas, agregar la geometría
             if latitude is not None and longitude is not None:
                 geometry = {
@@ -93,10 +102,19 @@ def process_xml_from_url(url, region_name):
                 }
 
                 # Crear el campo de descripción personalizado
-                description = f"<b>Motivo:</b> {properties.get('incident_type', 'Desconocido')}<br>"
-                description += f"<b>Fecha de Creación:</b> {properties.get('creation_time', 'Desconocido')}<br>"
-                description += f"<b>Estado de la Carretera:</b> {properties.get('network_status', 'Desconocido')}<br>"
-                description += f"<b>Dirección:</b> {properties.get('direction', 'Desconocida')}<br>"
+                description = ""
+                if 'incident_type' in properties:
+                    description += f"<b>Motivo:</b> {properties['incident_type']}<br>"
+                if 'creation_time' in properties:
+                    description += f"<b>Fecha de Creación:</b> {properties['creation_time']}<br>"
+                if 'network_status' in properties:
+                    description += f"<b>Estado de la Carretera:</b> {properties['network_status']}<br>"
+                if 'direction' in properties:
+                    description += f"<b>Dirección:</b> {properties['direction']}<br>"
+                if 'road' in properties:
+                    description += f"<b>Carretera:</b> {properties['road']}<br>"
+                if 'kilometer_point' in properties:
+                    description += f"<b>Punto Kilométrico:</b> {properties['kilometer_point']}<br>"
 
                 # Crear el objeto del incidente con la descripción incluida
                 incident = {
