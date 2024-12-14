@@ -13,7 +13,6 @@ REGIONS = {
 # Definir el espacio de nombres para el XML
 NS = {'_0': 'http://datex2.eu/schema/1_0/1_0'}
 
-# Función para comprobar si un valor es válido (no es nulo ni "Desconocido")
 # Función para comprobar si un valor es válido (no es nulo, "Desconocido", ni vacío)
 def is_valid(value):
     return value is not None and value.strip() and value.lower() != "desconocido"
@@ -27,9 +26,8 @@ def format_datetime(datetime_str):
     except ValueError:
         return datetime_str  # Si no se puede convertir, devolver el valor original
 
-# Función para realizar las sustituciones de palabras
+# Función para traducir los tipos de incidentes
 def translate_incident_type(incident_type):
-    # Realizar las sustituciones
     translations = {
         "flooding": "Inundación",
         "roadClosed": "Corte Total",
@@ -56,98 +54,25 @@ def process_xml_from_url(url, region_name):
             # Extraer los datos relevantes
             situation_creation_time = situation.find(".//_0:situationRecordCreationTime", NS)
             environmental_obstruction_type = situation.find(".//_0:environmentalObstructionType", NS)
-            network_management_type = situation.find(".//_0:networkManagementType", NS)
-            direction_relative = situation.find(".//_0:directionRelative", NS)
-            road_number = situation.find(".//_0:roadNumber", NS)
-            reference_point_distance = situation.find(".//_0:referencePointDistance", NS)
-
-            # Extraer las coordenadas de cada incidente
-            coordinates = situation.findall(".//_0:pointCoordinates", NS)
-            latitude = None
-            longitude = None
-
-            for coord in coordinates:
-                lat = coord.find(".//_0:latitude", NS)
-                lon = coord.find(".//_0:longitude", NS)
-
-                # Si las coordenadas están presentes y son válidas, asignar
-                if lat is not None and lon is not None and is_valid(lat.text) and is_valid(lon.text):
-                    latitude = lat.text
-                    longitude = lon.text
-                    break  # Usamos la primera coordenada válida encontrada
 
             # Asignar valores a las propiedades si están presentes y son válidas
             properties = {}
 
             # Formatear la fecha y hora si está presente
             if situation_creation_time is not None and is_valid(situation_creation_time.text):
-                formatted_time = format_datetime(situation_creation_time.text)
-                properties["creation_time"] = formatted_time
+                properties["creation_time"] = format_datetime(situation_creation_time.text)
 
-            # Asignar el tipo de incidente y traducirlo si es necesario
+            # Traducir el tipo de incidente si está presente
             if environmental_obstruction_type is not None and is_valid(environmental_obstruction_type.text):
-                translated_type = translate_incident_type(environmental_obstruction_type.text)
-                properties["incident_type"] = translated_type
+                properties["incident_type"] = translate_incident_type(environmental_obstruction_type.text)
 
-            # Asignar el estado de la carretera si está presente
-            if network_management_type is not None and is_valid(network_management_type.text):
-                properties["network_status"] = network_management_type.text
-
-            # Asignar la dirección según 'positive' o 'negative'
-            if direction_relative is not None and is_valid(direction_relative.text):
-                if direction_relative.text.lower() == 'positive':
-                    properties["direction"] = "Creciente"
-                elif direction_relative.text.lower() == 'negative':
-                    properties["direction"] = "Decreciente"
-
-            # Asignar la carretera y el punto kilométrico si están presentes
-            if road_number is not None and is_valid(road_number.text):
-                properties["road"] = road_number.text
-
-            if reference_point_distance is not None and is_valid(reference_point_distance.text):
-                properties["kilometer_point"] = reference_point_distance.text
-
-            # Si hay coordenadas válidas, agregar la geometría
-            if latitude is not None and longitude is not None:
-                geometry = {
-                    "type": "Point",
-                    "coordinates": [float(longitude), float(latitude)]  # Longitud, Latitud
-                }
-
-                # Crear el campo de descripción personalizado
-                description = ""
-                if 'incident_type' in properties:
-                    description += f"<b>Motivo:</b> {properties['incident_type']}<br>"
-                if 'creation_time' in properties:
-                    description += f"<b>Fecha de Creación:</b> {properties['creation_time']}<br>"
-                if 'network_status' in properties:
-                    description += f"<b>Estado de la Carretera:</b> {properties['network_status']}<br>"
-                if 'direction' in properties:
-                    description += f"<b>Dirección:</b> {properties['direction']}<br>"
-                if 'road' in properties:
-                    description += f"<b>Carretera:</b> {properties['road']}<br>"
-                if 'kilometer_point' in properties:
-                    description += f"<b>Punto Kilométrico:</b> {properties['kilometer_point']}<br>"
-
-                # Crear el objeto del incidente con la descripción incluida
-                incident = {
+            # Crear el objeto del incidente
+            if properties:
+                incidents.append({
                     "type": "Feature",
-                    "properties": {
-                        "description": description
-                    },
-                    "geometry": geometry
-                }
-                incidents.append(incident)
-                # Solo agregamos al incidente si la descripción no está vacía
-                if description.strip():
-                    incident = {
-                        "type": "Feature",
-                        "properties": {
-                            "description": description
-                        },
-                        "geometry": geometry
-                    }
-                    incidents.append(incident)
+                    "properties": properties,
+                    "geometry": None  # Asigna una geometría si es necesario
+                })
 
         # Crear el archivo GeoJSON
         geojson_data = {
