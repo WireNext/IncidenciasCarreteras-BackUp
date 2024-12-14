@@ -1,41 +1,28 @@
-name: Update GeoJSON
+name: Build and Fetch DGT Data
 
 on:
-  workflow_dispatch:  # Permite la ejecución manual
-  schedule:
-    - cron: '*/15 * * * *'  # Ejecuta cada 15 minutos
+  push:
+    branches:
+      - main
 
 jobs:
-  generate-geojson:
+  build:
     runs-on: ubuntu-latest
-
+    
     steps:
-    # Paso 1: Obtener el código desde el repositorio
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    # Paso 2: Configurar Java 17
-    - name: Set up Java
-      uses: actions/setup-java@v3
-      with:
-        java-version: '17'  # Usar Java 17
-        distribution: 'temurin'
+      - name: Set up Java 17
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
 
-    # Paso 3: Compilar el proyecto con Maven
-    - name: Build Java project
-      run: mvn clean install
+      - name: Build with Maven
+        run: mvn clean install
 
-    # Paso 4: Ejecutar el programa Java para obtener los datos y generar el archivo GeoJSON
-    - name: Run DGT Data Fetcher
-      run: java -jar target/dgt-data-fetcher-1.0-SNAPSHOT.jar
-
-    # Paso 5: Subir el archivo GeoJSON generado
-    - name: Upload GeoJSON
-      uses: actions/upload-artifact@v3
-      with:
-        name: geojson
-        path: incidencias.geojson  # Ruta del archivo GeoJSON generado
-
-    # Paso 6: Finalizar el trabajo
-    - name: Complete job
-      run: echo "GeoJSON generado y subido correctamente."
+      - name: Upload GeoJSON as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: incidencias-geojson
+          path: target/incidencias.geojson
