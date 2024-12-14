@@ -28,6 +28,7 @@ def format_datetime(datetime_str):
 
 # Función para realizar las sustituciones de palabras
 # Función para realizar las sustituciones de palabras
+# Función para realizar las sustituciones de palabras con depuración
 def translate_incident_type(incident_type):
     # Realizar las sustituciones con manejo más flexible
     translations = {
@@ -37,11 +38,23 @@ def translate_incident_type(incident_type):
         "narrowlanes": "Carriles Estrechos"
     }
     
-    # Convertir el tipo de incidente a minúsculas para que sea más flexible en la comparación
-    translated_type = translations.get(incident_type.strip().lower(), incident_type)
+    # Depuración: Imprimir el valor original
+    print(f"Original incident type: {incident_type}")
+
+    # Convertir el tipo de incidente a minúsculas y eliminar espacios
+    cleaned_incident_type = incident_type.strip().lower()
+
+    # Depuración: Imprimir el valor después de la limpieza
+    print(f"Cleaned incident type: {cleaned_incident_type}")
+
+    # Realizar la sustitución
+    translated_type = translations.get(cleaned_incident_type, incident_type)
+
+    # Depuración: Imprimir el tipo traducido
+    print(f"Translated incident type: {translated_type}")
     
-    # Si no hay traducción, se devuelve el valor original
     return translated_type
+    
 # Función para procesar un archivo XML desde una URL y extraer los datos necesarios
 def process_xml_from_url(url, region_name):
     try:
