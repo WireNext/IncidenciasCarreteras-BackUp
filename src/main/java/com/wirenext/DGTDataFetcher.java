@@ -5,6 +5,7 @@ import java.util.*;
 import javax.xml.parsers.*;
 import org.w3c.dom.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
+package com.wirenext;
 
 public class DGTDataFetcher {
     // Lista de URLs de la DGT
