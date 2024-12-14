@@ -43,10 +43,10 @@ jobs:
         run: |
           git add target/incidencias.geojson  # Añade el archivo GeoJSON
           git diff --cached --quiet || git commit -m "Update GeoJSON file"  # Solo hace commit si hay cambios
-          git push origin main  # Hacer push de los cambios a la rama main
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main  # Usa el GITHUB_TOKEN para autenticar el push
 
       - name: Upload GeoJSON as artifact
         uses: actions/upload-artifact@v3
         with:
           name: incidencias-geojson
-          path: target/incidencias.geojson  # El archivo de
+          path: target/incidencias.geojson  # El archivo debería estar en 'target/'
