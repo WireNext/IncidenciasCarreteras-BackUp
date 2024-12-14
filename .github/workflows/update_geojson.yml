@@ -1,32 +1,41 @@
 name: Update GeoJSON
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # Permite la ejecución manual
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/15 * * * *'  # Ejecuta cada 15 minutos
 
 jobs:
   generate-geojson:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    # Paso 1: Obtener el código desde el repositorio
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Set up Java
-        uses: actions/setup-java@v3
-        with:
-          java-version: '11'  # O la versión que prefieras
-          distribution: 'temurin'  # Usamos 'temurin' para Eclipse Temurin
+    # Paso 2: Configurar Java 17
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'  # Usar Java 17
+        distribution: 'temurin'
 
-      - name: Build Java project
-        run: mvn clean install  # O el comando que usas para compilar tu código
+    # Paso 3: Compilar el proyecto con Maven
+    - name: Build Java project
+      run: mvn clean install
 
-      - name: Run DGT Data Fetcher
-        run: java -jar target/dgt-data-fetcher.jar  # O el comando adecuado para ejecutar tu código
+    # Paso 4: Ejecutar el programa Java para obtener los datos y generar el archivo GeoJSON
+    - name: Run DGT Data Fetcher
+      run: java -jar target/dgt-data-fetcher-1.0-SNAPSHOT.jar
 
-      - name: Upload GeoJSON
-        uses: actions/upload-artifact@v3
-        with:
-          name: geojson-output
-          path: incidencias.geojson
+    # Paso 5: Subir el archivo GeoJSON generado
+    - name: Upload GeoJSON
+      uses: actions/upload-artifact@v3
+      with:
+        name: geojson
+        path: incidencias.geojson  # Ruta del archivo GeoJSON generado
+
+    # Paso 6: Finalizar el trabajo
+    - name: Complete job
+      run: echo "GeoJSON generado y subido correctamente."
