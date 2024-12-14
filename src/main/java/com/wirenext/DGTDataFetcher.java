@@ -12,7 +12,7 @@ public class DGTDataFetcher {
 
     // Lista de URLs de la DGT
     private static final List<String> DGT_API_URLS = Arrays.asList(
-        "https://nap.dgt.es/dataset/incidencias-dgt", // Excepto Pais Vasco y Cataluña
+        "https://infocar.dgt.es/datex2/dgt/SituationPublication/all/content.xml", // Excepto Pais Vasco y Cataluña
         "https://nap.dgt.es/dataset/incidencias-dt-gv", // Pais Vasco
         "https://nap.dgt.es/dataset/incidencias-sct"  // Cataluña
     );
