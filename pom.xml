@@ -1,45 +1,54 @@
-name: Build and Fetch DGT Data
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-  schedule:
-    - cron: '*/15 * * * *'  # Ejecutar cada 15 minutos
+    <!-- Información general del proyecto -->
+    <modelVersion>4.0.0</modelVersion>
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+    <!-- Datos del proyecto -->
+    <groupId>com.wirenext</groupId> <!-- Cambia por tu nombre de empresa o dominio -->
+    <artifactId>dgt-data-fetcher</artifactId> <!-- Nombre del artefacto -->
+    <version>1.0-SNAPSHOT</version> <!-- Versión del artefacto -->
+    <packaging>jar</packaging> <!-- Tipo de empaquetado -->
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    <!-- Dependencias necesarias -->
+    <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.12.5</version>
+        </dependency>
+    </dependencies>
 
-      - name: Set up Java 17 (using Temurin distribution)
-        uses: actions/setup-java@v2
-        with:
-          java-version: '17'
-          distribution: 'temurin'
+    <!-- Configuración del proceso de construcción -->
+    <build>
+        <plugins>
+            <!-- Configuración del compilador para usar Java 17 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>17</source> <!-- Java 17 -->
+                    <target>17</target> <!-- Java 17 -->
+                </configuration>
+            </plugin>
 
-      - name: Verify Maven installation
-        run: |
-          mvn --version  # Verifica que Maven está correctamente instalado
-
-      - name: Create target directory (optional)
-        run: |
-          mkdir -p target  # Crea el directorio 'target' manualmente en caso de que no exista
-
-      - name: Build with Maven
-        run: mvn clean install  # Compila el proyecto y genera el archivo GeoJSON en 'target/'
-
-      - name: List files in target directory
-        run: |
-          echo "Listing files in target directory"
-          ls -R target/  # Lista todos los archivos generados en 'target/'
-
-      - name: Upload GeoJSON as artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: incidencias-geojson
-          path: target/incidencias.geojson  # Asegúrate de que el archivo GeoJSON esté disponible después de la ejecución de Maven
+            <!-- Configuración del plugin para empaquetar el JAR -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <archive>
+                        <manifestEntries>
+                            <!-- Aquí debe ir el paquete correcto -->
+                            <Main-Class>com.wirenext.DGTDataFetcher</Main-Class>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
