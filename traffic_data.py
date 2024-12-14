@@ -9,6 +9,7 @@ REGIONS = {
     "Resto España": "http://infocar.dgt.es/datex2/dgt/SituationPublication/all/content.xml"
 }
 
+# Mantener el nombre del archivo sin cambios
 OUTPUT_FILE = "traffic_data.geojson"
 
 # Estructura inicial del GeoJSON
@@ -35,12 +36,20 @@ def process_xml_from_url(url, region_name):
             description = incident.find("description").text
             road = incident.find("road").text
 
+            # Verificar que las coordenadas sean válidas antes de agregarlas
+            try:
+                latitude = float(latitude)
+                longitude = float(longitude)
+            except (ValueError, TypeError):
+                print(f"Coordenadas inválidas para incidente en {road}. Saltando este incidente.")
+                continue
+
             # Crear una Feature para el GeoJSON
             feature = {
                 "type": "Feature",
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [float(longitude), float(latitude)]
+                    "coordinates": [longitude, latitude]
                 },
                 "properties": {
                     "region": region_name,
