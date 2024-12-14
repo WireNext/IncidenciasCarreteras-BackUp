@@ -26,7 +26,9 @@ jobs:
         run: mvn clean install
 
       - name: List files in target directory  # Paso extra para comprobar los archivos generados
-        run: ls -l target/
+        run: |
+          echo "Listing files in target directory"
+          ls -R target/  # Listar recursivamente los archivos dentro del directorio target
 
       - name: Upload GeoJSON as artifact
         uses: actions/upload-artifact@v3
