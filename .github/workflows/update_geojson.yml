@@ -1,4 +1,4 @@
-name: Upload GeoJSON Artifact
+name: Build and Fetch DGT Data
 
 on:
   push:
@@ -9,18 +9,34 @@ on:
     - cron: '*/15 * * * *'  # Ejecutar cada 15 minutos
 
 jobs:
-  upload:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Check files in the root directory
-        run: ls -l  # Verifica si el archivo GeoJSON está en la raíz
-
-      - name: Upload GeoJSON as artifact
-        uses: actions/upload-artifact@v3
+      - name: Set up Java 17 (using Temurin distribution)
+        uses: actions/setup-java@v2
         with:
-          name: incidencias-geojson
-          path: incidencias.geojson  # Asegúrate de que el archivo GeoJSON esté en la raíz
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Verify Maven installation
+        run: mvn --version  # Verifica que Maven está correctamente instalado
+
+      - name: Build with Maven
+        run: mvn clean install  # Compila el proyecto y genera el archivo GeoJSON en la raíz del repositorio
+
+      - name: List files in the root directory
+        run: ls -l  # Verifica que el archivo GeoJSON esté presente
+
+      - name: Commit GeoJSON file
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Update GeoJSON file"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
