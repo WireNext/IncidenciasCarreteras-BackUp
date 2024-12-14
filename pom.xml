@@ -43,8 +43,8 @@
                 <configuration>
                     <archive>
                         <manifestEntries>
-                            <!-- Asegúrate de que la clase principal esté especificada con su paquete completo -->
-                            <Main-Class>com.miempresa.DGTDataFetcher</Main-Class>
+                            <!-- Aquí debe ir el paquete correcto -->
+                            <Main-Class>com.wirenext.DGTDataFetcher</Main-Class>
                         </manifestEntries>
                     </archive>
                 </configuration>
