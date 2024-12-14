@@ -13,8 +13,8 @@ public class DGTDataFetcher {
     // Lista de URLs de la DGT
     private static final List<String> DGT_API_URLS = Arrays.asList(
         "https://infocar.dgt.es/datex2/dgt/SituationPublication/all/content.xml", // Excepto Pais Vasco y Cataluña
-        "https://nap.dgt.es/dataset/incidencias-dt-gv", // Pais Vasco
-        "https://nap.dgt.es/dataset/incidencias-sct"  // Cataluña
+        "https://infocar.dgt.es/datex2/dt-gv/SituationPublication/all/content.xml", // Pais Vasco
+        "https://infocar.dgt.es/datex2/sct/SituationPublication/all/content.xml"  // Cataluña
     );
 
     // Ruta de salida del archivo GeoJSON
