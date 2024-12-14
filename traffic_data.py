@@ -54,11 +54,11 @@ def process_xml_from_url(url, region_name):
             location_name = location_group.find(".//_0:name/_0:descriptor/_0:value", NS)
             location_name = location_name.text if location_name is not None else "Desconocida"
 
-            # Obtener el identificador de la carretera
+            # Obtener la carretera
             road = location_group.find(".//_0:situationRecord/_0:situationRecordCreationReference", NS)
             road = road.text if road is not None else "Desconocida"
 
-            # Obtener la hora de creación del incidente
+            # Obtener el tiempo de creación del incidente
             time = location_group.find(".//_0:situationRecord/_0:situationRecordCreationTime", NS)
             time = time.text if time is not None else "Desconocido"
 
