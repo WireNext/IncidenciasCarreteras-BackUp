@@ -39,8 +39,20 @@ def process_xml_from_url(url, region_name):
             longitude = location_group.find(".//_0:pointCoordinates/_0:longitude", NS).text
             location_name = location_group.find(".//_0:name/_0:descriptor/_0:value", NS).text
 
+            # Extraer más detalles: tipo de incidente, carretera, hora, etc.
+            description = location_group.find(".//_0:situationRecord/_0:impact/_0:impactDetails/_0:trafficRestrictionType", NS)
+            description = description.text if description is not None else "Desconocido"
+
+            # Obtener información sobre la carretera
+            road = location_group.find(".//_0:situationRecord/_0:situationRecordCreationReference", NS)
+            road = road.text if road is not None else "Desconocida"
+
+            # Fecha y hora (si está disponible)
+            time = location_group.find(".//_0:situationRecord/_0:situationRecordCreationTime", NS)
+            time = time.text if time is not None else "Desconocido"
+
             # Depuración: verificar qué datos se están extrayendo
-            print(f"Extrayendo incidente: {location_name}, {latitude}, {longitude}")
+            print(f"Extrayendo incidente: {location_name}, {latitude}, {longitude}, {description}, {road}, {time}")
 
             # Verificar que las coordenadas sean válidas antes de agregarlas
             try:
@@ -59,8 +71,10 @@ def process_xml_from_url(url, region_name):
                 },
                 "properties": {
                     "region": region_name,
-                    "description": location_name,
-                    "road": "Desconocido"  # Aquí puedes poner más información si está disponible
+                    "description": f"{description} en {road} ({location_name})",
+                    "road": road,
+                    "time": time,
+                    "incident_type": description
                 }
             }
 
