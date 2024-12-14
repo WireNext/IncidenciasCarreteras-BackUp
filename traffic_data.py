@@ -13,7 +13,7 @@ REGIONS = {
 # Definir el espacio de nombres para el XML
 NS = {'_0': 'http://datex2.eu/schema/1_0/1_0'}
 
-# Función para comprobar si un valor es válido (no es nulo ni "Desconocido")
+# Función para comprobar si un valor es válido (no es nulo, "Desconocido", ni vacío)
 def is_valid(value):
     return value is not None and value.strip() and value.lower() != "desconocido"
 
@@ -128,16 +128,17 @@ def process_xml_from_url(url, region_name):
                 if 'kilometer_point' in properties:
                     description += f"<b>Punto Kilométrico:</b> {properties['kilometer_point']}<br>"
 
-                # Crear el objeto del incidente con la descripción incluida
-                incident = {
-                    "type": "Feature",
-                    "properties": {
-                        "description": description
-                    },
-                    "geometry": geometry
-                }
+                # Solo agregamos al incidente si la descripción no está vacía
+                if description.strip():
+                    incident = {
+                        "type": "Feature",
+                        "properties": {
+                            "description": description
+                        },
+                        "geometry": geometry
+                    }
 
-                incidents.append(incident)
+                    incidents.append(incident)
 
         # Crear el archivo GeoJSON
         geojson_data = {
