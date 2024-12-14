@@ -1,3 +1,5 @@
+package com.wirenext; // El paquete debe estar al principio
+
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -5,9 +7,9 @@ import java.util.*;
 import javax.xml.parsers.*;
 import org.w3c.dom.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
-package com.wirenext;
 
 public class DGTDataFetcher {
+
     // Lista de URLs de la DGT
     private static final List<String> DGT_API_URLS = Arrays.asList(
         "https://nap.dgt.es/dataset/incidencias-dgt", // Excepto Pais Vasco y Cataluña
