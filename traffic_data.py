@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as ET
 import requests
+import json
 
 # Lista de regiones con sus respectivas URLs de archivos XML
 REGIONS = {
@@ -21,6 +22,9 @@ def process_xml_from_url(url, region_name):
         # Parsear el contenido XML
         root = ET.fromstring(response.content)
 
+        # Lista para almacenar los incidentes procesados
+        incidents = []
+
         # Procesar los incidentes en el archivo XML
         for situation in root.findall(".//_0:situation", NS):
             # Extraer los datos relevantes
@@ -35,12 +39,35 @@ def process_xml_from_url(url, region_name):
             network_status = network_management_type.text if network_management_type is not None else "Desconocido"
             direction = direction_relative.text if direction_relative is not None else "Desconocida"
 
-            # Mostrar la información para cada incidente
-            print(f"Incidente: {obstruction_type}")
-            print(f"Fecha de Creación: {creation_time}")
-            print(f"Estado de la carretera: {network_status}")
-            print(f"Dirección: {direction}")
-            print("------")
+            # Para cada incidencia, guardar la información en el formato necesario
+            incident = {
+                "type": "Feature",
+                "properties": {
+                    "incident_type": obstruction_type,
+                    "creation_time": creation_time,
+                    "network_status": network_status,
+                    "direction": direction,
+                    "region": region_name
+                },
+                "geometry": {
+                    "type": "Point",  # O puedes cambiar a "LineString" o "Polygon" si los datos lo requieren
+                    "coordinates": [-4.2257915, 41.61863]  # Cambia esto a las coordenadas correctas de cada incidencia
+                }
+            }
+
+            incidents.append(incident)
+
+        # Crear el archivo GeoJSON
+        geojson_data = {
+            "type": "FeatureCollection",
+            "features": incidents
+        }
+
+        # Guardar el archivo GeoJSON
+        with open("traffic_data.geojson", "w") as f:
+            json.dump(geojson_data, f, indent=2)
+
+        print(f"Archivo GeoJSON generado con éxito para {region_name}")
 
     except Exception as e:
         print(f"Error procesando {region_name} desde {url}: {e}")
