@@ -26,16 +26,6 @@ def format_datetime(datetime_str):
     except ValueError:
         return datetime_str  # Si no se puede convertir, devolver el valor original
 
-# Función para traducir los tipos de incidentes
-def translate_incident_type(incident_type):
-    translations = {
-        "flooding": "Inundación",
-        "roadClosed": "Corte Total",
-        "restrictions": "Restricciones",
-        "narrowLanes": "Carriles Estrechos"
-    }
-    return translations.get(incident_type.lower(), incident_type)  # Retorna la traducción o el valor original
-
 # Función para procesar un archivo XML desde una URL y extraer los datos necesarios
 def process_xml_from_url(url, region_name):
     try:
