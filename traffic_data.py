@@ -13,6 +13,13 @@ REGIONS = {
 # Definir el espacio de nombres para el XML
 NS = {'_0': 'http://datex2.eu/schema/1_0/1_0'}
 
+# Diccionario de traducciones
+TRANSLATIONS = {
+    "roadClosed": "Corte Total",
+    "restrictions": "Restricciones",
+    "narrowLanes": "Carriles Estrechos"
+}
+
 # Función para comprobar si un valor es válido (no es nulo, "Desconocido", ni vacío)
 def is_valid(value):
     return value is not None and value.strip() and value.lower() != "desconocido"
@@ -54,7 +61,9 @@ def process_xml_from_url(url, region_name):
 
             # Traducir el tipo de incidente si está presente
             if environmental_obstruction_type is not None and is_valid(environmental_obstruction_type.text):
-                properties["incident_type"] = translate_incident_type(environmental_obstruction_type.text)
+                original_type = environmental_obstruction_type.text
+                translated_type = TRANSLATIONS.get(original_type, original_type)  # Buscar traducción, usar original si no hay
+                properties["incident_type"] = translated_type
 
             # Crear el objeto del incidente
             if properties:
