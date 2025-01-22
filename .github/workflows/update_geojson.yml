@@ -1,4 +1,4 @@
-name: Actualizar GeoJSON
+  name: Actualizar GeoJSON
 
 on:
   schedule:
@@ -27,7 +27,7 @@ jobs:
         run: rm -f *.geojson # Elimina cualquier archivo GeoJSON previamente generado
 
       - name: Ejecutar script de actualización
-        run: python tu_script.py # Cambia "tu_script.py" por el nombre de tu archivo Python
+        run: python traffic_data.py # Cambia "tu_script.py" por el nombre de tu archivo Python
 
       - name: Auto Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v4
