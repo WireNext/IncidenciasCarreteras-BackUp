@@ -20,11 +20,10 @@ def is_valid(value):
 # Función para convertir la fecha y hora a un formato más bonito
 def format_datetime(datetime_str):
     try:
-        # Convertir la fecha y hora de ISO 8601 a un formato más amigable
         dt = datetime.fromisoformat(datetime_str)
         return dt.strftime("%d/%m/%Y - %H:%M:%S")
     except ValueError:
-        return datetime_str  # Si no se puede convertir, devolver el valor original
+        return datetime_str
 
 # Función para traducir tipos de incidentes
 def translate_incident_type(incident_type):
@@ -38,48 +37,60 @@ def translate_incident_type(incident_type):
 # Función para procesar un archivo XML desde una URL y extraer los datos necesarios
 def process_xml_from_url(url, region_name):
     try:
-        # Descargar el archivo XML desde la URL
         response = requests.get(url)
-        response.raise_for_status()  # Verifica errores HTTP
+        response.raise_for_status()
 
-        # Parsear el contenido XML
         root = ET.fromstring(response.content)
-
-        # Lista para almacenar los incidentes procesados
         incidents = []
 
-        # Procesar los incidentes en el archivo XML
         for situation in root.findall(".//_0:situation", NS):
-            # Extraer los datos relevantes
-            situation_creation_time = situation.find(".//_0:situationRecordCreationTime", NS)
-            environmental_obstruction_type = situation.find(".//_0:environmentalObstructionType", NS)
+            creation_time = situation.find(".//_0:situationRecordCreationTime", NS)
+            incident_type = situation.find(".//_0:environmentalObstructionType", NS)
+            road_name = situation.find(".//_0:roadName", NS)
+            direction = situation.find(".//_0:directionBound", NS)
+            km_point = situation.find(".//_0:affectedLocation/_0:startOfLocation/_0:pointCoordinates/_0:pointCoordinate", NS)
+            coordinates = situation.findall(".//_0:pointCoordinates/_0:pointCoordinate", NS)
 
-            # Asignar valores a las propiedades si están presentes y son válidas
+            # Construir las propiedades del incidente
             properties = {}
+            if creation_time is not None and is_valid(creation_time.text):
+                properties["description"] = f"<b>Fecha de Creación:</b> {format_datetime(creation_time.text)}<br>"
+            if incident_type is not None and is_valid(incident_type.text):
+                properties["description"] += f"<b>Tipo de Incidente:</b> {translate_incident_type(incident_type.text)}<br>"
+            if road_name is not None and is_valid(road_name.text):
+                properties["description"] += f"<b>Carretera:</b> {road_name.text}<br>"
+            if direction is not None and is_valid(direction.text):
+                properties["description"] += f"<b>Dirección:</b> {direction.text}<br>"
+            if km_point is not None and is_valid(km_point.text):
+                properties["description"] += f"<b>Punto Kilométrico:</b> {km_point.text}<br>"
 
-            # Formatear la fecha y hora si está presente
-            if situation_creation_time is not None and is_valid(situation_creation_time.text):
-                properties["creation_time"] = format_datetime(situation_creation_time.text)
+            # Crear la geometría si las coordenadas están disponibles
+            geometry = None
+            if coordinates and len(coordinates) == 2:
+                try:
+                    lng = float(coordinates[0].text)
+                    lat = float(coordinates[1].text)
+                    geometry = {
+                        "type": "Point",
+                        "coordinates": [lng, lat]
+                    }
+                except (TypeError, ValueError):
+                    pass
 
-            # Traducir el tipo de incidente si está presente
-            if environmental_obstruction_type is not None and is_valid(environmental_obstruction_type.text):
-                properties["incident_type"] = translate_incident_type(environmental_obstruction_type.text)
-
-            # Crear el objeto del incidente
-            if properties:
+            # Añadir el incidente si tiene datos válidos
+            if properties and geometry:
                 incidents.append({
                     "type": "Feature",
                     "properties": properties,
-                    "geometry": None  # Asigna una geometría si es necesario
+                    "geometry": geometry
                 })
 
-        # Crear el archivo GeoJSON
+        # Crear y guardar el archivo GeoJSON
         geojson_data = {
             "type": "FeatureCollection",
             "features": incidents
         }
 
-        # Guardar el archivo GeoJSON
         file_name = "traffic_data.geojson"
         with open(file_name, "w") as f:
             json.dump(geojson_data, f, indent=2)
