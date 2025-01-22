@@ -1,9 +1,9 @@
-  name: Actualizar GeoJSON
+name: Actualizar GeoJSON
 
-on:
+on: # Eventos que desencadenan el workflow
   schedule:
     - cron: "0 * * * *" # Ejecutar cada hora
-  workflow_dispatch: # Permitir ejecución manual
+  workflow_dispatch: # Permitir ejecución manual desde la interfaz de GitHub
 
 jobs:
   update-geojson:
@@ -27,7 +27,7 @@ jobs:
         run: rm -f *.geojson # Elimina cualquier archivo GeoJSON previamente generado
 
       - name: Ejecutar script de actualización
-        run: python traffic_data.py # Cambia "tu_script.py" por el nombre de tu archivo Python
+        run: python traffic_data.geojson # Cambia "tu_script.py" por el nombre de tu archivo Python
 
       - name: Auto Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v4
