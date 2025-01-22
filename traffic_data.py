@@ -7,18 +7,11 @@ from datetime import datetime
 REGIONS = {
     "Cataluña": "http://infocar.dgt.es/datex2/sct/SituationPublication/all/content.xml",
     "País Vasco": "http://infocar.dgt.es/datex2/dt-gv/SituationPublication/all/content.xml",
-    "Resto España": "https://infocar.dgt.es/datex2/v3/dgt/SituationPublication/incidencias.xml"
+    "Resto España": "http://infocar.dgt.es/datex2/dgt/SituationPublication/all/content.xml"
 }
 
 # Definir el espacio de nombres para el XML
 NS = {'_0': 'http://datex2.eu/schema/1_0/1_0'}
-
-# Diccionario de traducciones
-TRANSLATIONS = {
-    "roadClosed": "Corte Total",
-    "restrictions": "Restricciones",
-    "narrowLanes": "Carriles Estrechos"
-}
 
 # Función para comprobar si un valor es válido (no es nulo, "Desconocido", ni vacío)
 def is_valid(value):
@@ -32,6 +25,15 @@ def format_datetime(datetime_str):
         return dt.strftime("%d/%m/%Y - %H:%M:%S")
     except ValueError:
         return datetime_str  # Si no se puede convertir, devolver el valor original
+
+# Función para traducir tipos de incidentes
+def translate_incident_type(incident_type):
+    translations = {
+        "roadClosed": "Corte Total",
+        "restrictions": "Restricciones",
+        "narrowLanes": "Carriles Estrechos"
+    }
+    return translations.get(incident_type.strip(), incident_type)
 
 # Función para procesar un archivo XML desde una URL y extraer los datos necesarios
 def process_xml_from_url(url, region_name):
@@ -61,9 +63,7 @@ def process_xml_from_url(url, region_name):
 
             # Traducir el tipo de incidente si está presente
             if environmental_obstruction_type is not None and is_valid(environmental_obstruction_type.text):
-                original_type = environmental_obstruction_type.text
-                translated_type = TRANSLATIONS.get(original_type, original_type)  # Buscar traducción, usar original si no hay
-                properties["incident_type"] = translated_type
+                properties["incident_type"] = translate_incident_type(environmental_obstruction_type.text)
 
             # Crear el objeto del incidente
             if properties:
@@ -80,7 +80,7 @@ def process_xml_from_url(url, region_name):
         }
 
         # Guardar el archivo GeoJSON
-        file_name = f"{region_name.replace(' ', '_')}_traffic_data.geojson"
+        file_name = "traffic_data.geojson"
         with open(file_name, "w") as f:
             json.dump(geojson_data, f, indent=2)
 
