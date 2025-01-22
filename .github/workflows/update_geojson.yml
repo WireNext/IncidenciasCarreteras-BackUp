@@ -1,43 +1,38 @@
-name: Generar GeoJSON de tráfico
+name: Actualizar GeoJSON
 
 on:
-  push:
-    branches:
-      - main
   schedule:
-    - cron: "*/15 * * * *" # Se ejecuta cada 15 minutos
-  workflow_dispatch: # Permite ejecución manual
+    - cron: "0 * * * *" # Ejecutar cada hora
+  workflow_dispatch: # Permitir ejecución manual
 
 jobs:
-  generate-geojson:
+  update-geojson:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Configurar repositorio
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Configurar Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: 3.9 # Ajusta según tu versión de Python
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
 
-    - name: Instalar dependencias
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
 
-    - name: Ejecutar script para generar GeoJSON
-      run: python traffic_data.py
+      - name: Limpiar archivos GeoJSON anteriores
+        run: rm -f *.geojson # Elimina cualquier archivo GeoJSON previamente generado
 
-    - name: Verificar si el archivo GeoJSON ha cambiado
-      run: |
-        git diff --exit-code traffic_data.geojson || echo "El archivo ha cambiado"
+      - name: Ejecutar script de actualización
+        run: python tu_script.py # Cambia "tu_script.py" por el nombre de tu archivo Python
 
-    - name: Confirmar contenido generado
-      run: cat traffic_data.geojson
-
-    - name: Subir archivo generado al repositorio
-      uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: "Actualizar GeoJSON de tráfico"
-        file_pattern: traffic_data.geojson
+      - name: Auto Commit Changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Actualizar GeoJSON de tráfico"
+          file_pattern: "*.geojson"
+          commit_options: "--allow-empty" # Forzar commit incluso si no hay cambios significativos
+          branch: main
