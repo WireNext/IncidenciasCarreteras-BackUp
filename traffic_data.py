@@ -19,14 +19,48 @@ TRANSLATIONS = {
     "restrictions": "Restricciones",
     "narrowLanes": "Carriles Estrechos"
 }
+
 # Función para comprobar si un valor es válido (no es nulo, "Desconocido", ni vacío)
 def is_valid(value):
     return value is not None and value.strip() and value.lower() != "desconocido"
-@@ -54,28 +61,30 @@
+
+# Función para convertir la fecha y hora a un formato más bonito
+def format_datetime(datetime_str):
+    try:
+        # Convertir la fecha y hora de ISO 8601 a un formato más amigable
+        dt = datetime.fromisoformat(datetime_str)
+        return dt.strftime("%d/%m/%Y - %H:%M:%S")
+    except ValueError:
+        return datetime_str  # Si no se puede convertir, devolver el valor original
+
+# Función para procesar un archivo XML desde una URL y extraer los datos necesarios
+def process_xml_from_url(url, region_name):
+    try:
+        # Descargar el archivo XML desde la URL
+        response = requests.get(url)
+        response.raise_for_status()  # Verifica errores HTTP
+
+        # Parsear el contenido XML
+        root = ET.fromstring(response.content)
+
+        # Lista para almacenar los incidentes procesados
+        incidents = []
+
+        # Procesar los incidentes en el archivo XML
+        for situation in root.findall(".//_0:situation", NS):
+            # Extraer los datos relevantes
+            situation_creation_time = situation.find(".//_0:situationRecordCreationTime", NS)
+            environmental_obstruction_type = situation.find(".//_0:environmentalObstructionType", NS)
+
+            # Asignar valores a las propiedades si están presentes y son válidas
+            properties = {}
+
+            # Formatear la fecha y hora si está presente
+            if situation_creation_time is not None and is_valid(situation_creation_time.text):
+                properties["creation_time"] = format_datetime(situation_creation_time.text)
 
             # Traducir el tipo de incidente si está presente
             if environmental_obstruction_type is not None and is_valid(environmental_obstruction_type.text):
-                properties["incident_type"] = translate_incident_type(environmental_obstruction_type.text)
                 original_type = environmental_obstruction_type.text
                 translated_type = TRANSLATIONS.get(original_type, original_type)  # Buscar traducción, usar original si no hay
                 properties["incident_type"] = translated_type
@@ -54,3 +88,8 @@ def is_valid(value):
 
     except Exception as e:
         print(f"Error procesando {region_name} desde {url}: {e}")
+
+# Procesar todos los archivos XML de las regiones especificadas
+for region_name, url in REGIONS.items():
+    print(f"\nProcesando región: {region_name} desde {url}")
+    process_xml_from_url(url, region_name)
