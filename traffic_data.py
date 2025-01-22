@@ -44,6 +44,10 @@ def process_xml_from_url(url, region_name):
         incidents = []
 
         for situation in root.findall(".//_0:situation", NS):
+            # Inicializar description
+            description = ""
+
+            # Obtener los datos relevantes del XML
             creation_time = situation.find(".//_0:situationRecordCreationTime", NS)
             incident_type = situation.find(".//_0:environmentalObstructionType", NS)
             road_name = situation.find(".//_0:roadName", NS)
@@ -51,18 +55,17 @@ def process_xml_from_url(url, region_name):
             km_point = situation.find(".//_0:affectedLocation/_0:startOfLocation/_0:pointCoordinates/_0:pointCoordinate", NS)
             coordinates = situation.findall(".//_0:pointCoordinates/_0:pointCoordinate", NS)
 
-            # Construir las propiedades del incidente
-            properties = {}
+            # Construir la descripción acumulando datos válidos
             if creation_time is not None and is_valid(creation_time.text):
-                properties["description"] = f"<b>Fecha de Creación:</b> {format_datetime(creation_time.text)}<br>"
+                description += f"<b>Fecha de Creación:</b> {format_datetime(creation_time.text)}<br>"
             if incident_type is not None and is_valid(incident_type.text):
-                properties["description"] += f"<b>Tipo de Incidente:</b> {translate_incident_type(incident_type.text)}<br>"
+                description += f"<b>Tipo de Incidente:</b> {translate_incident_type(incident_type.text)}<br>"
             if road_name is not None and is_valid(road_name.text):
-                properties["description"] += f"<b>Carretera:</b> {road_name.text}<br>"
+                description += f"<b>Carretera:</b> {road_name.text}<br>"
             if direction is not None and is_valid(direction.text):
-                properties["description"] += f"<b>Dirección:</b> {direction.text}<br>"
+                description += f"<b>Dirección:</b> {direction.text}<br>"
             if km_point is not None and is_valid(km_point.text):
-                properties["description"] += f"<b>Punto Kilométrico:</b> {km_point.text}<br>"
+                description += f"<b>Punto Kilométrico:</b> {km_point.text}<br>"
 
             # Crear la geometría si las coordenadas están disponibles
             geometry = None
@@ -78,10 +81,10 @@ def process_xml_from_url(url, region_name):
                     pass
 
             # Añadir el incidente si tiene datos válidos
-            if properties and geometry:
+            if description and geometry:
                 incidents.append({
                     "type": "Feature",
-                    "properties": properties,
+                    "properties": {"description": description},
                     "geometry": geometry
                 })
 
