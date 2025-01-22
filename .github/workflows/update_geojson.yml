@@ -23,7 +23,7 @@ jobs:
           pip install requests
 
       - name: Ejecutar script de actualización
-        run: python actualizar_geojson.py
+        run: python traffic_data.py
 
       - name: Confirmar cambios
         run: |
