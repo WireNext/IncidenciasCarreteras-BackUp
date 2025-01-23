@@ -19,89 +19,96 @@ INCIDENT_TYPE_TRANSLATIONS = {
     "roadClosed": "Corte Total",
     "restrictions": "Restricciones",
     "narrowLanes": "Carriles Estrechos",
-    "vehicleStuck": "Vehiculo Parado"
+    "flooding": "Inundación"
 }
 
-# Ruta del archivo GeoJSON existente
-OUTPUT_FILE = "traffic_data.geojson"
+# Función para traducir tipos de incidentes
+def translate_incident_type(value):
+    return INCIDENT_TYPE_TRANSLATIONS.get(value, value)
 
-# Función para comprobar si un valor es válido
-def is_valid(value):
-    return value is not None and value.strip() and value.lower() != "desconocido"
-
-# Función para formatear fecha y hora
+# Función para convertir la fecha y hora a un formato más bonito
 def format_datetime(datetime_str):
     try:
-        dt = datetime.fromisoformat(datetime_str.replace("Z", "+00:00"))
+        dt = datetime.fromisoformat(datetime_str)
         return dt.strftime("%d/%m/%Y - %H:%M:%S")
     except ValueError:
         return datetime_str
 
-# Función para traducir tipo de incidente
-def translate_incident_type(incident_type):
-    return INCIDENT_TYPE_TRANSLATIONS.get(incident_type, incident_type)
-
-# Escribir datos al archivo GeoJSON
-def save_geojson(file_path, data):
-    with open(file_path, "w") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-
-# Función para procesar un archivo XML desde una URL y agregar los incidentes al GeoJSON
-def process_xml_from_url(url, geojson_data):
+# Función para procesar un archivo XML desde una URL y extraer los datos necesarios
+def process_xml_from_url(url, region_name, all_incidents):
     try:
+        # Descargar el archivo XML desde la URL
         response = requests.get(url)
         response.raise_for_status()
+
+        # Parsear el contenido XML
         root = ET.fromstring(response.content)
 
+        # Procesar los incidentes en el archivo XML
         for situation in root.findall(".//_0:situation", NS):
-            situation_creation_time = situation.find(".//_0:situationRecordCreationTime", NS)
-            latitude = situation.find(".//_0:latitude", NS)
-            longitude = situation.find(".//_0:longitude", NS)
-            direction = situation.find(".//_0:tpegDirection", NS)
-            road_number = situation.find(".//_0:roadNumber", NS)
-            point_km = situation.find(".//_0:referencePointDistance", NS)
-            incident_type = situation.find(".//_0:vehicleObstructionType", NS)
+            situation_record = situation.find(".//_0:situationRecord", NS)
 
-            # Construcción de la descripción
-            description = ""
-            if situation_creation_time is not None and is_valid(situation_creation_time.text):
-                description += f"<b>Fecha de Creación:</b> {format_datetime(situation_creation_time.text)}<br>"
-            if direction is not None and is_valid(direction.text):
-                description += f"<b>Dirección:</b> {direction.text.capitalize()}<br>"
-            if road_number is not None and is_valid(road_number.text):
-                description += f"<b>Carretera:</b> {road_number.text}<br>"
-            if point_km is not None and is_valid(point_km.text):
-                description += f"<b>Punto Kilométrico:</b> {float(point_km.text) / 1000:.1f}<br>"
-            if incident_type is not None and is_valid(incident_type.text):
-                description += f"<b>Tipo de Incidente:</b> {translate_incident_type(incident_type.text)}<br>"
+            if situation_record is not None:
+                description = []
 
-            # Construcción del objeto de incidente
-            if latitude is not None and longitude is not None and is_valid(latitude.text) and is_valid(longitude.text):
-                geojson_data["features"].append({
-                    "type": "Feature",
-                    "properties": {
-                        "description": description
-                    },
-                    "geometry": {
-                        "type": "Point",
-                        "coordinates": [
-                            float(longitude.text),
-                            float(latitude.text)
-                        ]
-                    }
-                })
+                # Extraer la fecha de creación
+                creation_time = situation_record.find(".//_0:situationRecordCreationTime", NS)
+                if creation_time is not None:
+                    description.append(f"<b>Fecha de Creación:</b> {format_datetime(creation_time.text)}")
+
+                # Extraer el tipo de obstrucción ambiental
+                environmental_obstruction = situation_record.find(".//_0:environmentalObstructionType", NS)
+                if environmental_obstruction is not None:
+                    obstruction_type = translate_incident_type(environmental_obstruction.text)
+                    description.append(f"<b>Tipo de Obstrucción:</b> {obstruction_type}")
+
+                # Extraer el tipo de incidente
+                vehicle_obstruction_type = situation_record.find(".//_0:vehicleObstructionType", NS)
+                if vehicle_obstruction_type is not None:
+                    incident_type = translate_incident_type(vehicle_obstruction_type.text)
+                    description.append(f"<b>Tipo de Incidente:</b> {incident_type}")
+
+                # Extraer la ubicación
+                location = situation_record.find(".//_0:pointCoordinates", NS)
+                if location is not None:
+                    latitude = location.find(".//_0:latitude", NS)
+                    longitude = location.find(".//_0:longitude", NS)
+                    if latitude is not None and longitude is not None:
+                        coordinates = [float(longitude.text), float(latitude.text)]
+
+                        # Crear el incidente en formato GeoJSON
+                        incident = {
+                            "type": "Feature",
+                            "properties": {
+                                "description": "<br>".join(description)
+                            },
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": coordinates
+                            }
+                        }
+                        all_incidents.append(incident)
 
     except Exception as e:
-        print(f"Error procesando datos desde {url}: {e}")
+        print(f"Error procesando {region_name} desde {url}: {e}")
 
-# Crear una estructura vacía para el GeoJSON
-geojson_data = {"type": "FeatureCollection", "features": []}
+# Lista para almacenar todos los incidentes
+all_incidents = []
 
-# Procesar todas las regiones y agregar los incidentes al GeoJSON
-for url in REGIONS.values():
-    process_xml_from_url(url, geojson_data)
+# Procesar todos los archivos XML de las regiones especificadas
+for region_name, url in REGIONS.items():
+    print(f"\nProcesando región: {region_name} desde {url}")
+    process_xml_from_url(url, region_name, all_incidents)
 
-# Guardar el GeoJSON actualizado, sobrescribiendo los datos antiguos
-save_geojson(OUTPUT_FILE, geojson_data)
+# Crear el archivo GeoJSON con todos los incidentes
+geojson_data = {
+    "type": "FeatureCollection",
+    "features": all_incidents
+}
 
-print(f"Archivo GeoJSON actualizado con éxito: {OUTPUT_FILE}")
+# Guardar el archivo GeoJSON
+geojson_file = "traffic_data.geojson"
+with open(geojson_file, "w") as f:
+    json.dump(geojson_data, f, indent=2, ensure_ascii=False)
+
+print(f"\nArchivo GeoJSON global generado con éxito: {geojson_file}")
