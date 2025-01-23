@@ -20,7 +20,7 @@ INCIDENT_TYPE_TRANSLATIONS = {
     "restrictions": "Restricciones",
     "narrowLanes": "Carriles Estrechos",
     "flooding": "Inundación",
-    "bothWays": "Ambos Sentidos"
+    "Bothways": "Ambos Sentidos"
 }
 
 # Función para traducir tipos de incidentes
