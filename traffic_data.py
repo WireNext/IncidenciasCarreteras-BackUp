@@ -28,7 +28,8 @@ INCIDENT_TYPE_TRANSLATIONS = {
     "congested": "Congestionada",
     "freeFlow": "Sin retención",
     "constructionWork": "Obras",
-    "impossible": "Imposible circular"
+    "impossible": "Imposible circular",
+    "objectOnTheRoad": "Objeto en Calzada"
 }
 
 # Función para traducir tipos de incidentes
