@@ -84,6 +84,13 @@ def process_xml_from_url(url, region_name, all_incidents):
                     situation_road = translate_incident_type(situation_road.text)
                     description.append(f"<b>Estado:</b> {situation_road}")
 
+                # Extraer impacto
+                impact = situation_record.find(".//_0:impactOnTraffic", NS)
+                if impact is not None:
+                    impact = translate_incident_type(impact.text)
+                    description.append(f"<b>Impacto: </b> {impact}")
+
+                
                 # Extraer la carretera
                 road_number = situation_record.find(".//_0:roadNumber", NS)
                 if road_number is not None:
