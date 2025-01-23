@@ -29,7 +29,8 @@ INCIDENT_TYPE_TRANSLATIONS = {
     "freeFlow": "Sin retención",
     "constructionWork": "Obras",
     "impossible": "Imposible circular",
-    "objectOnTheRoad": "Objeto en Calzada"
+    "objectOnTheRoad": "Objeto en Calzada",
+    "heavy": "Retención"
 }
 
 # Función para traducir tipos de incidentes
