@@ -68,6 +68,21 @@ def process_xml_from_url(url, region_name, all_incidents):
                     incident_type = translate_incident_type(vehicle_obstruction_type.text)
                     description.append(f"<b>Tipo de Incidente:</b> {incident_type}")
 
+                # Extraer la dirección
+                direction = situation_record.find(".//_0:tpegDirection", NS)
+                if direction is not None:
+                    description.append(f"<b>Dirección:</b> {direction.text.capitalize()}")
+
+                # Extraer la carretera
+                road_number = situation_record.find(".//_0:roadNumber", NS)
+                if road_number is not None:
+                    description.append(f"<b>Carretera:</b> {road_number.text}")
+
+                # Extraer el punto kilométrico
+                point_km = situation_record.find(".//_0:referencePointDistance", NS)
+                if point_km is not None:
+                    description.append(f"<b>Punto Kilométrico:</b> {float(point_km.text):.1f}")
+
                 # Extraer la ubicación
                 location = situation_record.find(".//_0:pointCoordinates", NS)
                 if location is not None:
