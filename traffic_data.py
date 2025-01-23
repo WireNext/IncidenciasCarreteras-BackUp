@@ -40,21 +40,13 @@ def format_datetime(datetime_str):
 def translate_incident_type(incident_type):
     return INCIDENT_TYPE_TRANSLATIONS.get(incident_type, incident_type)
 
-# Leer el archivo GeoJSON existente (si existe)
-def load_existing_geojson(file_path):
-    try:
-        with open(file_path, "r") as f:
-            return json.load(f)
-    except FileNotFoundError:
-        return {"type": "FeatureCollection", "features": []}  # Crear una estructura vacía si no existe
-
 # Escribir datos al archivo GeoJSON
 def save_geojson(file_path, data):
     with open(file_path, "w") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-# Función para procesar un archivo XML desde una URL y agregar los incidentes al GeoJSON existente
-def process_xml_from_url(url, existing_data):
+# Función para procesar un archivo XML desde una URL y agregar los incidentes al GeoJSON
+def process_xml_from_url(url, geojson_data):
     try:
         response = requests.get(url)
         response.raise_for_status()
@@ -84,7 +76,7 @@ def process_xml_from_url(url, existing_data):
 
             # Construcción del objeto de incidente
             if latitude is not None and longitude is not None and is_valid(latitude.text) and is_valid(longitude.text):
-                existing_data["features"].append({
+                geojson_data["features"].append({
                     "type": "Feature",
                     "properties": {
                         "description": description
@@ -101,14 +93,14 @@ def process_xml_from_url(url, existing_data):
     except Exception as e:
         print(f"Error procesando datos desde {url}: {e}")
 
-# Cargar el archivo GeoJSON existente
-geojson_data = load_existing_geojson(OUTPUT_FILE)
+# Crear una estructura vacía para el GeoJSON
+geojson_data = {"type": "FeatureCollection", "features": []}
 
 # Procesar todas las regiones y agregar los incidentes al GeoJSON
 for url in REGIONS.values():
     process_xml_from_url(url, geojson_data)
 
-# Guardar el GeoJSON actualizado
+# Guardar el GeoJSON actualizado, sobrescribiendo los datos antiguos
 save_geojson(OUTPUT_FILE, geojson_data)
 
 print(f"Archivo GeoJSON actualizado con éxito: {OUTPUT_FILE}")
