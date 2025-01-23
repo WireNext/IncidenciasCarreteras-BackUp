@@ -18,7 +18,8 @@ INCIDENT_TYPE_TRANSLATIONS = {
     "damagedVehicle": "Vehículo Averiado",
     "roadClosed": "Corte Total",
     "restrictions": "Restricciones",
-    "narrowLanes": "Carriles Estrechos"
+    "narrowLanes": "Carriles Estrechos",
+    "vehicleStuck": "Vehiculo Parado"
 }
 
 # Ruta del archivo GeoJSON existente
