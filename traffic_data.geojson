@@ -3412,6 +3412,54 @@
     {
       "type": "Feature",
       "properties": {
+        "ID del incidente": "GUID-1376034",
+        "Fecha de creación": "23/01/2025 - 18:35:51",
+        "Carretera": "AP-7",
+        "Área administrativa": "Girona"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9343097,
+          42.19931
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID-1376035",
+        "Fecha de creación": "23/01/2025 - 18:37:05",
+        "Carretera": "AP-7",
+        "Área administrativa": "Girona"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.8654997,
+          42.464306
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID-1376036",
+        "Fecha de creación": "23/01/2025 - 18:37:59",
+        "Carretera": "C-60",
+        "Área administrativa": "Barcelona"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.397999,
+          41.564583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "ID del incidente": "GUID_717043",
         "Fecha de creación": "18/07/2024 - 15:07:46",
         "Carretera": "BI-735",
@@ -3887,6 +3935,22 @@
         "coordinates": [
           -2.9001,
           43.0085
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID_739628",
+        "Fecha de creación": "23/01/2025 - 18:29:00",
+        "Carretera": "BI-637",
+        "Área administrativa": "BIZKAIA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.9688,
+          43.3163
         ]
       }
     },
@@ -5045,23 +5109,6 @@
     {
       "type": "Feature",
       "properties": {
-        "ID del incidente": "GUID_Suc_19127905",
-        "Fecha de creación": "23/01/2025 - 16:17:31",
-        "Fuente": "dgt-lince3",
-        "Carretera": "Ma-20",
-        "Área administrativa": "BALEARS, ILLES"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.6672153,
-          39.58656
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "ID del incidente": "GUID_Suc_19096600",
         "Fecha de creación": "27/01/2025 - 11:30:00",
         "Fuente": "dgt-lince3",
@@ -6102,6 +6149,41 @@
     {
       "type": "Feature",
       "properties": {
+        "ID del incidente": "GUID_Suc_19130827",
+        "Fecha de creación": "23/01/2025 - 07:00:00",
+        "Fuente": "adjudicatarios-obras",
+        "Carretera": "CA-36",
+        "Área administrativa": "CÁDIZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.245202,
+          36.508213
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID_Suc_19130825",
+        "Fecha de creación": "23/01/2025 - 18:38:19",
+        "Tipo de incidente": "vehicleStuck",
+        "Fuente": "dgt3.0",
+        "Carretera": "A-356",
+        "Área administrativa": "MÁLAGA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.4404635,
+          36.903435
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "ID del incidente": "GUID_Suc_19130179",
         "Fecha de creación": "23/01/2025 - 08:00:00",
         "Fuente": "TRAZA OBRAS",
@@ -6147,6 +6229,23 @@
         "coordinates": [
           -0.8458881,
           41.62626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID_Suc_19130824",
+        "Fecha de creación": "23/01/2025 - 18:37:00",
+        "Fuente": "112 de la Comunitat Valenciana",
+        "Carretera": "A-35",
+        "Área administrativa": "VALENCIA/VALÈNCIA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8256089,
+          38.85354
         ]
       }
     },
@@ -6249,41 +6348,6 @@
         "coordinates": [
           -1.15497,
           41.75997
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "ID del incidente": "GUID_Suc_19128864",
-        "Fecha de creación": "23/01/2025 - 16:59:36",
-        "Fuente": "dgt-lince3",
-        "Carretera": "AP-2",
-        "Área administrativa": "HUESCA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          0.186864,
-          41.480583
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "ID del incidente": "GUID_Suc_19128863",
-        "Fecha de creación": "23/01/2025 - 16:59:36",
-        "Tipo de incidente": "Vehículo Averiado",
-        "Fuente": "dgt-lince3",
-        "Carretera": "AP-2",
-        "Área administrativa": "HUESCA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          0.186864,
-          41.480583
         ]
       }
     },
@@ -6488,23 +6552,6 @@
         "coordinates": [
           0.1216834,
           40.369106
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "ID del incidente": "GUID_Suc_19129905",
-        "Fecha de creación": "23/01/2025 - 17:58:31",
-        "Fuente": "adjudicatarios-obras",
-        "Carretera": "AP-7",
-        "Área administrativa": "MURCIA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.9686155,
-          37.67415
         ]
       }
     },
@@ -7033,24 +7080,6 @@
         "coordinates": [
           -5.0856953,
           43.465244
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "ID del incidente": "GUID_Suc_19130144",
-        "Fecha de creación": "23/01/2025 - 18:02:19",
-        "Tipo de incidente": "vehicleStuck",
-        "Fuente": "dgt3.0",
-        "Carretera": "A-330",
-        "Área administrativa": "GRANADA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.5416133,
-          37.783936
         ]
       }
     },
@@ -8064,6 +8093,24 @@
     {
       "type": "Feature",
       "properties": {
+        "ID del incidente": "GUID_Suc_19130899",
+        "Fecha de creación": "23/01/2025 - 18:44:13",
+        "Tipo de incidente": "Vehículo Averiado",
+        "Fuente": "dgt-lince3",
+        "Carretera": "V-30",
+        "Área administrativa": "VALENCIA/VALÈNCIA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4006404,
+          39.44295
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "ID del incidente": "GUID_Suc_19126574",
         "Fecha de creación": "23/01/2025 - 10:00:00",
         "Fuente": "TRAZA OBRAS",
@@ -8075,24 +8122,6 @@
         "coordinates": [
           -3.521157,
           40.449795
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "ID del incidente": "GUID_Suc_19129982",
-        "Fecha de creación": "23/01/2025 - 17:56:39",
-        "Tipo de incidente": "vehicleStuck",
-        "Fuente": "dgt-lince3",
-        "Carretera": "A-6",
-        "Área administrativa": "MADRID"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.81607,
-          40.46917
         ]
       }
     },
@@ -8213,23 +8242,6 @@
         "coordinates": [
           -4.078643,
           43.218178
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "ID del incidente": "GUID_Suc_19129983",
-        "Fecha de creación": "23/01/2025 - 17:56:39",
-        "Fuente": "dgt-lince3",
-        "Carretera": "A-6",
-        "Área administrativa": "MADRID"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.8263915,
-          40.473297
         ]
       }
     },
@@ -8645,6 +8657,59 @@
     {
       "type": "Feature",
       "properties": {
+        "ID del incidente": "GUID_Suc_19130879",
+        "Fecha de creación": "23/01/2025 - 18:43:06",
+        "Tipo de incidente": "Vehículo Averiado",
+        "Fuente": "dgt-lince3",
+        "Carretera": "AP-2",
+        "Área administrativa": "HUESCA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1868644,
+          41.480583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID_Suc_19130878",
+        "Fecha de creación": "23/01/2025 - 18:43:06",
+        "Fuente": "dgt-lince3",
+        "Carretera": "AP-2",
+        "Área administrativa": "HUESCA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.186864,
+          41.480583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID_Suc_19130877",
+        "Fecha de creación": "23/01/2025 - 18:43:04",
+        "Tipo de incidente": "vehicleStuck",
+        "Fuente": "dgt3.0",
+        "Carretera": "AP-9",
+        "Área administrativa": "PONTEVEDRA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.668638,
+          42.2047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "ID del incidente": "GUID_Suc_17371499",
         "Fecha de creación": "13/11/2024 - 17:02:36",
         "Fuente": "dgt-lince3",
@@ -8673,6 +8738,24 @@
         "coordinates": [
           -4.1945314,
           36.83294
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID_Suc_19130880",
+        "Fecha de creación": "23/01/2025 - 18:43:18",
+        "Tipo de incidente": "vehicleStuck",
+        "Fuente": "dgt3.0",
+        "Carretera": "A-474",
+        "Área administrativa": "SEVILLA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2254944,
+          37.308323
         ]
       }
     },
@@ -8826,23 +8909,6 @@
         "coordinates": [
           -3.2597675,
           37.420364
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "ID del incidente": "GUID_Suc_19129392",
-        "Fecha de creación": "23/01/2025 - 17:25:16",
-        "Fuente": "dgt-lince3",
-        "Carretera": "A-7",
-        "Área administrativa": "VALENCIA/VALÈNCIA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.4483396,
-          39.543324
         ]
       }
     },
@@ -9121,6 +9187,24 @@
     {
       "type": "Feature",
       "properties": {
+        "ID del incidente": "GUID_Suc_19130882",
+        "Fecha de creación": "23/01/2025 - 18:43:43",
+        "Tipo de incidente": "vehicleStuck",
+        "Fuente": "dgt3.0",
+        "Carretera": "CV-309",
+        "Área administrativa": "VALENCIA/VALÈNCIA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.2436617,
+          39.65222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "ID del incidente": "GUID_Suc_19130601",
         "Fecha de creación": "23/01/2025 - 18:29:48",
         "Fuente": "dgt-lince3",
@@ -9269,6 +9353,58 @@
         "coordinates": [
           -5.45788,
           36.11478
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID_Suc_19130855",
+        "Fecha de creación": "23/01/2025 - 18:41:17",
+        "Fuente": "adjudicatarios-obras",
+        "Carretera": "AP-7",
+        "Área administrativa": "MURCIA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9686155,
+          37.67415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID_Suc_19130853",
+        "Fecha de creación": "23/01/2025 - 18:41:13",
+        "Tipo de incidente": "vehicleStuck",
+        "Fuente": "dgt3.0",
+        "Carretera": "N-627",
+        "Área administrativa": "BURGOS"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.687915,
+          42.409695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID_Suc_19130854",
+        "Fecha de creación": "23/01/2025 - 18:41:17",
+        "Fuente": "adjudicatarios-obras",
+        "Carretera": "AP-7",
+        "Área administrativa": "MURCIA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.0026683,
+          37.67981
         ]
       }
     },
@@ -9430,6 +9566,24 @@
     {
       "type": "Feature",
       "properties": {
+        "ID del incidente": "GUID_Suc_19130866",
+        "Fecha de creación": "23/01/2025 - 18:42:37",
+        "Tipo de incidente": "vehicleStuck",
+        "Fuente": "dgt-lince3",
+        "Carretera": "A-2",
+        "Área administrativa": "MADRID"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.442843,
+          40.467575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "ID del incidente": "GUID_Suc_18449583",
         "Fecha de creación": "23/12/2024 - 10:07:22",
         "Fuente": "adjudicatarios-obras",
@@ -9447,18 +9601,18 @@
     {
       "type": "Feature",
       "properties": {
-        "ID del incidente": "GUID_Suc_19130255",
-        "Fecha de creación": "23/01/2025 - 18:08:10",
+        "ID del incidente": "GUID_Suc_19130867",
+        "Fecha de creación": "23/01/2025 - 18:42:45",
         "Tipo de incidente": "vehicleStuck",
-        "Fuente": "dgt-lince3",
-        "Carretera": "A-7",
-        "Área administrativa": "VALENCIA/VALÈNCIA"
+        "Fuente": "dgt3.0",
+        "Carretera": "SA-105",
+        "Área administrativa": "SALAMANCA"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.5402804,
-          39.084595
+          -5.23461,
+          40.864967
         ]
       }
     },
@@ -9534,24 +9688,6 @@
     {
       "type": "Feature",
       "properties": {
-        "ID del incidente": "GUID_Suc_19130263",
-        "Fecha de creación": "23/01/2025 - 18:08:31",
-        "Tipo de incidente": "vehicleStuck",
-        "Fuente": "dgt3.0",
-        "Carretera": "A-79",
-        "Área administrativa": "ALICANTE/ALACANT"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.536323,
-          38.32714
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "ID del incidente": "GUID_Suc_19130457",
         "Fecha de creación": "23/01/2025 - 08:00:00",
         "Fuente": "adjudicatarios-obras",
@@ -9621,59 +9757,6 @@
     {
       "type": "Feature",
       "properties": {
-        "ID del incidente": "GUID_Suc_19129346",
-        "Fecha de creación": "23/01/2025 - 17:19:21",
-        "Tipo de incidente": "vehicleStuck",
-        "Fuente": "dgt-lince3",
-        "Carretera": "A-7",
-        "Área administrativa": "VALENCIA/VALÈNCIA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.4891923,
-          39.51417
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "ID del incidente": "GUID_Suc_19130668",
-        "Fecha de creación": "23/01/2025 - 18:31:33",
-        "Tipo de incidente": "vehicleStuck",
-        "Fuente": "dgt3.0",
-        "Carretera": "PO-233",
-        "Área administrativa": "PONTEVEDRA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.5700865,
-          42.439415
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "ID del incidente": "GUID_Suc_19129347",
-        "Fecha de creación": "23/01/2025 - 17:19:21",
-        "Fuente": "dgt-lince3",
-        "Carretera": "A-7",
-        "Área administrativa": "VALENCIA/VALÈNCIA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.4891923,
-          39.51417
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "ID del incidente": "GUID_Suc_16466859",
         "Fecha de creación": "08/10/2024 - 08:06:29",
         "Fuente": "dgt-lince3",
@@ -9702,6 +9785,23 @@
         "coordinates": [
           -5.1463833,
           41.195923
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID_Suc_19130837",
+        "Fecha de creación": "23/01/2025 - 18:39:40",
+        "Fuente": "dgt-lince3",
+        "Carretera": "A-3",
+        "Área administrativa": "MADRID"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.5533564,
+          40.355408
         ]
       }
     },
@@ -9742,23 +9842,6 @@
     {
       "type": "Feature",
       "properties": {
-        "ID del incidente": "GUID_Suc_19130445",
-        "Fecha de creación": "23/01/2025 - 18:14:33",
-        "Fuente": "dgt-lince3",
-        "Carretera": "M-50",
-        "Área administrativa": "MADRID"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.5448272,
-          40.383015
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "ID del incidente": "GUID_Suc_19103418",
         "Fecha de creación": "27/01/2025 - 08:00:00",
         "Fuente": "adjudicatarios-obras",
@@ -9787,24 +9870,6 @@
         "coordinates": [
           -4.1111135,
           43.029404
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "ID del incidente": "GUID_Suc_19130631",
-        "Fecha de creación": "23/01/2025 - 17:48:35",
-        "Tipo de incidente": "vehicleStuck",
-        "Fuente": "dgt-lince3",
-        "Carretera": "A-1",
-        "Área administrativa": "MADRID"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.648516,
-          40.52579
         ]
       }
     },
@@ -9981,23 +10046,6 @@
     {
       "type": "Feature",
       "properties": {
-        "ID del incidente": "GUID_Suc_19130431",
-        "Fecha de creación": "23/01/2025 - 18:13:47",
-        "Fuente": "dgt-lince3",
-        "Carretera": "V-30",
-        "Área administrativa": "VALENCIA/VALÈNCIA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.4591731,
-          39.504875
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "ID del incidente": "GUID_Suc_19111372",
         "Fecha de creación": "22/01/2025 - 21:00:00",
         "Fuente": "TRAZA OBRAS",
@@ -10078,24 +10126,6 @@
         "coordinates": [
           -6.956843,
           38.87625
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "ID del incidente": "GUID_Suc_19130643",
-        "Fecha de creación": "23/01/2025 - 18:27:50",
-        "Tipo de incidente": "vehicleStuck",
-        "Fuente": "dgt3.0",
-        "Carretera": "A-320",
-        "Área administrativa": "JAÉN"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.605547,
-          37.7897
         ]
       }
     },
@@ -10595,24 +10625,6 @@
     {
       "type": "Feature",
       "properties": {
-        "ID del incidente": "GUID_Suc_19130682",
-        "Fecha de creación": "23/01/2025 - 18:34:16",
-        "Tipo de incidente": "vehicleStuck",
-        "Fuente": "dgt3.0",
-        "Carretera": "N-611",
-        "Área administrativa": "CANTABRIA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.8870974,
-          43.44043
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "ID del incidente": "GUID_Suc_18895098",
         "Fecha de creación": "10/01/2025 - 21:34:11",
         "Fuente": "adjudicatarios-obras",
@@ -10749,17 +10761,17 @@
     {
       "type": "Feature",
       "properties": {
-        "ID del incidente": "GUID_Suc_19118730",
-        "Fecha de creación": "23/01/2025 - 10:09:44",
-        "Fuente": "adjudicatarios-obras",
-        "Carretera": "RM-11",
-        "Área administrativa": "MURCIA"
+        "ID del incidente": "GUID_Suc_19130694",
+        "Fecha de creación": "23/01/2025 - 18:35:58",
+        "Fuente": "dgt-lince3",
+        "Carretera": "M-50",
+        "Área administrativa": "MADRID"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.6720102,
-          37.615192
+          -3.5412314,
+          40.38636
         ]
       }
     },
@@ -11665,41 +11677,6 @@
         "coordinates": [
           -4.1680417,
           40.8304
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "ID del incidente": "GUID_Suc_19129563",
-        "Fecha de creación": "23/01/2025 - 17:38:24",
-        "Tipo de incidente": "Vehículo Averiado",
-        "Fuente": "dgt-lince3",
-        "Carretera": "A-3",
-        "Área administrativa": "VALENCIA/VALÈNCIA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.41788,
-          39.46917
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "ID del incidente": "GUID_Suc_19129564",
-        "Fecha de creación": "23/01/2025 - 17:38:24",
-        "Fuente": "dgt-lince3",
-        "Carretera": "A-3",
-        "Área administrativa": "VALENCIA/VALÈNCIA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.41788,
-          39.46917
         ]
       }
     },
@@ -13379,6 +13356,24 @@
     {
       "type": "Feature",
       "properties": {
+        "ID del incidente": "GUID_Suc_19130913",
+        "Fecha de creación": "23/01/2025 - 18:38:58",
+        "Tipo de incidente": "vehicleStuck",
+        "Fuente": "dgt3.0",
+        "Carretera": "A-1",
+        "Área administrativa": "BURGOS"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.704935,
+          42.233112
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "ID del incidente": "GUID_Suc_19127294",
         "Fecha de creación": "23/01/2025 - 15:39:00",
         "Fuente": "112 de la Comunitat Valenciana",
@@ -13413,6 +13408,42 @@
     {
       "type": "Feature",
       "properties": {
+        "ID del incidente": "GUID_Suc_19130912",
+        "Fecha de creación": "23/01/2025 - 18:38:57",
+        "Tipo de incidente": "vehicleStuck",
+        "Fuente": "dgt3.0",
+        "Carretera": "M-203",
+        "Área administrativa": "MADRID"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.5733116,
+          40.391674
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID_Suc_19130914",
+        "Fecha de creación": "23/01/2025 - 18:39:06",
+        "Tipo de incidente": "vehicleStuck",
+        "Fuente": "dgt3.0",
+        "Carretera": "AS-356",
+        "Área administrativa": "ASTURIAS"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.6420436,
+          43.54175
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "ID del incidente": "GUID_Suc_19125660",
         "Fecha de creación": "23/01/2025 - 14:31:00",
         "Fuente": "112 de la Comunitat Valenciana",
@@ -13424,6 +13455,23 @@
         "coordinates": [
           -0.5354168,
           39.881393
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID_Suc_19130916",
+        "Fecha de creación": "23/01/2025 - 18:39:27",
+        "Fuente": "dgt-lince3",
+        "Carretera": "Ma-20",
+        "Área administrativa": "BALEARS, ILLES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.6672153,
+          39.58656
         ]
       }
     },
@@ -13617,6 +13665,41 @@
     {
       "type": "Feature",
       "properties": {
+        "ID del incidente": "GUID_Suc_19130944",
+        "Fecha de creación": "23/01/2025 - 18:46:15",
+        "Tipo de incidente": "vehicleStuck",
+        "Fuente": "dgt3.0",
+        "Carretera": "CV-920",
+        "Área administrativa": "ALICANTE/ALACANT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7948836,
+          38.08764
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID_Suc_19130942",
+        "Fecha de creación": "23/01/2025 - 18:44:00",
+        "Fuente": "112 de la Comunitat Valenciana",
+        "Carretera": "A-7",
+        "Área administrativa": "VALENCIA/VALÈNCIA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3255006,
+          39.623604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "ID del incidente": "GUID_Suc_19044352",
         "Fecha de creación": "20/01/2025 - 08:27:58",
         "Fuente": "adjudicatarios-obras",
@@ -13736,6 +13819,23 @@
     {
       "type": "Feature",
       "properties": {
+        "ID del incidente": "GUID_Suc_19130946",
+        "Fecha de creación": "23/01/2025 - 18:46:34",
+        "Fuente": "dgt-lince3",
+        "Carretera": "A-3",
+        "Área administrativa": "VALENCIA/VALÈNCIA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.41788,
+          39.46917
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "ID del incidente": "GUID_Suc_19045210",
         "Fecha de creación": "02/02/2025 - 10:00:00",
         "Fuente": "TRAZA EVENTOS",
@@ -13747,6 +13847,24 @@
         "coordinates": [
           -0.9381058,
           37.757347
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID_Suc_19130945",
+        "Fecha de creación": "23/01/2025 - 18:46:34",
+        "Tipo de incidente": "Vehículo Averiado",
+        "Fuente": "dgt-lince3",
+        "Carretera": "A-3",
+        "Área administrativa": "VALENCIA/VALÈNCIA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.41788,
+          39.46917
         ]
       }
     },
@@ -14451,23 +14569,6 @@
     {
       "type": "Feature",
       "properties": {
-        "ID del incidente": "GUID_Suc_19130003",
-        "Fecha de creación": "23/01/2025 - 17:58:31",
-        "Fuente": "adjudicatarios-obras",
-        "Carretera": "AP-7",
-        "Área administrativa": "MURCIA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.9462264,
-          37.674267
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "ID del incidente": "GUID_Suc_19128194",
         "Fecha de creación": "24/01/2025 - 09:22:00",
         "Fuente": "adjudicatarios-obras",
@@ -14496,23 +14597,6 @@
         "coordinates": [
           3.020927,
           39.793705
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "ID del incidente": "GUID_Suc_19130002",
-        "Fecha de creación": "23/01/2025 - 17:58:31",
-        "Fuente": "adjudicatarios-obras",
-        "Carretera": "AP-7",
-        "Área administrativa": "MURCIA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.0026683,
-          37.67981
         ]
       }
     },
@@ -14690,23 +14774,6 @@
     {
       "type": "Feature",
       "properties": {
-        "ID del incidente": "GUID_Suc_19129807",
-        "Fecha de creación": "23/01/2025 - 17:49:15",
-        "Fuente": "dgt-lince3",
-        "Carretera": "A-2",
-        "Área administrativa": "MADRID"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.4714746,
-          40.466827
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "ID del incidente": "GUID_Suc_19128709",
         "Fecha de creación": "23/01/2025 - 16:47:35",
         "Tipo de incidente": "Vehículo Averiado",
@@ -14719,6 +14786,23 @@
         "coordinates": [
           -0.5562717,
           39.614334
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID_Suc_19130901",
+        "Fecha de creación": "23/01/2025 - 18:44:25",
+        "Fuente": "dgt-lince3",
+        "Carretera": "A-2",
+        "Área administrativa": "MADRID"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.4714746,
+          40.466827
         ]
       }
     },
@@ -15152,24 +15236,6 @@
     {
       "type": "Feature",
       "properties": {
-        "ID del incidente": "GUID_Suc_19130721",
-        "Fecha de creación": "23/01/2025 - 18:30:55",
-        "Tipo de incidente": "vehicleStuck",
-        "Fuente": "dgt3.0",
-        "Carretera": "AS-17",
-        "Área administrativa": "ASTURIAS"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.903225,
-          43.543488
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "ID del incidente": "GUID_Suc_19110828",
         "Fecha de creación": "23/01/2025 - 05:55:49",
         "Tipo de incidente": "Vehículo Averiado",
@@ -15481,24 +15547,6 @@
     {
       "type": "Feature",
       "properties": {
-        "ID del incidente": "GUID_Suc_19130738",
-        "Fecha de creación": "23/01/2025 - 18:32:11",
-        "Tipo de incidente": "vehicleStuck",
-        "Fuente": "dgt3.0",
-        "Carretera": "M-612",
-        "Área administrativa": "MADRID"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.697875,
-          40.503407
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "ID del incidente": "GUID_Suc_19130739",
         "Fecha de creación": "23/01/2025 - 18:30:00",
         "Tipo de incidente": "Vehículo Averiado",
@@ -15759,24 +15807,6 @@
     {
       "type": "Feature",
       "properties": {
-        "ID del incidente": "GUID_Suc_19130570",
-        "Fecha de creación": "23/01/2025 - 18:25:59",
-        "Tipo de incidente": "vehicleStuck",
-        "Fuente": "dgt3.0",
-        "Carretera": "PO-531",
-        "Área administrativa": "PONTEVEDRA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.651343,
-          42.4727
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "ID del incidente": "GUID_Suc_17388871",
         "Fecha de creación": "14/11/2024 - 16:29:09",
         "Fuente": "dgt-lince3",
@@ -15805,6 +15835,58 @@
         "coordinates": [
           2.42506,
           39.57733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID_Suc_19130956",
+        "Fecha de creación": "23/01/2025 - 18:47:38",
+        "Fuente": "dgt-lince3",
+        "Carretera": "M-40",
+        "Área administrativa": "MADRID"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7213144,
+          40.364857
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID_Suc_19130954",
+        "Fecha de creación": "23/01/2025 - 18:43:00",
+        "Fuente": "112 de la Comunitat Valenciana",
+        "Carretera": "CV-370",
+        "Área administrativa": "VALENCIA/VALÈNCIA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5993393,
+          39.56303
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID_Suc_19130955",
+        "Fecha de creación": "23/01/2025 - 18:47:38",
+        "Tipo de incidente": "vehicleStuck",
+        "Fuente": "dgt-lince3",
+        "Carretera": "M-40",
+        "Área administrativa": "MADRID"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7283468,
+          40.36398
         ]
       }
     },
@@ -15857,24 +15939,6 @@
         "coordinates": [
           -0.5344899,
           38.379246
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "ID del incidente": "GUID_Suc_19130755",
-        "Fecha de creación": "23/01/2025 - 18:33:29",
-        "Tipo de incidente": "vehicleStuck",
-        "Fuente": "dgt3.0",
-        "Carretera": "N-234",
-        "Área administrativa": "SORIA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.53051,
-          41.789536
         ]
       }
     },
@@ -16080,23 +16144,6 @@
         "coordinates": [
           -2.74231,
           38.96164
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "ID del incidente": "GUID_Suc_19130560",
-        "Fecha de creación": "23/01/2025 - 18:25:07",
-        "Fuente": "dgt-lince3",
-        "Carretera": "SE-30",
-        "Área administrativa": "SEVILLA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.94829,
-          37.40534
         ]
       }
     },
@@ -16582,23 +16629,6 @@
     {
       "type": "Feature",
       "properties": {
-        "ID del incidente": "GUID_Suc_19113218",
-        "Fecha de creación": "23/01/2025 - 07:59:07",
-        "Fuente": "adjudicatarios-obras",
-        "Carretera": "CA-36",
-        "Área administrativa": "CÁDIZ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -6.247171,
-          36.50659
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "ID del incidente": "GUID_Suc_19130782",
         "Fecha de creación": "23/01/2025 - 08:00:00",
         "Fuente": "TRAZA OBRAS",
@@ -17059,24 +17089,6 @@
     {
       "type": "Feature",
       "properties": {
-        "ID del incidente": "GUID_Suc_19130584",
-        "Fecha de creación": "23/01/2025 - 18:28:06",
-        "Tipo de incidente": "vehicleStuck",
-        "Fuente": "dgt3.0",
-        "Carretera": "A-30",
-        "Área administrativa": "MURCIA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.990935,
-          37.664955
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "ID del incidente": "GUID_Suc_17354251",
         "Fecha de creación": "12/11/2024 - 17:06:13",
         "Fuente": "dgt-lince3",
@@ -17367,24 +17379,6 @@
     {
       "type": "Feature",
       "properties": {
-        "ID del incidente": "GUID_Suc_19129609",
-        "Fecha de creación": "23/01/2025 - 17:44:52",
-        "Tipo de incidente": "vehicleStuck",
-        "Fuente": "dgt3.0",
-        "Carretera": "EP-7201",
-        "Área administrativa": "PONTEVEDRA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.312276,
-          42.66276
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "ID del incidente": "GUID_Suc_18661170",
         "Fecha de creación": "31/12/2024 - 23:00:40",
         "Fuente": "adjudicatarios-obras",
@@ -17453,6 +17447,23 @@
     {
       "type": "Feature",
       "properties": {
+        "ID del incidente": "GUID_Suc_19130798",
+        "Fecha de creación": "23/01/2025 - 18:35:58",
+        "Fuente": "dgt-lince3",
+        "Carretera": "M-50",
+        "Área administrativa": "MADRID"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.5448272,
+          40.383015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "ID del incidente": "GUID_Suc_19127671",
         "Fecha de creación": "23/01/2025 - 15:58:00",
         "Fuente": "112 de la Comunitat Valenciana",
@@ -17464,6 +17475,24 @@
         "coordinates": [
           -0.7040538,
           39.619225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID del incidente": "GUID_Suc_19130799",
+        "Fecha de creación": "23/01/2025 - 18:36:05",
+        "Tipo de incidente": "vehicleStuck",
+        "Fuente": "dgt3.0",
+        "Carretera": "ZA-20",
+        "Área administrativa": "ZAMORA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.73267,
+          41.506367
         ]
       }
     },
@@ -17760,23 +17789,6 @@
     {
       "type": "Feature",
       "properties": {
-        "ID del incidente": "GUID_Suc_19118664",
-        "Fecha de creación": "23/01/2025 - 10:09:44",
-        "Fuente": "adjudicatarios-obras",
-        "Carretera": "RM-11",
-        "Área administrativa": "MURCIA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.6568503,
-          37.59189
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "ID del incidente": "GUID_Suc_18939716",
         "Fecha de creación": "30/01/2025 - 10:05:00",
         "Fuente": "TRAZA EVENTOS",
@@ -17947,24 +17959,6 @@
     {
       "type": "Feature",
       "properties": {
-        "ID del incidente": "GUID_Suc_19130531",
-        "Fecha de creación": "23/01/2025 - 18:22:44",
-        "Tipo de incidente": "vehicleStuck",
-        "Fuente": "dgt3.0",
-        "Carretera": "N-430",
-        "Área administrativa": "CIUDAD REAL"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.371148,
-          39.00708
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "ID del incidente": "GUID_Suc_19126410",
         "Fecha de creación": "23/01/2025 - 08:00:00",
         "Fuente": "adjudicatarios-obras",
@@ -17993,24 +17987,6 @@
         "coordinates": [
           -0.4545126,
           39.44347
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "ID del incidente": "GUID_Suc_19120866",
-        "Fecha de creación": "23/01/2025 - 11:34:33",
-        "Tipo de incidente": "Vehículo Averiado",
-        "Fuente": "dgt-lince3",
-        "Carretera": "A-1241",
-        "Área administrativa": "HUESCA"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          0.2655421,
-          41.605824
         ]
       }
     },
