@@ -20,7 +20,7 @@ INCIDENT_TYPE_TRANSLATIONS = {
     "restrictions": "Restricciones",
     "narrowLanes": "Carriles Estrechos",
     "flooding": "Inundación",
-    "Bothways": "Ambos Sentidos"
+    "bothWays": "Ambos Sentidos"
 }
 
 # Función para traducir tipos de incidentes
@@ -72,12 +72,13 @@ def process_xml_from_url(url, region_name, all_incidents):
                 # Extraer la dirección
                 direction = situation_record.find(".//_0:tpegDirection", NS)
                 if direction is not None:
-                    description.append(f"<b>Dirección:</b> {direction.text.capitalize()}")
+                    incident_type = translate_incident_type(direction.text)
+                    description.append(f"<b>Dirección:</b> {direction}")
 
                 # Extraer la situación
                 situation_road = situation_record.find(".//_0:roadOrCarriagewayOrLaneManagementType", NS)
                 if situation_road is not None:
-                    obstruction_type = translate_incident_type(environmental_obstruction.text)
+                    obstruction_type = translate_incident_type(situation_road.text)
                     description.append(f"<b>Estado:</b> {situation_road}")
 
                 # Extraer la carretera
