@@ -1,36 +1,35 @@
-name: Actualizar tráfico
+name: Update Traffic Data
 
 on:
   schedule:
-    - cron: '*/15 * * * *'  # Ejecutar automáticamente cada 15 minutos
-  workflow_dispatch:       # Permitir ejecución manual desde la interfaz de GitHub
+    - cron: "*/5 * * * *"
 
 jobs:
-  run_script:
-    runs-on: ubuntu-latest  # Usar una máquina virtual con Ubuntu
-
+  update-traffic-data:
+    runs-on: ubuntu-latest
     steps:
-      - name: Hacer checkout del repositorio
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Configurar Python
+      - name: Set Up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'  # O la versión que prefieras
+          python-version: "3.x"
 
-      - name: Instalar dependencias
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests  # Instala las librerías que necesites
+      - name: Install Requirements
+        run: pip install requests
 
-      - name: Ejecutar script
-        run: |
-          python traffic_data.geojson  # Reemplaza con el nombre de tu script
+      - name: Run Python Script
+        run: python traffic_data.py
 
-      - name: Subir los resultados a GitHub (opcional)
+      - name: Force Git Add
+        run: git add -A
+
+      - name: Commit Changes
         run: |
-          git config --global user.email "your-email@example.com"
-          git config --global user.name "Your Name"
-          git add .
-          git commit -m "Actualizar resultados de tráfico"
-          git push
+          git config --local user.name "GitHub Actions Bot"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update traffic data" || echo "No changes to commit"
+
+      - name: Push Changes
+        run: git push
