@@ -19,7 +19,8 @@ INCIDENT_TYPE_TRANSLATIONS = {
     "roadClosed": "Corte Total",
     "restrictions": "Restricciones",
     "narrowLanes": "Carriles Estrechos",
-    "flooding": "Inundación"
+    "flooding": "Inundación",
+    "bothWays": "Ambos Sentidos"
 }
 
 # Función para traducir tipos de incidentes
