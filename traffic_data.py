@@ -65,6 +65,12 @@ def process_xml_from_url(url, region_name, all_incidents):
                 if creation_time is not None:
                     description.append(f"<b>Fecha de Creación:</b> {format_datetime(creation_time.text)}")
 
+                # Extraer el tipo de obstrucción
+                obstructionType = situation_record.find(".//_0:obstructionType", NS)
+                if obstructionType is not None:
+                    obstruction_type = translate_incident_type(obstructionType.text)
+                    description.append(f"<b>Tipo de Obstrucción:</b> {obstruction_type}")
+                
                 # Extraer el tipo de obstrucción ambiental
                 environmental_obstruction = situation_record.find(".//_0:environmentalObstructionType", NS)
                 if environmental_obstruction is not None:
