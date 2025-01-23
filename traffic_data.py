@@ -70,7 +70,7 @@ def process_xml_from_url(url, region_name, all_incidents):
                     description.append(f"<b>Tipo de Incidente:</b> {incident_type}")
 
                 # Extraer la dirección
-                direction = situation_record.find(".//_0:tpegDirection", NS)
+                direction = situation_record.find(".//_0:directionRelative", NS)
                 if direction is not None:
                     direction = translate_incident_type(direction.text)
                     description.append(f"<b>Dirección:</b> {direction}")
