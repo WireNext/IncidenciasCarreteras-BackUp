@@ -37,14 +37,15 @@ def format_datetime(datetime_str):
 def translate_incident_type(incident_type):
     return INCIDENT_TYPE_TRANSLATIONS.get(incident_type, incident_type)
 
+# Lista para almacenar todos los incidentes
+all_incidents = []
+
 # Función para procesar un archivo XML desde una URL
-def process_xml_from_url(url, region_name):
+def process_xml_from_url(url):
     try:
         response = requests.get(url)
         response.raise_for_status()
         root = ET.fromstring(response.content)
-
-        incidents = []
 
         for situation in root.findall(".//_0:situation", NS):
             situation_creation_time = situation.find(".//_0:situationRecordCreationTime", NS)
@@ -70,7 +71,7 @@ def process_xml_from_url(url, region_name):
 
             # Construcción del objeto de incidente
             if latitude is not None and longitude is not None and is_valid(latitude.text) and is_valid(longitude.text):
-                incidents.append({
+                all_incidents.append({
                     "type": "Feature",
                     "properties": {
                         "description": description
@@ -84,21 +85,20 @@ def process_xml_from_url(url, region_name):
                     }
                 })
 
-        # Crear archivo GeoJSON
-        geojson_data = {
-            "type": "FeatureCollection",
-            "features": incidents
-        }
-        file_name = f"{region_name.replace(' ', '_')}_traffic_data.geojson"
-        with open(file_name, "w") as f:
-            json.dump(geojson_data, f, indent=2, ensure_ascii=False)
-
-        print(f"Archivo GeoJSON generado con éxito para {region_name}")
-
     except Exception as e:
-        print(f"Error procesando {region_name} desde {url}: {e}")
+        print(f"Error procesando datos desde {url}: {e}")
 
 # Procesar todas las regiones
-for region_name, url in REGIONS.items():
-    print(f"\nProcesando región: {region_name}")
-    process_xml_from_url(url, region_name)
+for url in REGIONS.values():
+    process_xml_from_url(url)
+
+# Crear el archivo GeoJSON con todos los incidentes
+geojson_data = {
+    "type": "FeatureCollection",
+    "features": all_incidents
+}
+output_file = "all_traffic_data.geojson"
+with open(output_file, "w") as f:
+    json.dump(geojson_data, f, indent=2, ensure_ascii=False)
+
+print(f"Archivo GeoJSON generado con éxito: {output_file}")
