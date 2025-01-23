@@ -27,7 +27,8 @@ INCIDENT_TYPE_TRANSLATIONS = {
     "useUnderSpecifiedRestrictions": "Uso con restricciones",
     "congested": "Congestionada",
     "freeFlow": "Sin retención",
-    "constructionWork": "Obras"
+    "constructionWork": "Obras",
+    "impossible": "Imposible circular"
 }
 
 # Función para traducir tipos de incidentes
