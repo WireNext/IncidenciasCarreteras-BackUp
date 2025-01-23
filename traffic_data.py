@@ -20,6 +20,7 @@ INCIDENT_TYPE_TRANSLATIONS = {
     "restrictions": "Restricciones",
     "narrowLanes": "Carriles Estrechos",
     "flooding": "Inundación",
+    "vehicleStuck": "Vehiculo Parado",
     "both": "Ambos Sentidos",
     "negative": "Decreciente",
     "positive": "Creciente"
