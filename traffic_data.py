@@ -26,7 +26,8 @@ INCIDENT_TYPE_TRANSLATIONS = {
     "positive": "Creciente",
     "useUnderSpecifiedRestrictions": "Uso con restricciones",
     "congested": "Congestionada",
-    "freeFlow": "Sin retención"
+    "freeFlow": "Sin retención",
+    "constructionWork": "Obras"
 }
 
 # Función para traducir tipos de incidentes
@@ -79,7 +80,7 @@ def process_xml_from_url(url, region_name, all_incidents):
                 construction = situation_record.find(".//_0:constructionWorkType", NS)
                 if construction is not None:
                     construction = translate_incident_type(construction.text)
-                    description.append(f"<b> </b> {construction}")
+                    description.append(f"<b>Tipo de Incidente </b> {construction}")
 
                 # Extraer la dirección
                 direction = situation_record.find(".//_0:directionRelative", NS)
