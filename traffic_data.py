@@ -81,7 +81,7 @@ def process_xml_from_url(url, region_name, all_incidents):
                 # Extraer el tipo de incidente
                 vehicle_obstruction_type = situation_record.find(".//_0:vehicleObstructionType", NS)
                 if vehicle_obstruction_type is not None:
-                    incident_type = translate_incident_type(vehicle_obstruction_type.text)
+                    vehicle_obstruction_type = translate_incident_type(vehicle_obstruction_type.text)
                     description.append(f"<b>Tipo de Incidente:</b> {incident_type}")
 
                 # Extraer la construccion
@@ -97,10 +97,10 @@ def process_xml_from_url(url, region_name, all_incidents):
                     description.append(f"<b>Dirección:</b> {direction}")
 
                 # Extraer la situación
-                situation_road = situation_record.find(".//_0:networkManagementType", NS)
-                if situation_road is not None:
-                    situation_road = translate_incident_type(situation_road.text)
-                    description.append(f"<b>Estado:</b> {situation_road}")
+                state = situation_record.find(".//_0:networkManagementType", NS)
+                if state is not None:
+                    state = translate_incident_type(state.text)
+                    description.append(f"<b>Estado:</b> {state}")
 
                 # Extraer impacto
                 impact = situation_record.find(".//_0:impactOnTraffic", NS)
