@@ -13,8 +13,8 @@ REGIONS = {
 # Definir el espacio de nombres para el XML
 NS = {'_0': 'http://datex2.eu/schema/1_0/1_0'}
 
-# Diccionario de traducciones
-TRANSLATIONS = {
+# Traducción de tipos de incidentes
+INCIDENT_TYPE_TRANSLATIONS = {
     "damagedVehicle": "Vehículo Averiado",
     "roadClosed": "Corte Total",
     "restrictions": "Restricciones",
@@ -23,93 +23,82 @@ TRANSLATIONS = {
 
 # Función para comprobar si un valor es válido
 def is_valid(value):
-    return value is not None and value.strip()
+    return value is not None and value.strip() and value.lower() != "desconocido"
 
 # Función para formatear fecha y hora
 def format_datetime(datetime_str):
     try:
-        dt = datetime.fromisoformat(datetime_str)
+        dt = datetime.fromisoformat(datetime_str.replace("Z", "+00:00"))
         return dt.strftime("%d/%m/%Y - %H:%M:%S")
     except ValueError:
         return datetime_str
 
-# Función para traducir términos
-def translate(value):
-    return TRANSLATIONS.get(value, value)
+# Función para traducir tipo de incidente
+def translate_incident_type(incident_type):
+    return INCIDENT_TYPE_TRANSLATIONS.get(incident_type, incident_type)
 
-# Función para procesar un archivo XML y extraer información detallada
-def process_all_regions():
-    all_incidents = []
+# Función para procesar un archivo XML desde una URL
+def process_xml_from_url(url, region_name):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        root = ET.fromstring(response.content)
 
-    for region_name, url in REGIONS.items():
-        try:
-            # Descargar el archivo XML
-            response = requests.get(url)
-            response.raise_for_status()
+        incidents = []
 
-            # Parsear el contenido XML
-            root = ET.fromstring(response.content)
+        for situation in root.findall(".//_0:situation", NS):
+            situation_creation_time = situation.find(".//_0:situationRecordCreationTime", NS)
+            latitude = situation.find(".//_0:latitude", NS)
+            longitude = situation.find(".//_0:longitude", NS)
+            direction = situation.find(".//_0:tpegDirection", NS)
+            road_number = situation.find(".//_0:roadNumber", NS)
+            point_km = situation.find(".//_0:referencePointDistance", NS)
+            incident_type = situation.find(".//_0:vehicleObstructionType", NS)
 
-            # Procesar los incidentes
-            for situation in root.findall(".//_0:situation", NS):
-                properties = {}
-                geometry = {}
+            # Construcción de la descripción
+            description = ""
+            if situation_creation_time is not None and is_valid(situation_creation_time.text):
+                description += f"<b>Fecha de Creación:</b> {format_datetime(situation_creation_time.text)}<br>"
+            if direction is not None and is_valid(direction.text):
+                description += f"<b>Dirección:</b> {direction.text.capitalize()}<br>"
+            if road_number is not None and is_valid(road_number.text):
+                description += f"<b>Carretera:</b> {road_number.text}<br>"
+            if point_km is not None and is_valid(point_km.text):
+                description += f"<b>Punto Kilométrico:</b> {float(point_km.text) / 1000:.1f}<br>"
+            if incident_type is not None and is_valid(incident_type.text):
+                description += f"<b>Tipo de Incidente:</b> {translate_incident_type(incident_type.text)}<br>"
 
-                # Extraer información principal
-                situation_id = situation.get("id")
-                situation_record = situation.find(".//_0:situationRecord", NS)
-                creation_time = situation_record.find(".//_0:situationRecordCreationTime", NS)
-                incident_type = situation_record.find(".//_0:vehicleObstructionType", NS)
-                source_info = situation_record.find(".//_0:sourceInformation/_0:sourceName/_0:value", NS)
-                location_info = situation_record.find(".//_0:groupOfLocations/_0:locationContainedInGroup", NS)
-
-                # Extraer detalles de ubicación
-                latitude = location_info.find(".//_0:latitude", NS)
-                longitude = location_info.find(".//_0:longitude", NS)
-                road_number = location_info.find(".//_0:referencePoint/_0:roadNumber", NS)
-                administrative_area = location_info.find(".//_0:referencePoint/_0:administrativeArea/_0:value", NS)
-
-                # Asignar valores a las propiedades
-                if is_valid(situation_id):
-                    properties["ID del incidente"] = situation_id
-                if creation_time is not None and is_valid(creation_time.text):
-                    properties["Fecha de creación"] = format_datetime(creation_time.text)
-                if incident_type is not None and is_valid(incident_type.text):
-                    properties["Tipo de incidente"] = translate(incident_type.text)  # Traducir tipo de incidente
-                if source_info is not None and is_valid(source_info.text):
-                    properties["Fuente"] = source_info.text
-                if road_number is not None and is_valid(road_number.text):
-                    properties["Carretera"] = road_number.text
-                if administrative_area is not None and is_valid(administrative_area.text):
-                    properties["Área administrativa"] = administrative_area.text
-
-                # Asignar coordenadas
-                if latitude is not None and longitude is not None:
-                    geometry = {
+            # Construcción del objeto de incidente
+            if latitude is not None and longitude is not None and is_valid(latitude.text) and is_valid(longitude.text):
+                incidents.append({
+                    "type": "Feature",
+                    "properties": {
+                        "description": description
+                    },
+                    "geometry": {
                         "type": "Point",
-                        "coordinates": [float(longitude.text), float(latitude.text)]
+                        "coordinates": [
+                            float(longitude.text),
+                            float(latitude.text)
+                        ]
                     }
+                })
 
-                # Agregar datos al conjunto si tienen propiedades válidas
-                if properties and geometry:
-                    all_incidents.append({
-                        "type": "Feature",
-                        "properties": properties,
-                        "geometry": geometry
-                    })
+        # Crear archivo GeoJSON
+        geojson_data = {
+            "type": "FeatureCollection",
+            "features": incidents
+        }
+        file_name = f"{region_name.replace(' ', '_')}_traffic_data.geojson"
+        with open(file_name, "w") as f:
+            json.dump(geojson_data, f, indent=2, ensure_ascii=False)
 
-        except Exception as e:
-            print(f"Error procesando la región {region_name}: {e}")
+        print(f"Archivo GeoJSON generado con éxito para {region_name}")
 
-    # Crear el archivo GeoJSON combinado
-    geojson_data = {
-        "type": "FeatureCollection",
-        "features": all_incidents
-    }
-    with open("traffic_data.geojson", "w") as f:
-        json.dump(geojson_data, f, indent=2, ensure_ascii=False)
+    except Exception as e:
+        print(f"Error procesando {region_name} desde {url}: {e}")
 
-    print("Archivo GeoJSON generado con éxito.")
-
-# Ejecutar la función
-process_all_regions()
+# Procesar todas las regiones
+for region_name, url in REGIONS.items():
+    print(f"\nProcesando región: {region_name}")
+    process_xml_from_url(url, region_name)
