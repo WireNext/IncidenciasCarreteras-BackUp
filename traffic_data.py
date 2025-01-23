@@ -13,13 +13,6 @@ REGIONS = {
 # Definir el espacio de nombres para el XML
 NS = {'_0': 'http://datex2.eu/schema/1_0/1_0'}
 
-# Diccionario de traducciones
-TRANSLATIONS = {
-    "roadClosed": "Corte Total",
-    "restrictions": "Restricciones",
-    "narrowLanes": "Carriles Estrechos"
-}
-
 # Función para comprobar si un valor es válido (no es nulo, "Desconocido", ni vacío)
 def is_valid(value):
     return value is not None and value.strip() and value.lower() != "desconocido"
@@ -27,69 +20,76 @@ def is_valid(value):
 # Función para convertir la fecha y hora a un formato más bonito
 def format_datetime(datetime_str):
     try:
-        # Convertir la fecha y hora de ISO 8601 a un formato más amigable
         dt = datetime.fromisoformat(datetime_str)
         return dt.strftime("%d/%m/%Y - %H:%M:%S")
     except ValueError:
-        return datetime_str  # Si no se puede convertir, devolver el valor original
+        return datetime_str
 
-# Función para procesar un archivo XML desde una URL y extraer los datos necesarios
-def process_xml_from_url(url, region_name):
-    try:
-        # Descargar el archivo XML desde la URL
-        response = requests.get(url)
-        response.raise_for_status()  # Verifica errores HTTP
+# Función para traducir tipos de incidentes
+def translate_incident_type(incident_type):
+    translations = {
+        "roadClosed": "Corte Total",
+        "restrictions": "Restricciones",
+        "narrowLanes": "Carriles Estrechos"
+    }
+    return translations.get(incident_type.strip(), incident_type)
 
-        # Parsear el contenido XML
-        root = ET.fromstring(response.content)
+# Procesar XML y combinar todos los datos en un único GeoJSON
+def process_all_regions():
+    all_incidents = []
 
-        # Lista para almacenar los incidentes procesados
-        incidents = []
+    for region_name, url in REGIONS.items():
+        try:
+            # Descargar el archivo XML
+            response = requests.get(url)
+            response.raise_for_status()
 
-        # Procesar los incidentes en el archivo XML
-        for situation in root.findall(".//_0:situation", NS):
-            # Extraer los datos relevantes
-            situation_creation_time = situation.find(".//_0:situationRecordCreationTime", NS)
-            environmental_obstruction_type = situation.find(".//_0:environmentalObstructionType", NS)
+            # Parsear el contenido XML
+            root = ET.fromstring(response.content)
 
-            # Asignar valores a las propiedades si están presentes y son válidas
-            properties = {}
+            # Procesar incidentes
+            for situation in root.findall(".//_0:situation", NS):
+                properties = {}
+                geometry = {}
 
-            # Formatear la fecha y hora si está presente
-            if situation_creation_time is not None and is_valid(situation_creation_time.text):
-                properties["creation_time"] = format_datetime(situation_creation_time.text)
+                situation_creation_time = situation.find(".//_0:situationRecordCreationTime", NS)
+                environmental_obstruction_type = situation.find(".//_0:environmentalObstructionType", NS)
+                longitude = situation.find(".//_0:longitude", NS)
+                latitude = situation.find(".//_0:latitude", NS)
 
-            # Traducir el tipo de incidente si está presente
-            if environmental_obstruction_type is not None and is_valid(environmental_obstruction_type.text):
-                original_type = environmental_obstruction_type.text
-                translated_type = TRANSLATIONS.get(original_type, original_type)  # Buscar traducción, usar original si no hay
-                properties["incident_type"] = translated_type
+                # Formatear la fecha y traducir tipo de incidente
+                if situation_creation_time is not None and is_valid(situation_creation_time.text):
+                    properties["Fecha de Creación"] = format_datetime(situation_creation_time.text)
+                if environmental_obstruction_type is not None and is_valid(environmental_obstruction_type.text):
+                    properties["Tipo de Incidente"] = translate_incident_type(environmental_obstruction_type.text)
 
-            # Crear el objeto del incidente
-            if properties:
-                incidents.append({
-                    "type": "Feature",
-                    "properties": properties,
-                    "geometry": None  # Asigna una geometría si es necesario
-                })
+                # Añadir coordenadas si existen
+                if longitude is not None and latitude is not None and is_valid(longitude.text) and is_valid(latitude.text):
+                    geometry = {
+                        "type": "Point",
+                        "coordinates": [float(longitude.text), float(latitude.text)]
+                    }
 
-        # Crear el archivo GeoJSON
-        geojson_data = {
-            "type": "FeatureCollection",
-            "features": incidents
-        }
+                # Agregar datos al conjunto si tienen propiedades válidas
+                if properties and geometry:
+                    all_incidents.append({
+                        "type": "Feature",
+                        "properties": properties,
+                        "geometry": geometry
+                    })
 
-        # Guardar el archivo GeoJSON
-        file_name = f"{region_name.replace(' ', '_')}_traffic_data.geojson"
-        with open(file_name, "w") as f:
-            json.dump(geojson_data, f, indent=2)
+        except Exception as e:
+            print(f"Error procesando {region_name}: {e}")
 
-        print(f"Archivo GeoJSON generado con éxito para {region_name}")
+    # Crear el archivo GeoJSON combinado
+    geojson_data = {
+        "type": "FeatureCollection",
+        "features": all_incidents
+    }
+    with open("traffic_data.geojson", "w") as f:
+        json.dump(geojson_data, f, indent=2)
 
-    except Exception as e:
-        print(f"Error procesando {region_name} desde {url}: {e}")
+    print("Archivo GeoJSON combinado generado con éxito.")
 
-# Procesar todos los archivos XML de las regiones especificadas
-for region_name, url in REGIONS.items():
-    print(f"\nProcesando región: {region_name} desde {url}")
-    process_xml_from_url(url, region_name)
+# Ejecutar la función
+process_all_regions()
