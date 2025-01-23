@@ -23,7 +23,8 @@ INCIDENT_TYPE_TRANSLATIONS = {
     "vehicleStuck": "Vehiculo Parado",
     "both": "Ambos Sentidos",
     "negative": "Decreciente",
-    "positive": "Creciente"
+    "positive": "Creciente",
+    "useUnderSpecifiedRestrictions": "Uso con restricciones"
 }
 
 # Función para traducir tipos de incidentes
@@ -89,7 +90,6 @@ def process_xml_from_url(url, region_name, all_incidents):
                 if impact is not None:
                     impact = translate_incident_type(impact.text)
                     description.append(f"<b>Impacto: </b> {impact}")
-
                 
                 # Extraer la carretera
                 road_number = situation_record.find(".//_0:roadNumber", NS)
