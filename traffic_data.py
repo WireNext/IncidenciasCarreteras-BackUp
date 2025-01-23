@@ -79,7 +79,7 @@ def process_xml_from_url(url, region_name, all_incidents):
                     description.append(f"<b>Dirección:</b> {direction}")
 
                 # Extraer la situación
-                situation_road = situation_record.find(".//_0:roadOrCarriagewayOrLaneManagementType", NS)
+                situation_road = situation_record.find(".//_0:networkManagementType", NS)
                 if situation_road is not None:
                     situation_road = translate_incident_type(situation_road.text)
                     description.append(f"<b>Estado:</b> {situation_road}")
