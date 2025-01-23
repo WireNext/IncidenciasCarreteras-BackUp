@@ -74,6 +74,11 @@ def process_xml_from_url(url, region_name, all_incidents):
                 if direction is not None:
                     description.append(f"<b>Dirección:</b> {direction.text.capitalize()}")
 
+                # Extraer la situación
+                situation_road = situation_record.find(".//_0:roadOrCarriagewayOrLaneManagementType", NS)
+                if situation_road is not None:
+                    description.append(f"<b>Estado:</b> {situation_road.text.capitalize()}")
+
                 # Extraer la carretera
                 road_number = situation_record.find(".//_0:roadNumber", NS)
                 if road_number is not None:
