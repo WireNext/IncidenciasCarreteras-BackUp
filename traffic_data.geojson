@@ -2708,7 +2708,7 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:32:56<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 181300.0"
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:32:56<br><b>Impacto: </b> Retención<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 181300.0"
       },
       "geometry": {
         "type": "Point",
@@ -2741,6 +2741,19 @@
         "coordinates": [
           1.9051937,
           41.505753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:53:58<br><b>Impacto: </b> Retención<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 60500.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.792956,
+          41.993153
         ]
       }
     },
@@ -3046,19 +3059,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 11:13:22<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-637<br><b>Punto Kilométrico:</b> 16000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.9156,
-          43.2897
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 11:33:38<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-68<br><b>Punto Kilométrico:</b> 57000.0"
       },
       "geometry": {
@@ -3066,32 +3066,6 @@
         "coordinates": [
           -2.9034,
           42.7961
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 12:26:49<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> GI-636<br><b>Punto Kilométrico:</b> 3000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.898,
-          43.3162
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 12:35:08<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-68<br><b>Punto Kilométrico:</b> 3000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.9371,
-          43.1431
         ]
       }
     },
@@ -3137,19 +3111,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:09:26<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-634<br><b>Punto Kilométrico:</b> 30000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.2617,
-          43.2854
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:28:47<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-636<br><b>Punto Kilométrico:</b> 2000.0"
       },
       "geometry": {
@@ -3170,6 +3131,71 @@
         "coordinates": [
           -2.9547,
           43.2993
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:55:52<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BI-738<br><b>Punto Kilométrico:</b> 11000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.9776,
+          43.321
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:02:56<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> N-637<br><b>Punto Kilométrico:</b> 9000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.9851,
+          43.291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:03:10<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-1<br><b>Punto Kilométrico:</b> 382000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.3573,
+          42.8587
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:06:10<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> GI-627<br><b>Punto Kilométrico:</b> 37000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.4714,
+          43.0719
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:09:42<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> A-15<br><b>Punto Kilométrico:</b> 147000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.9987,
+          43.1482
         ]
       }
     },
@@ -3644,19 +3670,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:35:24<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-332<br><b>Punto Kilométrico:</b> 119266.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.3995325,
-          38.430435
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 16/09/2024 - 18:35:18<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-122<br><b>Punto Kilométrico:</b> 317000.0"
       },
       "geometry": {
@@ -3664,6 +3677,19 @@
         "coordinates": [
           -4.166979,
           41.611107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 28/01/2025 - 07:30:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-7205<br><b>Punto Kilométrico:</b> 4900.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.132776,
+          36.851604
         ]
       }
     },
@@ -3878,13 +3904,13 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:36:20<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-340<br><b>Punto Kilométrico:</b> 337960.0"
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:04:54<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> CA-181<br><b>Punto Kilométrico:</b> 0.0"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -3.4852166,
-          36.70127
+          -4.483134,
+          43.368385
         ]
       }
     },
@@ -3911,19 +3937,6 @@
         "coordinates": [
           -2.141333,
           39.492573
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 12:47:38<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> M-40<br><b>Punto Kilométrico:</b> 39709.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.828476,
-          40.41963
         ]
       }
     },
@@ -3963,19 +3976,6 @@
         "coordinates": [
           -0.9375356,
           41.337177
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:36:37<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-42<br><b>Punto Kilométrico:</b> 17400.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.75453,
-          40.270393
         ]
       }
     },
@@ -4034,19 +4034,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:36:37<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> A-42<br><b>Punto Kilométrico:</b> 16000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.75453,
-          40.270393
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:49:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> PO-331<br><b>Punto Kilométrico:</b> 17998.0"
       },
       "geometry": {
@@ -4099,6 +4086,32 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:05:24<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> M-40<br><b>Punto Kilométrico:</b> 12000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.5960884,
+          40.431778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:05:24<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> M-40<br><b>Punto Kilométrico:</b> 10900.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.5960884,
+          40.431778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:49:20<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-432a<br><b>Punto Kilométrico:</b> 386839.0"
       },
       "geometry": {
@@ -4112,13 +4125,13 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:49:16<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-66<br><b>Punto Kilométrico:</b> 27592.0"
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:02:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> V-30<br><b>Punto Kilométrico:</b> 8520.0"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -5.816799,
-          43.364685
+          -0.4180268,
+          39.461357
         ]
       }
     },
@@ -4145,45 +4158,6 @@
         "coordinates": [
           -2.5574327,
           39.647953
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:53:36<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-234<br><b>Punto Kilométrico:</b> 484000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.1146705,
-          41.847473
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:53:36<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BU-11<br><b>Punto Kilométrico:</b> 0.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.7031906,
-          42.313904
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:53:36<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BU-30<br><b>Punto Kilométrico:</b> 0.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.6401982,
-          42.365967
         ]
       }
     },
@@ -4236,6 +4210,110 @@
         "coordinates": [
           -3.6902478,
           40.38173
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:05:01<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-13A<br><b>Punto Kilométrico:</b> 42000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.69568,
+          39.59952
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:05:03<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-4<br><b>Punto Kilométrico:</b> 105300.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.00493,
+          36.84659
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:05:04<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-4<br><b>Punto Kilométrico:</b> 13000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.007825,
+          36.843536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:05:03<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-4<br><b>Punto Kilométrico:</b> 61200.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2026753,
+          36.533096
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:05:01<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-13<br><b>Punto Kilométrico:</b> 39300.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.707038,
+          39.619724
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:05:22<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-45<br><b>Punto Kilométrico:</b> 7989.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.7560883,
+          37.758423
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:05:04<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-4<br><b>Punto Kilométrico:</b> 61600.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.92946,
+          37.25304
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 07:30:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> A-66<br><b>Punto Kilométrico:</b> 809400.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.0317135,
+          37.414597
         ]
       }
     },
@@ -4411,19 +4489,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:31:17<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> SE-30<br><b>Punto Kilométrico:</b> 9000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -6.0229106,
-          37.372272
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 04/11/2024 - 08:59:13<br><b>Tipo de Obstrucción:</b> Inundación<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Imposible circular<br><b>Carretera:</b> CU-V-5009<br><b>Punto Kilométrico:</b> 10000.0"
       },
       "geometry": {
@@ -4574,19 +4639,6 @@
         "coordinates": [
           0.1489927,
           40.390327
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 10:14:58<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-77<br><b>Punto Kilométrico:</b> 3300.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.531037,
-          38.37689
         ]
       }
     },
@@ -4827,19 +4879,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 09:28:24<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-15<br><b>Punto Kilométrico:</b> 30000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.4729927,
-          41.393757
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:19:33<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-332<br><b>Punto Kilométrico:</b> 28300.0"
       },
       "geometry": {
@@ -4860,19 +4899,6 @@
         "coordinates": [
           -0.0810668,
           40.379776
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 09:28:24<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> SO-20<br><b>Punto Kilométrico:</b> 1800.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.483309,
-          41.694683
         ]
       }
     },
@@ -4944,6 +4970,32 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:12:02<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> A-92<br><b>Punto Kilométrico:</b> 2000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.929491,
+          37.385975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:12:34<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> M-40<br><b>Punto Kilométrico:</b> 21000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.6983628,
+          40.364376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 09:28:58<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> VM-497<br><b>Punto Kilométrico:</b> 0.0"
       },
       "geometry": {
@@ -4951,6 +5003,19 @@
         "coordinates": [
           -6.986642,
           37.271175
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:12:11<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> M-40<br><b>Punto Kilométrico:</b> 10699.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.595249,
+          40.432602
         ]
       }
     },
@@ -5126,6 +5191,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:58:53<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-2<br><b>Punto Kilométrico:</b> 330817.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7963634,
+          41.65279
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 02/10/2024 - 16:09:36<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-550<br><b>Punto Kilométrico:</b> 130500.0"
       },
       "geometry": {
@@ -5159,19 +5237,6 @@
         "coordinates": [
           -8.927366,
           42.466507
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 11:59:13<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-7204<br><b>Punto Kilométrico:</b> 12400.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.2283573,
-          36.941906
         ]
       }
     },
@@ -5464,19 +5529,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 24/01/2025 - 09:00:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-5<br><b>Punto Kilométrico:</b> 10320.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.79799,
-          40.37371
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 26/01/2025 - 11:50:08<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Retención<br><b>Carretera:</b> A-62<br><b>Punto Kilométrico:</b> 10000.0"
       },
       "geometry": {
@@ -5679,19 +5731,6 @@
         "coordinates": [
           -3.5269973,
           40.448048
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:02:25<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 558000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.2970193,
-          39.128895
         ]
       }
     },
@@ -5919,32 +5958,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:05:03<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-4<br><b>Punto Kilométrico:</b> 13000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -6.007825,
-          36.843536
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 12:07:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BA-20<br><b>Punto Kilométrico:</b> 7600.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -6.915241,
-          38.88952
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 19/06/2024 - 06:17:21<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> V-30<br><b>Punto Kilométrico:</b> 14500.0"
       },
       "geometry": {
@@ -6088,32 +6101,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:33:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> LU-133<br><b>Punto Kilométrico:</b> 16000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -7.112116,
-          43.501472
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:00:40<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 805800.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.908161,
-          37.665462
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 13/01/2025 - 14:51:46<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> M-300<br><b>Punto Kilométrico:</b> 32000.0"
       },
       "geometry": {
@@ -6121,19 +6108,6 @@
         "coordinates": [
           -3.4206398,
           40.468533
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:00:40<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 800000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.9506713,
-          37.675064
         ]
       }
     },
@@ -6251,19 +6225,6 @@
         "coordinates": [
           -5.46117,
           36.11797
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:37:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AC-173<br><b>Punto Kilométrico:</b> 5249.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.334693,
-          43.354862
         ]
       }
     },
@@ -6595,19 +6556,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 11:09:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CV-734<br><b>Punto Kilométrico:</b> 878.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          0.0846647,
-          38.78477
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 26/01/2025 - 11:47:26<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Retención<br><b>Carretera:</b> A-6<br><b>Punto Kilométrico:</b> 125000.0"
       },
       "geometry": {
@@ -6660,19 +6608,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 07:30:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> A-66<br><b>Punto Kilométrico:</b> 809400.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -6.0317135,
-          37.414597
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 29/11/2024 - 13:07:23<br><b>Dirección:</b> Decreciente<br><b>Estado:</b> trafficContolInOperation<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> GR-3211<br><b>Punto Kilométrico:</b> 2200.0"
       },
       "geometry": {
@@ -6699,19 +6634,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:44:06<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-70<br><b>Punto Kilométrico:</b> 29691.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.6143403,
-          38.306614
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:44:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> DP-6702<br><b>Punto Kilométrico:</b> 1238.0"
       },
       "geometry": {
@@ -6719,19 +6641,6 @@
         "coordinates": [
           -8.943956,
           42.61603
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 07:00:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-30<br><b>Punto Kilométrico:</b> 136000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.1648825,
-          38.02345
         ]
       }
     },
@@ -6751,19 +6660,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 12:22:35<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-403<br><b>Punto Kilométrico:</b> 51000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.40033,
-          40.182724
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 21:30:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> A-67<br><b>Punto Kilométrico:</b> 166900.0"
       },
       "geometry": {
@@ -6771,19 +6667,6 @@
         "coordinates": [
           -4.081259,
           43.247585
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 12:22:35<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-5<br><b>Punto Kilométrico:</b> 120500.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.8787665,
-          39.972263
         ]
       }
     },
@@ -6803,19 +6686,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 12:22:35<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-5<br><b>Punto Kilométrico:</b> 105000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.7000294,
-          39.99033
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 24/11/2024 - 16:05:22<br><b>Tipo de Obstrucción:</b> rockfalls<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-334<br><b>Punto Kilométrico:</b> 32000.0"
       },
       "geometry": {
@@ -6823,19 +6693,6 @@
         "coordinates": [
           -2.5116277,
           37.363083
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 12:22:35<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-502<br><b>Punto Kilométrico:</b> 117200.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.850037,
-          39.940086
         ]
       }
     },
@@ -6933,6 +6790,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 22:00:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-3<br><b>Punto Kilométrico:</b> 278800.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1833699,
+          39.5446
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 22/01/2025 - 13:36:38<br><b>Tipo de Obstrucción:</b> other<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-1<br><b>Punto Kilométrico:</b> 36600.0"
       },
       "geometry": {
@@ -6940,32 +6810,6 @@
         "coordinates": [
           -3.3265343,
           42.53073
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:50:26<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AC-305<br><b>Punto Kilométrico:</b> 13262.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.806675,
-          42.685337
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:50:05<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> LE-7414<br><b>Punto Kilométrico:</b> 9471.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.999885,
-          42.19324
         ]
       }
     },
@@ -7024,6 +6868,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 28/01/2025 - 07:00:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 589800.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1301155,
+          38.912155
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 02/10/2024 - 16:08:51<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> N-550<br><b>Punto Kilométrico:</b> 129500.0"
       },
       "geometry": {
@@ -7037,19 +6894,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 12:22:35<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-502<br><b>Punto Kilométrico:</b> 98000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.9816136,
-          40.015556
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 02/02/2025 - 18:45:00<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-7204<br><b>Punto Kilométrico:</b> 28500.0"
       },
       "geometry": {
@@ -7057,6 +6901,19 @@
         "coordinates": [
           -4.3357406,
           36.90753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:58:05<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-2<br><b>Punto Kilométrico:</b> 245900.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.5494761,
+          41.394127
         ]
       }
     },
@@ -7297,19 +7154,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:47:30<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CO-4103<br><b>Punto Kilométrico:</b> 463.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.36775,
-          37.898674
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 12/09/2024 - 10:15:50<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-8<br><b>Punto Kilométrico:</b> 232000.0"
       },
       "geometry": {
@@ -7382,6 +7226,19 @@
         "coordinates": [
           -6.3637643,
           37.354187
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:58:39<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-322<br><b>Punto Kilométrico:</b> 326177.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.15037,
+          38.878075
         ]
       }
     },
@@ -7531,19 +7388,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:47:10<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> M-40<br><b>Punto Kilométrico:</b> 10000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.5985851,
-          40.425297
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 02/02/2025 - 09:34:00<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> M-104<br><b>Punto Kilométrico:</b> 4100.0"
       },
       "geometry": {
@@ -7551,19 +7395,6 @@
         "coordinates": [
           -3.6502538,
           40.679794
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:47:04<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-525<br><b>Punto Kilométrico:</b> 301575.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.227708,
-          42.69365
         ]
       }
     },
@@ -7596,19 +7427,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:47:07<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-3<br><b>Punto Kilométrico:</b> 278800.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.1681889,
-          39.530464
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:04:12<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-129<br><b>Punto Kilométrico:</b> 21900.0"
       },
       "geometry": {
@@ -7629,19 +7447,6 @@
         "coordinates": [
           -5.45788,
           36.11478
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:47:19<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> SE-30<br><b>Punto Kilométrico:</b> 1300.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.9439588,
-          37.39453
         ]
       }
     },
@@ -7733,19 +7538,6 @@
         "coordinates": [
           -0.4393006,
           42.11794
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 11:03:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CV-706<br><b>Punto Kilométrico:</b> 2953.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.4028345,
-          38.727097
         ]
       }
     },
@@ -7928,19 +7720,6 @@
         "coordinates": [
           -1.8180584,
           38.095352
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:05:03<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-4<br><b>Punto Kilométrico:</b> 61600.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.92946,
-          37.25304
         ]
       }
     },
@@ -8149,19 +7928,6 @@
         "coordinates": [
           -5.84722,
           43.54462
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:01:09<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-6203<br><b>Punto Kilométrico:</b> 24000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.1205845,
-          38.33233
         ]
       }
     },
@@ -8402,19 +8168,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:51:39<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CL-626<br><b>Punto Kilométrico:</b> 81151.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.779646,
-          42.785095
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 09/02/2025 - 09:30:00<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-19<br><b>Punto Kilométrico:</b> 38200.0"
       },
       "geometry": {
@@ -8422,19 +8175,6 @@
         "coordinates": [
           3.0259821,
           39.42534
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:51:22<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AC-544<br><b>Punto Kilométrico:</b> 684.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.654745,
-          42.865204
         ]
       }
     },
@@ -8480,6 +8220,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:09:10<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-3240a<br><b>Punto Kilométrico:</b> 1147.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.00681,
+          39.64577
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 02/01/2025 - 14:02:57<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> A-52<br><b>Punto Kilométrico:</b> 115100.0"
       },
       "geometry": {
@@ -8493,6 +8246,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:09:20<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> PO-332<br><b>Punto Kilométrico:</b> 1512.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.790354,
+          42.14546
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:21:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-7<br><b>Punto Kilométrico:</b> 332580.0"
       },
       "geometry": {
@@ -8500,6 +8266,19 @@
         "coordinates": [
           -0.5291277,
           39.498623
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:10:00<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-42<br><b>Punto Kilométrico:</b> 17400.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.75453,
+          40.270393
         ]
       }
     },
@@ -8545,6 +8324,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:01:02<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-5<br><b>Punto Kilométrico:</b> 29040.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.9874,
+          40.291378
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 10:25:56<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CV-33<br><b>Punto Kilométrico:</b> 2000.0"
       },
       "geometry": {
@@ -8571,13 +8363,13 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:50:32<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> GC-65<br><b>Punto Kilométrico:</b> 25240.0"
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:02:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-405<br><b>Punto Kilométrico:</b> 34000.0"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -15.438807,
-          27.856382
+          -5.409874,
+          36.340927
         ]
       }
     },
@@ -8636,6 +8428,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:59:20<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-340a<br><b>Punto Kilométrico:</b> 598591.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6636099,
+          37.689663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 10:09:12<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-7<br><b>Punto Kilométrico:</b> 868800.0"
       },
       "geometry": {
@@ -8643,6 +8448,19 @@
         "coordinates": [
           -3.3165286,
           36.74937
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:40:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-420<br><b>Punto Kilométrico:</b> 120500.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.3677235,
+          38.55135
         ]
       }
     },
@@ -8753,6 +8571,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:52:50<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-3017<br><b>Punto Kilométrico:</b> 0.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.7479365,
+          39.61441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 09/11/2024 - 18:15:08<br><b>Tipo de Obstrucción:</b> Inundación<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CV-380<br><b>Punto Kilométrico:</b> 11677.0"
       },
       "geometry": {
@@ -8805,6 +8636,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:13:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AC-162<br><b>Punto Kilométrico:</b> 166.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.252353,
+          43.349876
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:55:40<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-31<br><b>Punto Kilométrico:</b> 134000.0"
       },
       "geometry": {
@@ -8818,13 +8662,13 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:02:48<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-405<br><b>Punto Kilométrico:</b> 33000.0"
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:13:05<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> RM-425<br><b>Punto Kilométrico:</b> 2326.0"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -5.4048867,
-          36.333725
+          -1.0612243,
+          38.618164
         ]
       }
     },
@@ -8883,6 +8727,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:52:10<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> A-3<br><b>Punto Kilométrico:</b> 14000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.546503,
+          40.34846
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 05/11/2024 - 16:24:18<br><b>Tipo de Obstrucción:</b> Inundación<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Imposible circular<br><b>Carretera:</b> CV-391<br><b>Punto Kilométrico:</b> 9280.0"
       },
       "geometry": {
@@ -8890,6 +8747,19 @@
         "coordinates": [
           -1.0527776,
           39.566715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:53:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> LU-641<br><b>Punto Kilométrico:</b> 12000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.350547,
+          42.675392
         ]
       }
     },
@@ -9026,19 +8896,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:47:54<br><b>Tipo de Incidente:</b> Vehículo Averiado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-42<br><b>Punto Kilométrico:</b> 76000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.9808314,
-          39.840252
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 01/02/2025 - 09:00:00<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CV-146<br><b>Punto Kilométrico:</b> 4430.0"
       },
       "geometry": {
@@ -9046,19 +8903,6 @@
         "coordinates": [
           0.1037353,
           40.14348
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:47:54<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> A-42<br><b>Punto Kilométrico:</b> 75000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.9808314,
-          39.840252
         ]
       }
     },
@@ -9117,6 +8961,71 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:05:01<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-30<br><b>Punto Kilométrico:</b> 0.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.70277,
+          39.61463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:05:01<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-13A<br><b>Punto Kilométrico:</b> 5500.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.02149,
+          39.79309
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:05:01<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-13<br><b>Punto Kilométrico:</b> 5000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.0206976,
+          39.79357
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:05:01<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-30<br><b>Punto Kilométrico:</b> 7700.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.70252,
+          39.55338
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 07:00:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-30<br><b>Punto Kilométrico:</b> 136000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1648825,
+          38.02345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:13:34<br><b>Tipo de Incidente:</b> Vehículo Averiado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-31<br><b>Punto Kilométrico:</b> 54000.0"
       },
       "geometry": {
@@ -9156,6 +9065,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:05:01<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-13<br><b>Punto Kilométrico:</b> 50400.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.0212982,
+          39.794186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 20/01/2025 - 09:10:06<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-52<br><b>Punto Kilométrico:</b> 288800.0"
       },
       "geometry": {
@@ -9163,6 +9085,19 @@
         "coordinates": [
           -8.461131,
           42.143505
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:05:01<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-13<br><b>Punto Kilométrico:</b> 39400.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.1130702,
+          39.85088
         ]
       }
     },
@@ -9189,19 +9124,6 @@
         "coordinates": [
           -0.4126398,
           39.25239
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:26:01<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-8028<br><b>Punto Kilométrico:</b> 612.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.9370084,
-          37.36862
         ]
       }
     },
@@ -9273,19 +9195,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:25:25<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CV-715<br><b>Punto Kilométrico:</b> 18922.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.0684742,
-          38.789944
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 07/09/2021 - 15:00:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Retención<br><b>Carretera:</b> GR-5202<br><b>Punto Kilométrico:</b> 18000.0"
       },
       "geometry": {
@@ -9345,6 +9254,19 @@
         "coordinates": [
           -0.1294959,
           39.840343
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:54:24<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-110<br><b>Punto Kilométrico:</b> 355499.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.6705365,
+          40.263596
         ]
       }
     },
@@ -9429,19 +9351,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:49:50<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> M-50<br><b>Punto Kilométrico:</b> 47919.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.71387,
-          40.273346
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 03/07/2023 - 08:03:45<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> LR-131<br><b>Punto Kilométrico:</b> 400.0"
       },
       "geometry": {
@@ -9468,13 +9377,39 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:24:48<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-6<br><b>Punto Kilométrico:</b> 588600.0"
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:06:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> V-21<br><b>Punto Kilométrico:</b> 14924.0"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -8.433648,
-          43.2856
+          -0.3261624,
+          39.501984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:07:41<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Z-40<br><b>Punto Kilométrico:</b> 19083.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8401347,
+          41.631577
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:06:00<br><b>Tipo de Incidente:</b> Vehículo Averiado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CV-25<br><b>Punto Kilométrico:</b> 17596.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5283241,
+          39.753216
         ]
       }
     },
@@ -9676,13 +9611,13 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:24:07<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> M-224<br><b>Punto Kilométrico:</b> 21968.0"
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:08:41<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-405<br><b>Punto Kilométrico:</b> 9396.0"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -3.375063,
-          40.41441
+          -5.374655,
+          36.484425
         ]
       }
     },
@@ -9793,19 +9728,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:21:37<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CV-566<br><b>Punto Kilométrico:</b> 303.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.5631977,
-          39.002705
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 02/12/2024 - 21:00:23<br><b>Tipo de Obstrucción:</b> Inundación<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CV-424<br><b>Punto Kilométrico:</b> 1700.0"
       },
       "geometry": {
@@ -9813,19 +9735,6 @@
         "coordinates": [
           -0.5986142,
           39.463703
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:21:36<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-1<br><b>Punto Kilométrico:</b> 65848.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.6108916,
-          40.917873
         ]
       }
     },
@@ -9943,19 +9852,6 @@
         "coordinates": [
           -5.977017,
           37.340538
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 09:32:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-31<br><b>Punto Kilométrico:</b> 235007.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.5496216,
-          38.343925
         ]
       }
     },
@@ -10131,19 +10027,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 09:34:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-7<br><b>Punto Kilométrico:</b> 508989.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.6628108,
-          38.330036
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:28:38<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-33<br><b>Punto Kilométrico:</b> 90690.0"
       },
       "geometry": {
@@ -10196,19 +10079,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:22:29<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-22<br><b>Punto Kilométrico:</b> 36934.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          0.256703,
-          41.870205
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 26/09/2024 - 09:53:43<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> CV-905<br><b>Punto Kilométrico:</b> 8380.0"
       },
       "geometry": {
@@ -10222,19 +10092,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:22:24<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> M-21<br><b>Punto Kilométrico:</b> 1526.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.5838826,
-          40.4398
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 24/01/2025 - 08:30:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> M-634<br><b>Punto Kilométrico:</b> 13240.0"
       },
       "geometry": {
@@ -10242,19 +10099,6 @@
         "coordinates": [
           -3.7165916,
           40.958424
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:41:23<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> M-45<br><b>Punto Kilométrico:</b> 30889.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.500932,
-          40.429104
         ]
       }
     },
@@ -10326,19 +10170,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:18:41<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> CV-30<br><b>Punto Kilométrico:</b> 1000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.44207,
-          39.48722
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 05/11/2024 - 21:01:05<br><b>Dirección:</b> Ambos Sentidos<br><b>Estado:</b> useOfSpecifiedLaneAllowed<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-435<br><b>Punto Kilométrico:</b> 139580.0"
       },
       "geometry": {
@@ -10385,6 +10216,19 @@
         "coordinates": [
           -6.8353224,
           37.85291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:13:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AC-162<br><b>Punto Kilométrico:</b> 279.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.252094,
+          43.349037
         ]
       }
     },
@@ -10599,6 +10443,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:11:58<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-66<br><b>Punto Kilométrico:</b> 363253.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.6292167,
+          40.776802
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:15:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-64<br><b>Punto Kilométrico:</b> 18000.0"
       },
       "geometry": {
@@ -10658,6 +10515,58 @@
         "coordinates": [
           -1.3551145,
           38.013046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:04:06<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> LZ-20<br><b>Punto Kilométrico:</b> 405.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.564859,
+          28.971634
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:04:38<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-471R1<br><b>Punto Kilométrico:</b> 14238.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.93807,
+          36.980198
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:04:48<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> M-40<br><b>Punto Kilométrico:</b> 10000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.6016705,
+          40.4213
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 09:00:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-5<br><b>Punto Kilométrico:</b> 10320.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.79799,
+          40.37371
         ]
       }
     },
@@ -10736,6 +10645,19 @@
         "coordinates": [
           -1.8318574,
           38.10035
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:03:11<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> PO-233<br><b>Punto Kilométrico:</b> 9391.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.510316,
+          42.46104
         ]
       }
     },
@@ -10846,6 +10768,45 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:11:36<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-502<br><b>Punto Kilométrico:</b> 99000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.9859347,
+          40.023895
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:11:36<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-502<br><b>Punto Kilométrico:</b> 98000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.9816136,
+          40.015556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:11:35<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> PO-11<br><b>Punto Kilométrico:</b> 2000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.674761,
+          42.4129
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:00:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-340<br><b>Punto Kilométrico:</b> 11100.0"
       },
       "geometry": {
@@ -10853,6 +10814,19 @@
         "coordinates": [
           -6.120854,
           36.390892
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:09:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CV-35<br><b>Punto Kilométrico:</b> 17490.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.532642,
+          39.583305
         ]
       }
     },
@@ -10872,6 +10846,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:11:36<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-403<br><b>Punto Kilométrico:</b> 51000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.40033,
+          40.182724
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 07:50:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> MA-7300<br><b>Punto Kilométrico:</b> 0.0"
       },
       "geometry": {
@@ -10879,6 +10866,19 @@
         "coordinates": [
           -5.12214,
           36.62674
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:11:36<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-5<br><b>Punto Kilométrico:</b> 120500.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.8787665,
+          39.972263
         ]
       }
     },
@@ -11041,19 +11041,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 09:10:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-3<br><b>Punto Kilométrico:</b> 109000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.7375493,
-          39.91215
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 24/01/2025 - 08:00:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> RM-15<br><b>Punto Kilométrico:</b> 13400.0"
       },
       "geometry": {
@@ -11158,19 +11145,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 09:09:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-31<br><b>Punto Kilométrico:</b> 195146.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.8129592,
-          38.54441
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 20/01/2025 - 13:36:20<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> N-400<br><b>Punto Kilométrico:</b> 55200.0"
       },
       "geometry": {
@@ -11197,13 +11171,39 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:42:06<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> SE-30<br><b>Punto Kilométrico:</b> 1000.0"
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:02:00<br><b>Tipo de Incidente:</b> vehicleOnFire<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> V-21<br><b>Punto Kilométrico:</b> 14592.0"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -5.94829,
-          37.40534
+          -0.3259436,
+          39.50499
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:11:34<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 805800.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.908161,
+          37.665462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:11:34<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 800000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9506713,
+          37.675064
         ]
       }
     },
@@ -11288,19 +11288,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 09:14:38<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-4<br><b>Punto Kilométrico:</b> 61200.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -6.2026753,
-          36.533096
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 09:07:35<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-4<br><b>Punto Kilométrico:</b> 52300.0"
       },
       "geometry": {
@@ -11308,32 +11295,6 @@
         "coordinates": [
           -3.5885859,
           39.98803
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:41:29<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> Ma-20<br><b>Punto Kilométrico:</b> 6000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.6631713,
-          39.589787
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:00:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-310<br><b>Punto Kilométrico:</b> 84420.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.0905073,
-          39.128353
         ]
       }
     },
@@ -11425,32 +11386,6 @@
         "coordinates": [
           1.4203075,
           38.92868
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:42:27<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-1051<br><b>Punto Kilométrico:</b> 9300.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.59844,
-          36.81902
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:42:27<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-1051<br><b>Punto Kilométrico:</b> 0.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.636395,
-          36.74954
         ]
       }
     },
@@ -11613,32 +11548,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:21:41<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BU-811<br><b>Punto Kilométrico:</b> 10000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.206778,
-          42.331543
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:21:41<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CL-117<br><b>Punto Kilométrico:</b> 26000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.03909,
-          41.970497
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:41:00<br><b>Tipo de Incidente:</b> vehicleOnFire<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-9<br><b>Punto Kilométrico:</b> 78000.0"
       },
       "geometry": {
@@ -11646,19 +11555,6 @@
         "coordinates": [
           -8.571825,
           42.831726
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 11:11:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-332<br><b>Punto Kilométrico:</b> 136415.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.2461326,
-          38.509808
         ]
       }
     },
@@ -11912,19 +11808,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 09:14:38<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-4<br><b>Punto Kilométrico:</b> 105300.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -6.00493,
-          36.84659
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 09/02/2025 - 09:15:00<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CV-1486<br><b>Punto Kilométrico:</b> 3660.0"
       },
       "geometry": {
@@ -11932,19 +11815,6 @@
         "coordinates": [
           0.0591216,
           40.112522
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:02:25<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 563500.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.2443171,
-          39.078285
         ]
       }
     },
@@ -11971,32 +11841,6 @@
         "coordinates": [
           0.1037353,
           40.14348
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:02:25<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 544000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.4142532,
-          39.207558
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:02:25<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 544000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.4144332,
-          39.207558
         ]
       }
     },
@@ -12081,19 +11925,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:53:36<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BU-11<br><b>Punto Kilométrico:</b> 4000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.68623,
-          42.34415
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 19/01/2025 - 13:54:03<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> A-2<br><b>Punto Kilométrico:</b> 61000.0"
       },
       "geometry": {
@@ -12114,32 +11945,6 @@
         "coordinates": [
           -8.686325,
           43.158627
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:53:36<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BU-30<br><b>Punto Kilométrico:</b> 25900.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.69676,
-          42.31658
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:53:36<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BU-11<br><b>Punto Kilométrico:</b> 3000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.7031906,
-          42.313904
         ]
       }
     },
@@ -12185,19 +11990,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:53:36<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-234<br><b>Punto Kilométrico:</b> 408500.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.6886227,
-          42.2533
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 25/09/2023 - 09:20:52<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> Z-40<br><b>Punto Kilométrico:</b> 20450.0"
       },
       "geometry": {
@@ -12205,19 +11997,6 @@
         "coordinates": [
           -0.8522314,
           41.62446
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:53:36<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BU-11<br><b>Punto Kilométrico:</b> 4000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.7011929,
-          42.320778
         ]
       }
     },
@@ -12244,19 +12023,6 @@
         "coordinates": [
           -0.358569,
           39.598736
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:43:04<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> M-45<br><b>Punto Kilométrico:</b> 17000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.612778,
-          40.359932
         ]
       }
     },
@@ -12348,19 +12114,6 @@
         "coordinates": [
           -0.418629,
           42.805195
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 09:24:07<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-7<br><b>Punto Kilométrico:</b> 964200.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.166335,
-          36.749477
         ]
       }
     },
@@ -12770,19 +12523,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:26:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 637028.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.0384551,
-          38.62416
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 07:24:12<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-3<br><b>Punto Kilométrico:</b> 322000.0"
       },
       "geometry": {
@@ -13082,19 +12822,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 09:20:40<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AG-56<br><b>Punto Kilométrico:</b> 10700.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.685988,
-          42.851173
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 14/11/2024 - 16:28:29<br><b>Tipo de Obstrucción:</b> Inundación<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> MA-7401<br><b>Punto Kilométrico:</b> 2000.0"
       },
       "geometry": {
@@ -13147,6 +12874,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:53:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> DP-7601<br><b>Punto Kilométrico:</b> 4000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.022979,
+          43.517597
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 20/11/2024 - 18:26:02<br><b>Tipo de Obstrucción:</b> Inundación<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> N-330<br><b>Punto Kilométrico:</b> 236000.0"
       },
       "geometry": {
@@ -13154,6 +12894,19 @@
         "coordinates": [
           -1.3408068,
           39.890343
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:03:26<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> GR-3209<br><b>Punto Kilométrico:</b> 5299.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.60419,
+          37.098633
         ]
       }
     },
@@ -13342,32 +13095,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:51:32<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> M-40<br><b>Punto Kilométrico:</b> 10900.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.5960884,
-          40.431778
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:51:32<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> M-40<br><b>Punto Kilométrico:</b> 12500.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.5960884,
-          40.431778
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 03/02/2025 - 11:30:00<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BU-822<br><b>Punto Kilométrico:</b> 0.0"
       },
       "geometry": {
@@ -13511,6 +13238,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:52:29<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-7054<br><b>Punto Kilométrico:</b> 24050.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.7108192,
+          36.76366
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/12/2024 - 14:29:00<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Imposible circular<br><b>Carretera:</b> A-4025<br><b>Punto Kilométrico:</b> 500.0"
       },
       "geometry": {
@@ -13531,19 +13271,6 @@
         "coordinates": [
           -5.819282,
           43.029102
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 11:59:13<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-402<br><b>Punto Kilométrico:</b> 55300.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.1464157,
-          36.890236
         ]
       }
     },
@@ -13596,6 +13323,32 @@
         "coordinates": [
           -0.6923914,
           39.48337
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:52:48<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> OU-405<br><b>Punto Kilométrico:</b> 123.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.144669,
+          42.288208
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:51:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CV-50<br><b>Punto Kilométrico:</b> 74151.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.6917267,
+          39.48457
         ]
       }
     },
@@ -13771,32 +13524,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:40:18<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-41<br><b>Punto Kilométrico:</b> 193500.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.0720305,
-          38.743847
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:40:18<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-420<br><b>Punto Kilométrico:</b> 120500.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.3677235,
-          38.55135
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 10:05:50<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> RM-11<br><b>Punto Kilométrico:</b> 13500.0"
       },
       "geometry": {
@@ -13804,19 +13531,6 @@
         "coordinates": [
           -1.6294854,
           37.52788
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:40:18<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-420<br><b>Punto Kilométrico:</b> 133600.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.3492045,
-          38.616257
         ]
       }
     },
@@ -13953,32 +13667,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:21:41<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BU-811<br><b>Punto Kilométrico:</b> 12000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.212824,
-          42.33833
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:21:41<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BU-813<br><b>Punto Kilométrico:</b> 11000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.205655,
-          42.32513
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 15/11/2024 - 21:10:13<br><b>Tipo de Obstrucción:</b> Inundación<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CV-403<br><b>Punto Kilométrico:</b> 4200.0"
       },
       "geometry": {
@@ -13992,19 +13680,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:21:41<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BU-813<br><b>Punto Kilométrico:</b> 13000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.2198946,
-          42.316643
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 20/01/2025 - 08:27:58<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> MA-8404<br><b>Punto Kilométrico:</b> 2200.0"
       },
       "geometry": {
@@ -14012,19 +13687,6 @@
         "coordinates": [
           -5.30685,
           36.80387
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:21:41<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BU-923<br><b>Punto Kilométrico:</b> 0.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.4857416,
-          41.63228
         ]
       }
     },
@@ -14051,19 +13713,6 @@
         "coordinates": [
           -4.843219,
           39.980453
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:45:05<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> M-512<br><b>Punto Kilométrico:</b> 14500.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.2602673,
-          40.46489
         ]
       }
     },
@@ -14155,19 +13804,6 @@
         "coordinates": [
           -8.854903,
           42.970455
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:21:41<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BU-923<br><b>Punto Kilométrico:</b> 24300.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.48949,
-          41.82325
         ]
       }
     },
@@ -14421,19 +14057,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 13:02:25<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 558000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.2971397,
-          39.128807
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 04/11/2024 - 22:12:58<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Imposible circular<br><b>Carretera:</b> A-7<br><b>Punto Kilométrico:</b> 578500.0"
       },
       "geometry": {
@@ -14467,19 +14090,6 @@
         "coordinates": [
           -6.339432,
           43.392933
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 11:59:13<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-7207<br><b>Punto Kilométrico:</b> 11400.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.9688272,
-          36.787067
         ]
       }
     },
@@ -14629,6 +14239,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:00:11<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CM-4001<br><b>Punto Kilométrico:</b> 3733.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.9683533,
+          39.8885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 31/12/2024 - 23:00:40<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 697900.0"
       },
       "geometry": {
@@ -14662,19 +14285,6 @@
         "coordinates": [
           -0.6078278,
           38.39979
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 12:22:35<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-502<br><b>Punto Kilométrico:</b> 99000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.9859347,
-          40.023895
         ]
       }
     },
@@ -14889,39 +14499,13 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:31:05<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-6<br><b>Punto Kilométrico:</b> 68500.0"
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:00:51<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AG-56<br><b>Punto Kilométrico:</b> 10700.0"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -4.1423426,
-          40.708023
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:31:05<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-6<br><b>Punto Kilométrico:</b> 57000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.2552657,
-          40.734756
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:31:05<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-6<br><b>Punto Kilométrico:</b> 77500.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.355774,
-          40.7664
+          -8.685988,
+          42.851173
         ]
       }
     },
@@ -14935,19 +14519,6 @@
         "coordinates": [
           -2.7268212,
           40.836407
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:31:05<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-6<br><b>Punto Kilométrico:</b> 78200.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.3493586,
-          40.762814
         ]
       }
     },
@@ -15013,32 +14584,6 @@
         "coordinates": [
           -5.527718,
           43.481445
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:21:34<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-402<br><b>Punto Kilométrico:</b> 56149.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.1470466,
-          36.886276
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:28:55<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> LR-115<br><b>Punto Kilométrico:</b> 25371.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.0942185,
-          42.227062
         ]
       }
     },
@@ -15117,19 +14662,6 @@
         "coordinates": [
           -3.7284,
           40.440884
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:12:25<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-30<br><b>Punto Kilométrico:</b> 176000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -1.0429485,
-          37.738773
         ]
       }
     },
@@ -15227,19 +14759,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:12:25<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-345<br><b>Punto Kilométrico:</b> 1000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.8805955,
-          37.595085
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:12:25<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> BA-019<br><b>Punto Kilométrico:</b> 0.0"
       },
       "geometry": {
@@ -15247,19 +14766,6 @@
         "coordinates": [
           -5.8271756,
           38.36139
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:01:09<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-310<br><b>Punto Kilométrico:</b> 23000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.5822115,
-          38.392162
         ]
       }
     },
@@ -15292,6 +14798,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:59:04<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-6102<br><b>Punto Kilométrico:</b> 4363.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.1677167,
+          39.330017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 02/12/2024 - 21:00:51<br><b>Tipo de Obstrucción:</b> Inundación<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CV-425<br><b>Punto Kilométrico:</b> 4000.0"
       },
       "geometry": {
@@ -15312,19 +14831,6 @@
         "coordinates": [
           -13.499893,
           29.144152
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:24:48<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-6<br><b>Punto Kilométrico:</b> 549000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.048809,
-          43.21274
         ]
       }
     },
@@ -15383,19 +14889,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:24:49<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> RM-F36<br><b>Punto Kilométrico:</b> 940.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.9528607,
-          37.73072
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 21/07/2024 - 10:43:43<br><b>Dirección:</b> Creciente<br><b>Estado:</b> trafficContolInOperation<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> VG-20<br><b>Punto Kilométrico:</b> 200.0"
       },
       "geometry": {
@@ -15409,6 +14902,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:10:00<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> A-42<br><b>Punto Kilométrico:</b> 12000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.75453,
+          40.270393
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 21/07/2024 - 10:43:43<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> VG-20<br><b>Punto Kilométrico:</b> 200.0"
       },
       "geometry": {
@@ -15416,6 +14922,19 @@
         "coordinates": [
           -8.758113,
           42.225178
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:10:14<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-7176<br><b>Punto Kilométrico:</b> 9297.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.9520984,
+          36.558636
         ]
       }
     },
@@ -15474,13 +14993,13 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:23:27<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-7<br><b>Punto Kilométrico:</b> 1108841.0"
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:59:01<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-77<br><b>Punto Kilométrico:</b> 3300.0"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -5.407473,
-          36.207462
+          -0.531037,
+          38.37689
         ]
       }
     },
@@ -15565,6 +15084,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:57:09<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AS-19<br><b>Punto Kilométrico:</b> 19576.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.9013853,
+          43.55276
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:23:24<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> M-220<br><b>Punto Kilométrico:</b> 19000.0"
       },
       "geometry": {
@@ -15585,19 +15117,6 @@
         "coordinates": [
           -4.8889027,
           36.73545
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 07:56:03<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-13<br><b>Punto Kilométrico:</b> 50400.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          3.0212982,
-          39.794186
         ]
       }
     },
@@ -15721,19 +15240,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 07:56:03<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-13<br><b>Punto Kilométrico:</b> 39400.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          3.1130702,
-          39.85088
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 17/10/2024 - 09:22:45<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CR-2122<br><b>Punto Kilométrico:</b> 6600.0"
       },
       "geometry": {
@@ -15747,13 +15253,13 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:34:15<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-7<br><b>Punto Kilométrico:</b> 624331.0"
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:08:53<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CA-351<br><b>Punto Kilométrico:</b> 8377.0"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -1.6088784,
-          37.70966
+          -4.0442624,
+          43.426777
         ]
       }
     },
@@ -15786,13 +15292,39 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 10:27:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-7<br><b>Punto Kilométrico:</b> 527924.0"
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:56:02<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> SE-30<br><b>Punto Kilométrico:</b> 2000.0"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.8023151,
-          38.223835
+          -5.94829,
+          37.40534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:51:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-15<br><b>Punto Kilométrico:</b> 30000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.4729927,
+          41.393757
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:02:57<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> Ma-20<br><b>Punto Kilométrico:</b> 7000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.6631713,
+          39.589787
         ]
       }
     },
@@ -15825,26 +15357,65 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 07:56:03<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-13A<br><b>Punto Kilométrico:</b> 42000.0"
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:09:48<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BA-20<br><b>Punto Kilométrico:</b> 4630.0"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.69568,
-          39.59952
+          -6.963005,
+          38.87202
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 12:33:18<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-611<br><b>Punto Kilométrico:</b> 190000.0"
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:09:45<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CM-220<br><b>Punto Kilométrico:</b> 91954.0"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -4.0111246,
-          43.394318
+          -1.9022566,
+          39.724415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:48:47<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> Ma-1110<br><b>Punto Kilométrico:</b> 5000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.6473353,
+          39.601757
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:09:32<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-5<br><b>Punto Kilométrico:</b> 274352.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.8560143,
+          39.28025
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:09:10<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> EX-304<br><b>Punto Kilométrico:</b> 1366.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.086068,
+          40.025333
         ]
       }
     },
@@ -15858,19 +15429,6 @@
         "coordinates": [
           -1.9610184,
           38.177246
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 07:56:03<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-30<br><b>Punto Kilométrico:</b> 0.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.70277,
-          39.61463
         ]
       }
     },
@@ -15897,6 +15455,19 @@
         "coordinates": [
           -4.5342526,
           42.11658
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:01:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> DP-5812<br><b>Punto Kilométrico:</b> 1283.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.306496,
+          43.358425
         ]
       }
     },
@@ -15955,19 +15526,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:37:46<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> V-30<br><b>Punto Kilométrico:</b> 4000.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.4272543,
-          39.477905
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/01/2025 - 10:30:52<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> M-503<br><b>Punto Kilométrico:</b> 2000.0"
       },
       "geometry": {
@@ -16007,6 +15565,58 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:01:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> DP-5812<br><b>Punto Kilométrico:</b> 1412.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.307181,
+          43.357307
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:01:12<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> V-30<br><b>Punto Kilométrico:</b> 8000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4272543,
+          39.477905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 22:00:00<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-611<br><b>Punto Kilométrico:</b> 190000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.015086,
+          43.394127
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:01:29<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AC-960<br><b>Punto Kilométrico:</b> 10805.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.382611,
+          42.814976
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 16/10/2024 - 00:09:09<br><b>Dirección:</b> Ambos Sentidos<br><b>Estado:</b> other<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 674120.0"
       },
       "geometry": {
@@ -16033,13 +15643,52 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 08:02:48<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-405<br><b>Punto Kilométrico:</b> 34000.0"
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:06:01<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> SE-30<br><b>Punto Kilométrico:</b> 10000.0"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -5.409874,
-          36.340927
+          -6.0229106,
+          37.372272
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:05:50<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-1503<br><b>Punto Kilométrico:</b> 7298.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.5608244,
+          41.44675
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:06:41<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-30<br><b>Punto Kilométrico:</b> 134698.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1574366,
+          38.032375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:06:06<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> PO-323<br><b>Punto Kilométrico:</b> 3955.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.692476,
+          42.25137
         ]
       }
     },
@@ -16085,6 +15734,19 @@
     {
       "type": "Feature",
       "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:54:33<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> A-3<br><b>Punto Kilométrico:</b> 9000.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.6014771,
+          40.378147
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "description": "<b>Fecha de Creación:</b> 02/12/2024 - 18:11:54<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> CO-3108<br><b>Punto Kilométrico:</b> 800.0"
       },
       "geometry": {
@@ -16092,6 +15754,19 @@
         "coordinates": [
           -4.4757967,
           37.936424
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 14:54:00<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> PO-313<br><b>Punto Kilométrico:</b> 821.0"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.699311,
+          42.384735
         ]
       }
     },
@@ -16124,52 +15799,26 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 07:56:03<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-13<br><b>Punto Kilométrico:</b> 39300.0"
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:07:36<br><b>Tipo de Incidente:</b> Vehiculo Parado<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> CM-3011<br><b>Punto Kilométrico:</b> 8435.0"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.707038,
-          39.619724
+          -2.8522084,
+          39.87983
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 07:56:03<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-13<br><b>Punto Kilométrico:</b> 5000.0"
+        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 15:07:06<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Retención<br><b>Carretera:</b> M-40<br><b>Punto Kilométrico:</b> 46000.0"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          3.0206976,
-          39.79357
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 07:56:03<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-30<br><b>Punto Kilométrico:</b> 7700.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.70252,
-          39.55338
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/01/2025 - 07:56:03<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> Ma-13A<br><b>Punto Kilométrico:</b> 5500.0"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          3.02149,
-          39.79309
+          -3.8230495,
+          40.447746
         ]
       }
     },
