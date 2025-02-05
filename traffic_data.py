@@ -119,6 +119,8 @@ def process_xml_from_url(url, region_name, all_incidents):
                 if lane is not None:
                     lane = translate_incident_type(lane.text)
                     description.append(f"<b>Aviso: </b> {lane}")
+                else:
+                    print("No se encontró roadOrCarriagewayOrLaneManagementType")
                 
                 # Extraer la carretera
                 road_number = situation_record.find(".//_0:roadNumber", NS)
