@@ -30,7 +30,10 @@ INCIDENT_TYPE_TRANSLATIONS = {
     "constructionWork": "Obras",
     "impossible": "Imposible circular",
     "objectOnTheRoad": "Objeto en Calzada",
-    "heavy": "Retención"
+    "heavy": "Retención",
+    "vehicleOnFire": "Vehiculo en llamas",
+    "narrowLanes": "Estrechamiento de carriles"
+    
 }
 
 # Función para traducir tipos de incidentes
@@ -108,6 +111,13 @@ def process_xml_from_url(url, region_name, all_incidents):
                 if impact is not None:
                     impact = translate_incident_type(impact.text)
                     description.append(f"<b>Impacto: </b> {impact}")
+
+                # Extraer carril
+                carril = situation_record.find(".//_0:roadOrCarriagewayOrLaneManagementType", NS)
+                if carril is not None:
+                    carril = translate_incident_type(carril.text)
+                    description.append(f"<b>Carril: </b> {carril}")
+
 
                 # Extraer impacto
                 lane = situation_record.find(".//_0:roadOrCarriagewayOrLaneManagementType", NS)
