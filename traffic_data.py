@@ -114,13 +114,6 @@ def process_xml_from_url(url, region_name, all_incidents):
                     impact = translate_incident_type(impact.text)
                     description.append(f"<b>Impacto: </b> {impact}")
 
-                # Extraer carril
-                carril = situation_record.find(".//_0:roadOrCarriagewayOrLaneManagementType", NS)
-                if carril is not None:
-                    carril = translate_incident_type(carril.text)
-                    description.append(f"<b>Carril: </b> {carril}")
-
-
                 # Extraer impacto
                 lane = situation_record.find(".//_0:roadOrCarriagewayOrLaneManagementType", NS)
                 if lane is not None:
