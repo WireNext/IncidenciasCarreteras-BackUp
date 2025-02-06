@@ -102,11 +102,15 @@ def process_xml_from_url(url, region_name, all_incidents):
                     direction = translate_incident_type(direction.text)
                     description.append(f"<b>Dirección:</b> {direction}")
 
-                # Extraer la situación
-                state = situation_record.find(".//_0:networkManagementType", NS)
-                if state is not None:
-                    state = translate_incident_type(state.text)
-                    description.append(f"<b>Estado:</b> {state}")
+# Intentemos obtener el valor de 'networkManagementType'
+lane = situation_record.find(".//_0:networkManagementType", NS)
+if lane is not None and lane.text:  # Verificamos que no sea None ni vacío
+    lane_text = translate_incident_type(lane.text.strip())  # Convertimos el texto
+    description.append(f"<b>Aviso: </b> {lane_text}")
+else:
+    description.append("<b>Aviso:</b> No disponible")  # Asegúrate de incluir algo
+    print("No se encontró networkManagementType, pero se procesó el incidente")
+
 
                 # Extraer impacto
                 impact = situation_record.find(".//_0:impactOnTraffic", NS)
