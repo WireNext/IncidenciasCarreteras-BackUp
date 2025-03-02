@@ -34,7 +34,8 @@ INCIDENT_TYPE_TRANSLATIONS = {
     "vehicleOnFire": "Vehiculo en llamas",
     "narrowLanes": "Estrechamiento de carriles",
     "intermittentShortTermClosures": "Cortes intermitentes",
-    "laneClosures": "Cierre de algún carril"
+    "laneClosures": "Cierre de algún carril",
+"rockfalls": "Caida de piedras"
     
 }
 
