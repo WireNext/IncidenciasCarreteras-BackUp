@@ -35,7 +35,8 @@ INCIDENT_TYPE_TRANSLATIONS = {
     "narrowLanes": "Estrechamiento de carriles",
     "intermittentShortTermClosures": "Cortes intermitentes",
     "laneClosures": "Cierre de algún carril",
-"rockfalls": "Caida de piedras"
+    "rockfalls": "Caida de piedras",
+    "trafficContolInOperation": "Itinerario alternativo"
     
 }
 
