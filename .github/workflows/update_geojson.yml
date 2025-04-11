@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/5 * * * *"  # Actualiza los datos cada 5 minutos
   workflow_dispatch:
 
 jobs:
@@ -26,17 +26,23 @@ jobs:
       - name: Run Python Script
         run: python traffic_data.py
 
+      - name: Confirm that the file exists
+        run: |
+          if [ -f "combined_traffic_data.geojson" ]; then
+            echo "Archivo GeoJSON encontrado."
+          else
+            echo "Archivo GeoJSON NO encontrado."
+            exit 1
+          fi
+
       - name: Force Git Add
-        run: git add -A
+        run: git add combined_traffic_data.geojson
 
       - name: Commit Changes
         run: |
           git config --local user.name "GitHub Actions Bot"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Update traffic data" || echo "No changes to commit"
-
-      - name: Pull remoto con rebase
-        run: git pull origin main --rebase || echo "Nothing to rebase"
 
       - name: Push Changes
         run: git push
