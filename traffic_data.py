@@ -124,7 +124,7 @@ def process_xml_from_url(url, region_name, all_incidents):
                 # Extraer el punto kilométrico
                 point_km = situation_record.find(".//_0:referencePointDistance", NS)
                 if point_km is not None:
-                    description.append(f"<b>Punto Kilométrico:</b> {float(point_km.text):.1f}")
+                    description.append(f"<b>Punto Kilométrico:</b> {float(point_km.text) / 1000:.1f} km")
 
                 # Extraer la ubicación
                 location = situation_record.find(".//_0:pointCoordinates", NS)
