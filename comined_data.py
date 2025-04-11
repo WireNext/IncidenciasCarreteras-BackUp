@@ -14,7 +14,8 @@ combined_data = {
 }
 
 # Guardar el archivo combinado
-with open('combined_traffic_data.geojson', 'w', encoding='utf-8') as combined_file:
-    json.dump(combined_data, combined_file, ensure_ascii=False, indent=2)
+geojson_file = "combined_traffic_data.geojson"  # Nombre del archivo GeoJSON de salida
+with open(geojson_file, "w") as f:
+    json.dump(geojson_data, f, indent=2, ensure_ascii=False)
 
-print("Archivo GeoJSON combinado guardado con éxito.")
+print(f"\nArchivo GeoJSON global generado con éxito: {geojson_file}")
