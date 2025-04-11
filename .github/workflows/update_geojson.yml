@@ -1,12 +1,12 @@
 name: Update Traffic Data
 
 on:
-  push:  # Permite actualizar manualmente al hacer un push
+  push:
     branches:
       - main
-  schedule:  # Actualizaciones automáticas cada 5 minutos
+  schedule:
     - cron: "*/5 * * * *"
-  workflow_dispatch:  # Permite ejecutar el workflow manualmente desde la interfaz de GitHub Actions
+  workflow_dispatch:
 
 jobs:
   update-traffic-data:
@@ -34,6 +34,9 @@ jobs:
           git config --local user.name "GitHub Actions Bot"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Update traffic data" || echo "No changes to commit"
+
+      - name: Pull remoto con rebase
+        run: git pull origin main --rebase || echo "Nothing to rebase"
 
       - name: Push Changes
         run: git push
