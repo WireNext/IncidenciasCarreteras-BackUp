@@ -36,7 +36,8 @@ INCIDENT_TYPE_TRANSLATIONS = {
     "intermittentShortTermClosures": "Cortes intermitentes",
     "laneClosures": "Cierre de algún carril",
     "rockfalls": "Caida de piedras",
-    "trafficContolInOperation": "Itinerario alternativo"
+    "trafficContolInOperation": "Itinerario alternativo",
+    "laneOrCarriagewayClosed": "Arcen cerrado"
     
 }
 
