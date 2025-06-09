@@ -105,11 +105,11 @@ def process_xml_from_url(url, region_name, all_incidents):
                     direction = translate_incident_type(direction.text)
                     description.append(f"<b>Dirección:</b> {direction}")
 
-                # Extraer impacto
+                # Extraer aviso
                 lane = situation_record.find(".//_0:networkManagementType", NS)
-                if lane is not None:
-                    lane = translate_incident_type(lane.text)
-                    description.append(f"<b>Aviso: </b> {lane}")
+                if lane is not None and lane.text:
+                    translated = translate_incident_type(lane.text)
+                    description.append(f"<b>Aviso: </b> {translated}")
 
                 # Extraer impacto
                 impact = situation_record.find(".//_0:impactOnTraffic", NS)
