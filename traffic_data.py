@@ -37,7 +37,8 @@ INCIDENT_TYPE_TRANSLATIONS = {
     "laneClosures": "Cierre de algún carril",
     "rockfalls": "Caida de piedras",
     "trafficContolInOperation": "Itinerario alternativo",
-    "laneOrCarriagewayClosed": "Arcen cerrado"
+    "laneOrCarriagewayClosed": "Arcen cerrado",
+    "brokenDownHeavyLorry": "Camión averiado"
     
 }
 
