@@ -139,7 +139,10 @@ def process_xml_from_url(url, region_name, all_incidents):
                         incident = {
                             "type": "Feature",
                             "properties": {
-                                "description": "<br>".join(description)
+                                "description": "<br>".join(description),
+                                "tipo": incident_type if
+                                'incident_type' in locals() else
+                                "Desconocido"
                             },
                             "geometry": {
                                 "type": "Point",
