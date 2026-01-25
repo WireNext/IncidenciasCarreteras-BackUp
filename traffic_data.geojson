@@ -1460,7 +1460,7 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 25/01/2026 - 08:24:28<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Imposible circular<br><b>Carretera:</b> BV-4243<br><b>Punto Kilométrico:</b> 4.0 km"
+        "description": "<b>Fecha de Creación:</b> 25/01/2026 - 08:24:28<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Retención<br><b>Carretera:</b> BV-4243<br><b>Punto Kilométrico:</b> 2.0 km"
       },
       "geometry": {
         "type": "Point",
@@ -1506,6 +1506,19 @@
         "coordinates": [
           1.9085579,
           42.39644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 25/01/2026 - 09:31:07<br><b>Impacto: </b> Retención<br><b>Carretera:</b> C-31<br><b>Punto Kilométrico:</b> 198.8 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1307871,
+          41.361214
         ]
       }
     },
@@ -1584,6 +1597,32 @@
         "coordinates": [
           -2.9275,
           43.2416
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 25/01/2026 - 09:30:17<br><b>Tipo de Obstrucción:</b> incident<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Imposible circular<br><b>Carretera:</b> N-634<br><b>Punto Kilométrico:</b> 22.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2515,
+          43.2947
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 25/01/2026 - 09:30:54<br><b>Tipo de Obstrucción:</b> incident<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Imposible circular<br><b>Carretera:</b> N-634<br><b>Punto Kilométrico:</b> 28.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.1981,
+          43.2987
         ]
       }
     },
