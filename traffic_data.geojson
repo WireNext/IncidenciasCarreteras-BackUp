@@ -1070,19 +1070,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 25/01/2026 - 14:02:40<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 263.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          1.0793307,
-          41.08744
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 25/01/2026 - 21:55:38<br><b>Impacto: </b> Retención<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 282.0 km"
       },
       "geometry": {
@@ -1499,19 +1486,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 26/01/2026 - 11:20:30<br><b>Carretera:</b> C-25<br><b>Punto Kilométrico:</b> 205.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.467034,
-          41.843357
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 26/01/2026 - 09:00:00<br><b>Dirección:</b> Ambos Sentidos<br><b>Carretera:</b> C-13<br><b>Punto Kilométrico:</b> 134.0 km"
       },
       "geometry": {
@@ -1569,34 +1543,21 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.2456834,
-          41.557926
+          2.257339,
+          41.558735
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 26/01/2026 - 13:59:32<br><b>Impacto: </b> Retención<br><b>Carretera:</b> C-33<br><b>Punto Kilométrico:</b> 85.0 km"
+        "description": "<b>Fecha de Creación:</b> 26/01/2026 - 14:16:36<br><b>Carretera:</b> C-17<br><b>Punto Kilométrico:</b> 15.0 km"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.2016969,
-          41.507114
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 26/01/2026 - 14:16:36<br><b>Impacto: </b> Retención<br><b>Carretera:</b> C-17<br><b>Punto Kilométrico:</b> 13.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.2395635,
-          41.56462
+          2.2469902,
+          41.571655
         ]
       }
     },
@@ -1621,8 +1582,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.1630595,
-          41.472992
+          2.1600533,
+          41.481426
         ]
       }
     },
@@ -1798,19 +1759,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 26/01/2026 - 14:19:32<br><b>Tipo de Obstrucción:</b> incident<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> GI-3562<br><b>Punto Kilométrico:</b> 3.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.3993,
-          43.2936
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 26/01/2026 - 14:28:59<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> N-240<br><b>Punto Kilométrico:</b> 7.0 km"
       },
       "geometry": {
@@ -1844,6 +1792,45 @@
         "coordinates": [
           -2.9184,
           42.7038
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 26/01/2026 - 15:15:31<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> GI-2634<br><b>Punto Kilométrico:</b> 15.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.1766,
+          43.168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 26/01/2026 - 15:19:02<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-1<br><b>Punto Kilométrico:</b> 145.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.4332,
+          43.192
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 26/01/2026 - 15:24:53<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-1<br><b>Punto Kilométrico:</b> 421.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.1801,
+          43.0507
         ]
       }
     },
