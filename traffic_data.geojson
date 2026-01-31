@@ -1213,7 +1213,7 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 31/01/2026 - 15:01:22<br><b>Carretera:</b> C-32<br><b>Punto Kilométrico:</b> 50.5 km"
+        "description": "<b>Fecha de Creación:</b> 31/01/2026 - 15:01:22<br><b>Impacto: </b> Retención<br><b>Carretera:</b> C-32<br><b>Punto Kilométrico:</b> 50.5 km"
       },
       "geometry": {
         "type": "Point",
@@ -1226,13 +1226,52 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 31/01/2026 - 15:12:15<br><b>Carretera:</b> B-10<br><b>Punto Kilométrico:</b> 10.0 km"
+        "description": "<b>Fecha de Creación:</b> 31/01/2026 - 15:47:08<br><b>Aviso: </b> Itinerario alternativo<br><b>Carretera:</b> N-340<br><b>Punto Kilométrico:</b> 1243.7 km"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.1728566,
-          41.367767
+          2.0059917,
+          41.40638
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 31/01/2026 - 16:07:40<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Retención<br><b>Carretera:</b> C-142b<br><b>Punto Kilométrico:</b> 0.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.9657702,
+          42.728527
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 31/01/2026 - 16:07:57<br><b>Aviso: </b> Corte Total<br><b>Impacto: </b> Imposible circular<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 280.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.9079045,
+          41.019947
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 31/01/2026 - 16:08:10<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Retención<br><b>Carretera:</b> C-28<br><b>Punto Kilométrico:</b> 37.1 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.0513874,
+          42.63923
         ]
       }
     },
@@ -1356,19 +1395,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 31/01/2026 - 14:52:50<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-1<br><b>Punto Kilométrico:</b> 354.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.6718,
-          42.8809
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 31/01/2026 - 15:10:11<br><b>Tipo de Obstrucción:</b> Objeto en Calzada<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> A-636<br><b>Punto Kilométrico:</b> 2.0 km"
       },
       "geometry": {
@@ -1382,13 +1408,26 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 31/01/2026 - 15:15:28<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-68<br><b>Punto Kilométrico:</b> 18.0 km"
+        "description": "<b>Fecha de Creación:</b> 31/01/2026 - 15:45:39<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BI-3749<br><b>Punto Kilométrico:</b> 13.0 km"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.9155,
-          43.104
+          -3.0372,
+          43.3052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 31/01/2026 - 15:54:54<br><b>Tipo de Obstrucción:</b> Caida de piedras<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> GI-627<br><b>Punto Kilométrico:</b> 31.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5019,
+          43.0323
         ]
       }
     },
