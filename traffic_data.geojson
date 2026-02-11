@@ -1876,13 +1876,13 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 11/02/2026 - 14:12:11<br><b>Impacto: </b> Retención<br><b>Carretera:</b> C-58<br><b>Punto Kilométrico:</b> 0.0 km"
+        "description": "<b>Fecha de Creación:</b> 11/02/2026 - 14:12:11<br><b>Impacto: </b> Retención<br><b>Carretera:</b> C-58<br><b>Punto Kilométrico:</b> 0.5 km"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.1721091,
-          41.46741
+          2.1600533,
+          41.481426
         ]
       }
     },
@@ -1915,19 +1915,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 11/02/2026 - 15:15:20<br><b>Carretera:</b> C-25<br><b>Punto Kilométrico:</b> 200.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.4102454,
-          41.868244
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 11/02/2026 - 19:45:00<br><b>Carretera:</b> A-2<br><b>Punto Kilométrico:</b> 518.0 km"
       },
       "geometry": {
@@ -1941,13 +1928,39 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 11/02/2026 - 20:25:59<br><b>Carretera:</b> C-59<br><b>Punto Kilométrico:</b> 2.0 km"
+        "description": "<b>Fecha de Creación:</b> 11/02/2026 - 21:01:51<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Retención<br><b>Carretera:</b> C-28<br><b>Punto Kilométrico:</b> 41.9 km"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.194622,
-          41.534176
+          1.0065178,
+          42.646996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 11/02/2026 - 21:25:33<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 105.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.550819,
+          41.713627
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 11/02/2026 - 21:34:59<br><b>Aviso: </b> Corte Total<br><b>Impacto: </b> Imposible circular<br><b>Carretera:</b> LL-11<br><b>Punto Kilométrico:</b> 3.7 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6848061,
+          41.62097
         ]
       }
     },
@@ -2084,32 +2097,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 11/02/2026 - 17:49:17<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-8<br><b>Punto Kilométrico:</b> 49.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.2757,
-          43.2636
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 11/02/2026 - 20:14:05<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> A-1<br><b>Punto Kilométrico:</b> 382.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.3568,
-          42.8591
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 11/02/2026 - 20:20:49<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Decreciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-1<br><b>Punto Kilométrico:</b> 435.0 km"
       },
       "geometry": {
@@ -2136,19 +2123,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 11/02/2026 - 20:38:28<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> AP-8<br><b>Punto Kilométrico:</b> 116.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.9377,
-          43.241
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 11/02/2026 - 20:41:21<br><b>Tipo de Obstrucción:</b> Caida de piedras<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BI-3117<br><b>Punto Kilométrico:</b> 20.0 km"
       },
       "geometry": {
@@ -2156,6 +2130,19 @@
         "coordinates": [
           -2.8772,
           43.3866
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 11/02/2026 - 21:09:54<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> AP-8<br><b>Punto Kilométrico:</b> 43.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2153,
+          43.283
         ]
       }
     },
