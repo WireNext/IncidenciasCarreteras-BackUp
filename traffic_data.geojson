@@ -706,19 +706,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 02/02/2026 - 22:00:00<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Imposible circular<br><b>Carretera:</b> BV-1414<br><b>Punto Kilométrico:</b> 2.4 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.0915039,
-          41.49495
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 03/02/2026 - 09:52:23<br><b>Dirección:</b> Ambos Sentidos<br><b>Carretera:</b> BV-4241<br><b>Punto Kilométrico:</b> 0.0 km"
       },
       "geometry": {
@@ -1941,19 +1928,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 31/03/2026 - 08:32:34<br><b>Dirección:</b> Ambos Sentidos<br><b>Carretera:</b> C-242<br><b>Punto Kilométrico:</b> 6.5 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          0.6620488,
-          41.355705
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 01/04/2026 - 08:00:00<br><b>Dirección:</b> Creciente<br><b>Carretera:</b> N-154<br><b>Punto Kilométrico:</b> 0.0 km"
       },
       "geometry": {
@@ -2019,19 +1993,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 02/04/2026 - 08:00:00<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Imposible circular<br><b>Carretera:</b> TV-3454<br><b>Punto Kilométrico:</b> 14.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          0.7526584,
-          40.715076
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 02/04/2026 - 10:34:26<br><b>Dirección:</b> Ambos Sentidos<br><b>Impacto: </b> Imposible circular<br><b>Carretera:</b> BV-4031<br><b>Punto Kilométrico:</b> 0.0 km"
       },
       "geometry": {
@@ -2039,6 +2000,32 @@
         "coordinates": [
           1.9637486,
           42.321754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 03/04/2026 - 07:57:02<br><b>Carretera:</b> AP-2<br><b>Punto Kilométrico:</b> 191.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1548209,
+          41.400116
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 03/04/2026 - 08:12:34<br><b>Impacto: </b> Retención<br><b>Carretera:</b> C-32<br><b>Punto Kilométrico:</b> 59.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.0886748,
+          41.35722
         ]
       }
     },
@@ -2162,26 +2149,26 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 03/04/2026 - 05:23:22<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> GI-2631<br><b>Punto Kilométrico:</b> 24.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.1467,
-          43.2633
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 03/04/2026 - 06:44:51<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BI-2405<br><b>Punto Kilométrico:</b> 59.0 km"
+        "description": "<b>Fecha de Creación:</b> 03/04/2026 - 06:44:51<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> BI-2405<br><b>Punto Kilométrico:</b> 59.0 km"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
           -2.4773,
           43.3161
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 03/04/2026 - 08:17:54<br><b>Tipo de Obstrucción:</b> Caida de piedras<br><b>Dirección:</b> unknown<br><b>Impacto: </b> unknown<br><b>Carretera:</b> BI-3723<br><b>Punto Kilométrico:</b> 3.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.917,
+          43.2351
         ]
       }
     },
