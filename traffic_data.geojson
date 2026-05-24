@@ -1343,19 +1343,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 27/04/2026 - 08:00:00<br><b>Dirección:</b> Ambos Sentidos<br><b>Carretera:</b> C-13<br><b>Punto Kilométrico:</b> 142.1 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          1.2114805,
-          42.493942
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 27/04/2026 - 12:37:10<br><b>Dirección:</b> Ambos Sentidos<br><b>Carretera:</b> T-203<br><b>Punto Kilométrico:</b> 0.0 km"
       },
       "geometry": {
@@ -1928,7 +1915,7 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 24/05/2026 - 17:48:14<br><b>Carretera:</b> C-65<br><b>Punto Kilométrico:</b> 7.0 km"
+        "description": "<b>Fecha de Creación:</b> 24/05/2026 - 17:48:14<br><b>Impacto: </b> Retención<br><b>Carretera:</b> C-65<br><b>Punto Kilométrico:</b> 8.5 km"
       },
       "geometry": {
         "type": "Point",
@@ -1946,8 +1933,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          3.0531387,
-          41.819458
+          3.0603924,
+          41.82626
         ]
       }
     },
@@ -1959,34 +1946,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          1.4781432,
-          41.629246
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 24/05/2026 - 17:58:13<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 147.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.1607523,
-          41.521713
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 24/05/2026 - 18:35:08<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 190.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          1.7791134,
-          41.405342
+          1.4570524,
+          41.6257
         ]
       }
     },
@@ -1998,47 +1959,21 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          1.7086935,
-          41.330574
+          1.6625776,
+          41.330242
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 24/05/2026 - 18:52:03<br><b>Carretera:</b> B-20<br><b>Punto Kilométrico:</b> 10.5 km"
+        "description": "<b>Fecha de Creación:</b> 24/05/2026 - 19:16:37<br><b>Impacto: </b> Retención<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 262.5 km"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.1596038,
-          41.43955
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 24/05/2026 - 19:14:41<br><b>Carretera:</b> B-10<br><b>Punto Kilométrico:</b> 7.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.2231147,
-          41.413033
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 24/05/2026 - 19:16:37<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 262.5 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          1.0681026,
-          41.08408
+          1.0563855,
+          41.082542
         ]
       }
     },
@@ -2052,6 +1987,58 @@
         "coordinates": [
           2.500544,
           41.57037
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 24/05/2026 - 19:45:13<br><b>Impacto: </b> Retención<br><b>Carretera:</b> B-20<br><b>Punto Kilométrico:</b> 2.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.0607376,
+          41.332695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 24/05/2026 - 19:57:58<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 125.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3644607,
+          41.623974
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 24/05/2026 - 20:22:09<br><b>Impacto: </b> Retención<br><b>Carretera:</b> B-10<br><b>Punto Kilométrico:</b> 1.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2103171,
+          41.434402
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 24/05/2026 - 20:26:44<br><b>Carretera:</b> C-32<br><b>Punto Kilométrico:</b> 89.5 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.364861,
+          41.506096
         ]
       }
     },
@@ -2214,32 +2201,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 24/05/2026 - 17:45:27<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Imposible circular<br><b>Carretera:</b> N-240<br><b>Punto Kilométrico:</b> 44.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.7888,
-          43.1574
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 24/05/2026 - 17:51:28<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-622<br><b>Punto Kilométrico:</b> 18.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.804,
-          42.9565
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 24/05/2026 - 18:17:46<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-1<br><b>Punto Kilométrico:</b> 136.0 km"
       },
       "geometry": {
@@ -2253,13 +2214,13 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 24/05/2026 - 18:49:55<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BI-2238<br><b>Punto Kilométrico:</b> 33.0 km"
+        "description": "<b>Fecha de Creación:</b> 24/05/2026 - 18:49:55<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BI-2238<br><b>Punto Kilométrico:</b> 37.0 km"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.6671,
-          43.3249
+          -2.65,
+          43.356
         ]
       }
     },
@@ -2273,6 +2234,19 @@
         "coordinates": [
           -1.9056,
           43.308
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 24/05/2026 - 19:44:12<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-68<br><b>Punto Kilométrico:</b> 33.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.8737,
+          42.9906
         ]
       }
     },
