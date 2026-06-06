@@ -1304,19 +1304,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 05/05/2026 - 22:00:00<br><b>Dirección:</b> Ambos Sentidos<br><b>Carretera:</b> B-212<br><b>Punto Kilométrico:</b> 4.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          1.6236457,
-          41.33074
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 06/05/2026 - 07:00:00<br><b>Carretera:</b> A-2<br><b>Punto Kilométrico:</b> 579.7 km"
       },
       "geometry": {
@@ -2019,13 +2006,26 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 05/06/2026 - 19:12:13<br><b>Impacto: </b> Retención<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 219.0 km"
+        "description": "<b>Fecha de Creación:</b> 06/06/2026 - 08:28:20<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 195.0 km"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          1.5206205,
-          41.222984
+          1.7086935,
+          41.330574
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 06/06/2026 - 09:19:30<br><b>Aviso: </b> Itinerario alternativo<br><b>Carretera:</b> GI-662<br><b>Punto Kilométrico:</b> 3.8 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.056602,
+          41.816513
         ]
       }
     },
@@ -2117,6 +2117,71 @@
         "coordinates": [
           -2.4348,
           43.1071
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 06/06/2026 - 07:49:19<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BI-625<br><b>Punto Kilométrico:</b> 376.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.9224,
+          43.1677
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 06/06/2026 - 08:31:57<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-1<br><b>Punto Kilométrico:</b> 345.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.7515,
+          42.8388
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 06/06/2026 - 08:40:03<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> AP-8<br><b>Punto Kilométrico:</b> 93.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6925,
+          43.196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 06/06/2026 - 08:42:04<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> A-8<br><b>Punto Kilométrico:</b> 128.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.0374,
+          43.3124
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 06/06/2026 - 09:12:55<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> GI-627<br><b>Punto Kilométrico:</b> 29.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.5205,
+          43.0217
         ]
       }
     },
