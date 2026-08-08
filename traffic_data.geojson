@@ -1928,19 +1928,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 08/08/2026 - 09:52:06<br><b>Impacto: </b> Retención<br><b>Carretera:</b> B-20<br><b>Punto Kilométrico:</b> 10.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.131641,
-          41.414078
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 08/08/2026 - 14:32:10<br><b>Aviso: </b> Corte Total<br><b>Impacto: </b> Imposible circular<br><b>Carretera:</b> C-58<br><b>Punto Kilométrico:</b> 0.5 km"
       },
       "geometry": {
@@ -1961,19 +1948,6 @@
         "coordinates": [
           1.414032,
           42.17066
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "description": "<b>Fecha de Creación:</b> 08/08/2026 - 14:39:54<br><b>Carretera:</b> B-20<br><b>Punto Kilométrico:</b> 17.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.209133,
-          41.457825
         ]
       }
     },
@@ -2013,6 +1987,32 @@
         "coordinates": [
           2.550819,
           41.713627
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 08/08/2026 - 16:57:33<br><b>Carretera:</b> C-32<br><b>Punto Kilométrico:</b> 63.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.094651,
+          41.37462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 08/08/2026 - 17:05:30<br><b>Carretera:</b> AP-7<br><b>Punto Kilométrico:</b> 164.3 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.971564,
+          41.469475
         ]
       }
     },
@@ -2175,13 +2175,52 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 08/08/2026 - 16:30:58<br><b>Tipo de Obstrucción:</b> incident<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> AP-8<br><b>Punto Kilométrico:</b> 48.0 km"
+        "description": "<b>Fecha de Creación:</b> 08/08/2026 - 16:56:23<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BI-30<br><b>Punto Kilométrico:</b> 17.0 km"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.2675,
-          43.2702
+          -2.9034,
+          43.2888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 08/08/2026 - 17:00:55<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> BI-30<br><b>Punto Kilométrico:</b> 10.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.9739,
+          43.2955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 08/08/2026 - 17:01:27<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-622<br><b>Punto Kilométrico:</b> 19.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.8144,
+          42.9608
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 08/08/2026 - 17:05:07<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> BI-10<br><b>Punto Kilométrico:</b> 119.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.9617,
+          43.2641
         ]
       }
     },
