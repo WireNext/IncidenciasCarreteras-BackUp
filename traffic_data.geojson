@@ -2630,7 +2630,7 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 02/09/2026 - 12:30:00<br><b>Carretera:</b> C-32<br><b>Punto Kilométrico:</b> 31.5 km"
+        "description": "<b>Fecha de Creación:</b> 02/09/2026 - 12:30:00<br><b>Dirección:</b> Ambos Sentidos<br><b>Carretera:</b> C-32<br><b>Punto Kilométrico:</b> 31.5 km"
       },
       "geometry": {
         "type": "Point",
@@ -2903,19 +2903,6 @@
     {
       "type": "Feature",
       "properties": {
-        "description": "<b>Fecha de Creación:</b> 02/09/2026 - 19:31:48<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-622<br><b>Punto Kilométrico:</b> 21.0 km"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -2.8386,
-          42.961
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "description": "<b>Fecha de Creación:</b> 02/09/2026 - 20:08:45<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> N-1<br><b>Punto Kilométrico:</b> 434.0 km"
       },
       "geometry": {
@@ -3001,6 +2988,45 @@
         "coordinates": [
           -2.9149,
           42.7411
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 03/09/2026 - 00:42:59<br><b>Tipo de Incidente:</b> brokenDownVehicle<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-240<br><b>Punto Kilométrico:</b> 8.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6483,
+          42.9079
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 03/09/2026 - 00:49:33<br><b>Tipo de Incidente </b> Obras<br><b>Dirección:</b> Creciente<br><b>Impacto: </b> Sin retención<br><b>Carretera:</b> N-1<br><b>Punto Kilométrico:</b> 413.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.232,
+          43.0244
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<b>Fecha de Creación:</b> 03/09/2026 - 01:01:48<br><b>Dirección:</b> unknown<br><b>Impacto: </b> Congestionada<br><b>Carretera:</b> A-124<br><b>Punto Kilométrico:</b> 59.0 km"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6357,
+          42.5761
         ]
       }
     },
